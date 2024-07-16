@@ -39,7 +39,8 @@ class ProductController extends Controller
                 })
                 ->addColumn('action', function ($products) {
                     // Here you can add any action buttons or links
-                    return '<button class="btn btn-primary mx-1 edit-btn" data-product=\'' . json_encode($products) . '\'>Edit</button><button class="btn btn-danger delete-btn" data-product=\'' . json_encode($products) . '\'>Delete</button>';
+                    return '<button class="btn btn-primary mx-1 edit-btn" data-product=\'' . json_encode($products) . '\'>Edit</button>
+                    <button class="btn btn-danger delete-btn" data-product=\'' . json_encode($products) . '\'>Delete</button>';
                 })
                 ->rawColumns(['action'])
                 ->toJson();
@@ -57,6 +58,7 @@ class ProductController extends Controller
         $request->validate([
             'product_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Max 2MB
         ]);
+
         try {
             $product = new Product();
             $product->sku = $request['sku'];
@@ -68,11 +70,11 @@ class ProductController extends Controller
             $product->brands_id = $request['brands_id'];
             $product->description = $request['description'];
             $product->seasonability = $request['seasonability'];
+            $product->quantity=$request['quantity'];
             $imageName = time() . '.' . $request->product_image->getClientOriginalExtension();
             $request->product_image->move(public_path('uploads'), $imageName);
             $product->product_image = $imageName;
             if ($product->save()) {
-
                 $newSettlers = NewSettler::all();
                 $product = [
                     'subject' => 'New Product Added: ' . $product->sku,
@@ -157,6 +159,7 @@ class ProductController extends Controller
         $product->brands_id = $request['brands_id'];
         $product->description = $request['description'];
         $product->seasonability = $request['seasonability'];
+        $product->quantity = $request['quantity'];
         $product->sale = $request['sale'];
         $product->discount = $request['discount'];
         if ($request->has('previuos_image')) {
@@ -169,7 +172,6 @@ class ProductController extends Controller
             $request->product_image->move(public_path('uploads'), $imageName);
             $product->product_image = $imageName;
         }
-
         if ($product->update()) {
             return response()->json(['status' => true, 'message' => 'Product updated successfully'], 200);
         } else {

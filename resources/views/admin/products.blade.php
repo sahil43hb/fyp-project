@@ -113,6 +113,13 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="mb-3 col-sm-4">
+                                    <label for="inputText" class="col-sm-2 col-form-label">Quantity</label>
+                                    <div class="col-sm-12">
+                                        <input type="number" class="form-control" name="quantity" placeholder="Enter Quantity"
+                                            required>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class='d-flex row'>
@@ -153,7 +160,7 @@
         <div class="modal-dialog modal-fullscreen ">
             <div class="modal-content ">
                 <div class="modal-header">
-                    <h5 class="modal-title">Add New Product</h5>
+                    <h5 class="modal-title">Edit Product</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -245,6 +252,27 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-4">
+                                    <label for="inputText" class="col-sm-2 col-form-label">Quantity</label>
+                                    <div class="col-sm-12">
+                                        <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Enter Quantity"
+                                            required>
+                                    </div>
+                                </div>
+                                {{-- <div class="mb-3 col-sm-4">
+                                    <label class="col-sm-12 col-form-label">Sale</label>
+                                    <div class="col-sm-12">
+                                        <select class="form-select" id="sale" name="sale"
+                                            aria-label="Default select example" required>
+                                            <option value="">Select choice</option>
+                                            <option value="1">Yes</option>
+                                            <option value="0">No</option>
+                                        </select>
+                                    </div>
+                                </div> --}}
+                            </div>
+
+                            <div class='d-flex row'>
+                                <div class="mb-3 col-sm-4">
                                     <label class="col-sm-12 col-form-label">Sale</label>
                                     <div class="col-sm-12">
                                         <select class="form-select" id="sale" name="sale"
@@ -255,9 +283,6 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class='d-flex row'>
                                 <div class="mb-3 col-sm-4" id="discount_container">
                                     <label for="inputText" class="col-sm-4 col-form-label">Discount in %</label>
                                     <div class="col-sm-12">
@@ -277,6 +302,9 @@
                                             height="100" width="100">
                                     </div>
                                 </div>
+                               
+                            </div>
+                            <div class='d-flex row'>
                                 <div class="col-sm-4 mb-3">
                                     <label for="inputPassword" class="col-sm-5 col-form-label">Description</label>
                                     <div class="col-sm-12">
@@ -284,6 +312,7 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
@@ -340,6 +369,7 @@
                 <th>Brand</th>
                 <th>Price</th>
                 <th>Size</th>
+                <th>Quantity</th>
                 <th>Action</th>
             </tr>
         </thead>

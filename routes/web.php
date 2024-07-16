@@ -28,6 +28,9 @@ use App\Http\Controllers\UserController;
 
 
 require __DIR__ . '/admin.php';
+
+Route::get('/invoice/{order_id}', [InvoiceController::class, 'invoice'])->name('download.invoice');
+
 Route::group(['middleware' => ['auth', 'user', 'verified']], function () {
     // Place your authenticated routes here
     Route::get('/cart', [CartController::class, 'index']);
@@ -35,7 +38,7 @@ Route::group(['middleware' => ['auth', 'user', 'verified']], function () {
     Route::post('/add-to-cart', [CartController::class, 'create']);
     Route::put('/add-to-cart/{id}', [CartController::class, 'update']);
     Route::get('/confirmation', [StripeController::class, 'confirmation'])->name('confirmation');
-    Route::get('/invoice/{order_id}', [InvoiceController::class, 'invoice'])->name('download.invoice');
+    // Route::get('/invoice/{order_id}', [InvoiceController::class, 'invoice'])->name('download.invoice');
     Route::post('/checkout', [StripeController::class, 'index'])->name('checkout');
     Route::get('/success', [StripeController::class, 'success'])->name('success');
     Route::get('/cancel', [StripeController::class, 'cancel'])->name('cancel');
