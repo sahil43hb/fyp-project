@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Footcase - admin</title>
+    <title>FootStep - admin</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -46,15 +46,15 @@
                         <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
                             <div class="d-flex justify-content-center py-4">
-                                <a href="index.html" class="logo d-flex align-items-center w-auto">
+                                <a href="/admin-panel/login" class="logo d-flex align-items-center w-auto">
                                     <img src="assets/img/logo.png" alt="">
-                                    <span class="d-none d-lg-block">Admin Login</span>
+                                    <span class="d-none d-lg-block theme-color" >Admin Login</span>
                                 </a>
                             </div><!-- End Logo -->
                             <div class="card mb-3">
                                 <div class="card-body">
                                     <div class="pt-4 pb-2">
-                                        <h5 class="card-title text-center pb-0 fs-4">Login</h5>
+                                        <h5 class="card-title text-center pb-0 fs-4 theme-color">Login</h5>
                                     </div>
                                     <form method="post" id="adminLogin" class="row g-3 needs-validation" novalidate>
                                         @csrf
@@ -78,7 +78,7 @@
                                             </div>
                                         </div> --}}
                                         <div class="col-12">
-                                            <button type="submit" class="btn btn-primary w-100">Login</button>
+                                            <button type="submit" class="btn w-100 text-light" style="background-color: #44D62C">Login</button>
                                         </div>
                                     </form>
                                 </div>

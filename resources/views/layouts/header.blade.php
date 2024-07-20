@@ -3,7 +3,7 @@
             <nav class="navbar navbar-expand-lg navbar-light main_box">
                 <div class="container">
                     <a class="navbar-brand logo_h" href="{{ url('/') }}"><img width="100px" height="70px"
-                            style="border-radius:12px;" src="{{ asset('img/header_image.jpg') }}" alt="" /></a>
+                            style="border-radius:12px;" src="{{ asset('img/header_logo1.png') }}" alt="" /></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -72,7 +72,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li class="nav-item">
                                 <a href="{{ url('cart') }}" class="add_to_cart_container">
-                                    <span class="ti-bag"></span>
+                                    <span class="ti-bag" style="color:#44D62C"></span>
                                     @if (Auth::check())
                                         <sup class="add_to_cart" id="cartData">{{ cartData() }}</sup>
                                     @endif
@@ -80,7 +80,7 @@
                             </li>
                             <li class="nav-item">
                                 <button class="search">
-                                    <span class="lnr lnr-magnifier" id="search"></span>
+                                    <span class="lnr lnr-magnifier" id="search" style="color:#44D62C"></span>
                                 </button>
                             </li>
                         </ul>

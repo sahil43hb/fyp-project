@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-    Footcase
+    FootStep-Brands
 @endsection
 
 @section('css')

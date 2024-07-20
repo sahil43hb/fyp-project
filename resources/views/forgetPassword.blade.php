@@ -53,7 +53,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn" style="background-color: #44D62C;color:#fff">
                                         Send Password Reset Link
                                     </button>
                                 </div>

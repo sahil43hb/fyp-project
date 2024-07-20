@@ -5,7 +5,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-footer-widget">
                         <h6>About Us</h6>
-                        <p>
+                        <p style="color: #fff; opacity: 0.9">
                             Footcase has been working in market since last 35 years.We are serving people with the
                             best quality fine shoes.Today Footcase has its own 2 branches.We believe in customer
                             satisfaction and provide our customers the best of best .
@@ -15,7 +15,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-footer-widget">
                         <h6>Newsletter</h6>
-                        <p>Stay update with our latest</p>
+                        <p style="color: #fff; opacity: 0.9">Stay update with our latest</p>
                         <div class="" id="mc_embed_signup">
                             <form action="{{ url('new_settler') }}" method="post" class="form-inline">
                                 @csrf
@@ -23,7 +23,7 @@
                                     <input class="form-control" name="email" placeholder="Enter Email"
                                         onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
                                         required type="email" />
-                                    <button type="submit" class="click-btn btn btn-default">
+                                    <button type="submit" class="click-btn btn btn-default " style="border:1px solid #fff">
                                         <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                                     </button>
                                 </div>
@@ -50,27 +50,28 @@
                 <div class="col-lg-2 col-md-6 col-sm-6">
                     <div class="single-footer-widget">
                         <h6>Follow Us</h6>
-                        <p>Let us be social</p>
+                        <p style="color: #fff; opacity: 0.9">Let us be social</p>
                         <div class="footer-social d-flex align-items-center">
-                            <a href="https://www.instagram.com/footcasepk?igsh=cjRvbm8wM3VvYzJp&utm_source=qr"
-                                target="_blank"><i class="fa fa-instagram"></i></a>
-                            <a href="https://www.facebook.com/profile.php?id=100095411535989&mibextid=LQQJ4d"
-                                target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-instagram" ></i></a>
+                            <a href="#"
+                                target="_blank"><i class="fa fa-facebook" ></i></a>
+                            <a href="#"
+                                target="_blank"><i class="fa fa-youtube" ></i></a>
 
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
-                <p class="footer-text m-0">
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright
-                    <i>©</i> 2024
-                    <a href="#">DAAZ.</a>
-                    All rights reserved.
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                </p>
-            </div>
         </div>
+        <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap" style="background-color: #000">
+            <p class="footer-text m-0 " >
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright
+                <i>©</i> 2024
+                <a href="#">DAAZ.</a>
+                All rights reserved.
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div> 
     </footer>
     <!-- End footer Area -->

@@ -65,7 +65,9 @@ h6 {
     font-weight: 600;
     color: #012970;
 }
-
+.theme-color{
+    color: #44D62C !important;
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -363,7 +365,7 @@ h6 {
 }
 
 .logo img {
-    max-height: 26px;
+    /* max-height: 26px; */
     margin-right: 6px;
 }
 

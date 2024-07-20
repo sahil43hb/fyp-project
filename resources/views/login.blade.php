@@ -15,7 +15,7 @@
     <!-- meta character set -->
     <meta charset="UTF-8" />
     <!-- Site Title -->
-    <title>Register in Matrix</title>
+    <title>Register in FootStep</title>
 
     @vite('resources/js/userForm.js')
 

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-    Footcase
+    FootStep
 @endsection
 
 @section('css')
@@ -83,7 +83,7 @@
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" style="border:none">
-                                                <i class="fa-solid fa-trash"></i>
+                                                <i class="fa-solid fa-trash cartDel"></i>
                                             </button>
                                         </form>
                                     </td>
@@ -139,7 +139,7 @@
                                     <form method="post" id="checkoutForm">
                                         @csrf
                                         <div class="checkout_btn_inner d-flex align-items-center justify-content-end">
-                                            <button type="submit" class="primary-btn border-0">Proceed to checkout</button>
+                                            <button type="submit" class="primary-btn border-0" style="background-color: red">Proceed to checkout</button>
                                         </div>
                                     </form>
                                 </td>

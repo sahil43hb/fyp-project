@@ -40,7 +40,7 @@
                     email,
                     <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                         @csrf
-                        <button type="submit" class="btn btn-link p-0 m-0 align-baseline">click here to request
+                        <button type="submit" class="btn btn-link p-0 m-0 align-baseline" style="color: #44D62C">click here to request
                             another</button>.
                     </form>
                 </div>
