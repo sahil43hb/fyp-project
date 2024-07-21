@@ -21,7 +21,7 @@ class BrandController extends Controller
             return DataTables::of($brands)
                 ->addIndexColumn()
                 ->addColumn('action', function ($brands) {
-                    return '<button class="btn btn-primary mx-1 edit-btn" data-brand=\'' . json_encode($brands) . '\'>Edit</button><button class="btn btn-danger delete-btn" data-brand=\'' . json_encode($brands) . '\'>Delete</button>';
+                    return '<button class="btn bg-color text-white mx-1 edit-btn" data-brand=\'' . json_encode($brands) . '\'>Edit</button><button class="btn btn-danger delete-btn" data-brand=\'' . json_encode($brands) . '\'>Delete</button>';
                 })
                 ->rawColumns(['action'])
                 ->toJson();

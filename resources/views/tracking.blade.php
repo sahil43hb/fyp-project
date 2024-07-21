@@ -3,7 +3,7 @@
 
 
 @section('title')
-    Footcase
+    FootStep
 @endsection
 
 @section('css')

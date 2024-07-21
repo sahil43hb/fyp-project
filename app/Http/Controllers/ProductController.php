@@ -39,7 +39,7 @@ class ProductController extends Controller
                 })
                 ->addColumn('action', function ($products) {
                     // Here you can add any action buttons or links
-                    return '<button class="btn btn-primary mx-1 edit-btn" data-product=\'' . json_encode($products) . '\'>Edit</button>
+                    return '<button class="btn bg-color text-white mx-1 edit-btn" data-product=\'' . json_encode($products) . '\'>Edit</button>
                     <button class="btn btn-danger delete-btn" data-product=\'' . json_encode($products) . '\'>Delete</button>';
                 })
                 ->rawColumns(['action'])

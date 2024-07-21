@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('title')
-    Footcase - Products
+    FootStep- Products
 @endsection
 
 <script>
@@ -15,7 +15,7 @@
 
 @section('content')
     <div class="d-flex flex-row justify-content-end">
-        <button class="btn btn-primary my-4" data-bs-toggle="modal" data-bs-target="#fullscreenModal">Add
+        <button class="btn bg-color text-white my-4" data-bs-toggle="modal" data-bs-target="#fullscreenModal">Add
             product</button>
     </div>
 
@@ -23,7 +23,7 @@
         <div class="modal-dialog modal-fullscreen ">
             <div class="modal-content ">
                 <div class="modal-header container">
-                    <h5 class="modal-title">Add New Product</h5>
+                    <h5 class="modal-title theme-color">Add New Product</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -32,21 +32,21 @@
                         <div class="container">
                             <div class='d-flex row'>
                                 <div class="mb-3 col-sm-4">
-                                    <label for="inputText" class="col-sm-2 col-form-label">SKU</label>
+                                    <label for="inputText" class="col-sm-2 col-form-label theme-color">SKU</label>
                                     <div class="col-sm-12">
                                         <input type="text" class="form-control" name="sku" placeholder="Enter sku"
                                             required>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-4">
-                                    <label for="inputText" class="col-sm-2 col-form-label">Price</label>
+                                    <label for="inputText" class="col-sm-2 col-form-label theme-color">Price</label>
                                     <div class="col-sm-12">
                                         <input type="number" class="form-control" name="price"
                                             placeholder="Enter price"required>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-4">
-                                    <label for="inputText" class="col-sm-2 col-form-label">Size</label>
+                                    <label for="inputText" class="col-sm-2 col-form-label theme-color">Size</label>
                                     <div class="col-sm-12">
                                         <input type="number" class="form-control" name="size_no"
                                             placeholder="Enter size"required>
@@ -55,7 +55,7 @@
                             </div>
                             <div class='d-flex row'>
                                 <div class="mb-3  col-sm-4">
-                                    <label class="col-sm-12 col-form-label">Categories</label>
+                                    <label class="col-sm-12 col-form-label theme-color">Categories</label>
                                     <div class="col-sm-12">
                                         <select class="form-select" id="category_id" name="category_id"
                                             aria-label="Default select example" required>
@@ -67,7 +67,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-4">
-                                    <label class="col-sm-12 col-form-label">Sub categories</label>
+                                    <label class="col-sm-12 col-form-label theme-color">Sub categories</label>
                                     <div class="col-sm-12">
                                         <select class="form-select" id="sub_categories_id" name="sub_categories_id"
                                             aria-label="Default select example" required>
@@ -76,7 +76,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-4">
-                                    <label class="col-sm-12 col-form-label">Brands</label>
+                                    <label class="col-sm-12 col-form-label theme-color">Brands</label>
                                     <div class="col-sm-12">
                                         <select class="form-select" name="brands_id" aria-label="Default select example"
                                             required>
@@ -91,7 +91,7 @@
 
                             <div class='d-flex row'>
                                 <div class="mb-3  col-sm-4">
-                                    <label class="col-sm-12 col-form-label">New Collection</label>
+                                    <label class="col-sm-12 col-form-label theme-color">New Collection</label>
                                     <div class="col-sm-12">
                                         <select class="form-select" name="new_collection"
                                             aria-label="Default select example" required>
@@ -102,7 +102,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-4">
-                                    <label class="col-sm-12 col-form-label">Season</label>
+                                    <label class="col-sm-12 col-form-label theme-color">Season</label>
                                     <div class="col-sm-12">
                                         <select class="form-select" name="seasonability" aria-label="Default select example"
                                             required>
@@ -114,7 +114,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-4">
-                                    <label for="inputText" class="col-sm-2 col-form-label">Quantity</label>
+                                    <label for="inputText" class="col-sm-2 col-form-label theme-color">Quantity</label>
                                     <div class="col-sm-12">
                                         <input type="number" class="form-control" name="quantity" placeholder="Enter Quantity"
                                             required>
@@ -124,14 +124,14 @@
 
                             <div class='d-flex row'>
                                 <div class="col-sm-4 mb-3">
-                                    <label for="inputPassword" class="col-sm-5 col-form-label">Description</label>
+                                    <label for="inputPassword" class="col-sm-5 col-form-label theme-color">Description</label>
                                     <div class="col-sm-12">
                                         <textarea class="form-control" name="description" style="height: 100px"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-sm-4 mb-3">
                                     <div class="col-sm-12">
-                                        <label for="inputNumber" class="col-sm-6 col-form-label">Image</label>
+                                        <label for="inputNumber" class="col-sm-6 col-form-label theme-color">Image</label>
                                         <div class="col-sm-12">
                                             <input class="form-control" name="product_image" type="file" required />
                                         </div>
@@ -139,11 +139,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer container">
+                        <div class="modal-footer container ">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                                 Close
                             </button>
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn text-white bg-color">
                                 Save changes
                             </button>
                         </div>
@@ -160,7 +160,7 @@
         <div class="modal-dialog modal-fullscreen ">
             <div class="modal-content ">
                 <div class="modal-header">
-                    <h5 class="modal-title">Edit Product</h5>
+                    <h5 class="modal-title theme-color">Edit Product</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -169,21 +169,21 @@
                         <div class="container">
                             <div class='d-flex row'>
                                 <div class="mb-3 col-sm-4">
-                                    <label for="inputText" class="col-sm-2 col-form-label">SKU</label>
+                                    <label for="inputText" class="col-sm-2 col-form-label theme-color">SKU</label>
                                     <div class="col-sm-12">
                                         <input type="text" class="form-control" id="sku" name="sku"
                                             placeholder="Enter sku" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-4">
-                                    <label for="inputText" class="col-sm-2 col-form-label">Price</label>
+                                    <label for="inputText" class="col-sm-2 col-form-label theme-color">Price</label>
                                     <div class="col-sm-12">
                                         <input type="number" class="form-control" name="price" id="price"
                                             placeholder="Enter price"required>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-4">
-                                    <label for="inputText" class="col-sm-2 col-form-label">Size</label>
+                                    <label for="inputText" class="col-sm-2 col-form-label theme-color">Size</label>
                                     <div class="col-sm-12">
                                         <input type="number" class="form-control" name="size_no" id="size_no"
                                             placeholder="Enter size"required>
@@ -192,7 +192,7 @@
                             </div>
                             <div class='d-flex row'>
                                 <div class="mb-3  col-sm-4">
-                                    <label class="col-sm-12 col-form-label">Categories</label>
+                                    <label class="col-sm-12 col-form-label theme-color">Categories</label>
                                     <div class="col-sm-12">
                                         <select class="form-select" id="edit_category_id" name="category_id"
                                             aria-label="Default select example" required>
@@ -204,7 +204,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-4">
-                                    <label class="col-sm-12 col-form-label">Sub categories</label>
+                                    <label class="col-sm-12 col-form-label theme-color">Sub categories</label>
                                     <div class="col-sm-12">
                                         <select class="form-select" id="edit_sub_categories_id" name="sub_categories_id"
                                             aria-label="Default select example" required>
@@ -213,7 +213,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-4">
-                                    <label class="col-sm-12 col-form-label">Brands</label>
+                                    <label class="col-sm-12 col-form-label theme-color">Brands</label>
                                     <div class="col-sm-12">
                                         <select class="form-select" name="brands_id" id="brands_id"
                                             aria-label="Default select example" required>
@@ -228,7 +228,7 @@
 
                             <div class='d-flex row'>
                                 <div class="mb-3  col-sm-4">
-                                    <label class="col-sm-12 col-form-label">New Collection</label>
+                                    <label class="col-sm-12 col-form-label theme-color">New Collection</label>
                                     <div class="col-sm-12">
                                         <select class="form-select" id="new_collection" name="new_collection"
                                             aria-label="Default select example" required>
@@ -240,7 +240,7 @@
                                 </div>
 
                                 <div class="mb-3 col-sm-4">
-                                    <label class="col-sm-12 col-form-label">Season</label>
+                                    <label class="col-sm-12 col-form-label theme-color">Season</label>
                                     <div class="col-sm-12">
                                         <select class="form-select" id="seasonability" name="seasonability"
                                             aria-label="Default select example" required>
@@ -252,14 +252,14 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-4">
-                                    <label for="inputText" class="col-sm-2 col-form-label">Quantity</label>
+                                    <label for="inputText" class="col-sm-2 col-form-label theme-color">Quantity</label>
                                     <div class="col-sm-12">
                                         <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Enter Quantity"
                                             required>
                                     </div>
                                 </div>
                                 {{-- <div class="mb-3 col-sm-4">
-                                    <label class="col-sm-12 col-form-label">Sale</label>
+                                    <label class="col-sm-12 col-form-label theme-color">Sale</label>
                                     <div class="col-sm-12">
                                         <select class="form-select" id="sale" name="sale"
                                             aria-label="Default select example" required>
@@ -273,7 +273,7 @@
 
                             <div class='d-flex row'>
                                 <div class="mb-3 col-sm-4">
-                                    <label class="col-sm-12 col-form-label">Sale</label>
+                                    <label class="col-sm-12 col-form-label theme-color">Sale</label>
                                     <div class="col-sm-12">
                                         <select class="form-select" id="sale" name="sale"
                                             aria-label="Default select example" required>
@@ -284,7 +284,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-4" id="discount_container">
-                                    <label for="inputText" class="col-sm-4 col-form-label">Discount in %</label>
+                                    <label for="inputText" class="col-sm-4 col-form-label theme-color">Discount in %</label>
                                     <div class="col-sm-12">
                                         <input type="number" class="form-control" id="discount" name="discount"
                                             placeholder="Enter discount in percentage">
@@ -292,7 +292,7 @@
                                 </div>
                                 <div class="col-sm-4 mb-3">
                                     <div class="col-sm-12 mb-3">
-                                        <label for="inputNumber" class="col-sm-6 col-form-label">Image</label>
+                                        <label for="inputNumber" class="col-sm-6 col-form-label theme-color">Image</label>
                                         <div class="col-sm-12">
                                             <input class="form-control" name="product_image" type="file" />
                                         </div>
@@ -305,8 +305,8 @@
                                
                             </div>
                             <div class='d-flex row'>
-                                <div class="col-sm-4 mb-3">
-                                    <label for="inputPassword" class="col-sm-5 col-form-label">Description</label>
+                                <div class="col-sm-4 mb-3"> 
+                                    <label for="inputPassword" class="col-sm-5 col-form-label theme-color">Description</label>
                                     <div class="col-sm-12">
                                         <textarea class="form-control" name="description" id="description" style="height: 150px"></textarea>
                                     </div>
@@ -318,7 +318,7 @@
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                                 Close
                             </button>
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn bg-color text-white">
                                 Save changes
                             </button>
                         </div>
@@ -335,7 +335,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Delete Product</h5>
+                    <h5 class="modal-title theme-color">Delete Product</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form method="post" id="deleteProduct">
@@ -350,7 +350,7 @@
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                             No
                         </button>
-                        <button type="submit" class="btn btn-danger">
+                        <button type="submit" class="btn bg-color text-white">
                             Yes
                         </button>
                     </div>

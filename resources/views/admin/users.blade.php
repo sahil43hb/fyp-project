@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('title')
-Footcase - Users
+    FootStep - Users
 @endsection
 
 @section('css')

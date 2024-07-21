@@ -20,7 +20,7 @@ class CategoryController extends Controller
                 ->addIndexColumn()
                 ->addColumn('action', function ($category) {
                     // Here you can add any action buttons or links
-                    return '<button class="btn btn-primary mx-1 edit-btn" data-category=\'' . json_encode($category) . '\'>Edit</button><button class="btn btn-danger delete-btn" data-category=\'' . json_encode($category) . '\'>Delete</button>';
+                    return '<button class="btn bg-color text-white mx-1 edit-btn" data-category=\'' . json_encode($category) . '\'>Edit</button><button class="btn btn-danger delete-btn" data-category=\'' . json_encode($category) . '\'>Delete</button>';
                 })
                 ->rawColumns(['action'])
                 ->toJson();

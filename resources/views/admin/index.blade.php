@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('title')
-    Footcase - Admin
+    FootStep  - Admin
 @endsection
 
 @section('css')
@@ -9,10 +9,10 @@
 
 @section('content')
     <div class="pagetitle d-flex justify-content-between align-items-center my-4">
-        <h1>Dashboard</h1>
+        <h1 class="theme-color">Dashboard</h1>
         <form action="{{ route('report_generate') }}" method="POST">
             @csrf
-            <button class="btn btn-primary">Generate Report</button>
+            <button class="btn text-white bg-color">Generate Report</button>
         </form>
     </div><!-- End Page Title -->
 
@@ -25,13 +25,13 @@
                     <div class="col-xxl-4 col-xl-5">
                         <div class="card info-card customers-card">
                             <div class="card-body">
-                                <h5 class="card-title">Customers</h5>
+                                <h5 class="card-title theme-color">Customers</h5>
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                                         <i class="bi bi-people"></i>
                                     </div>
                                     <div class="ps-3">
-                                        <h6>{{ $users }}</h6> <span class="text-muted small pt-2 ps-1">Total
+                                        <h6 class="theme-color">{{ $users }}</h6> <span class="text-muted small pt-2 ps-1">Total
                                             Users</span>
                                     </div>
                                 </div>
@@ -46,13 +46,13 @@
                     <div class="col-xxl-4 col-md-7">
                         <div class="card info-card revenue-card">
                             <div class="card-body">
-                                <h5 class="card-title">Sales</h5>
+                                <h5 class="card-title theme-color">Sales</h5>
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                                         <i class="bi bi-currency-dollar"></i>
                                     </div>
                                     <div class="ps-3">
-                                        <h6>Rs. {{ $orders->sum('total') }}</h6>
+                                        <h6  class="theme-color">Rs. {{ $orders->sum('total') }}</h6>
                                         <span class="text-muted small pt-2 ps-1">Total Sale</span>
 
                                     </div>
@@ -66,13 +66,13 @@
                     <div class="col-xxl-4 col-md-5">
                         <div class="card info-card sales-card">
                             <div class="card-body">
-                                <h5 class="card-title">Orders</h5>
+                                <h5 class="card-title theme-color">Orders</h5>
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                                         <i class="bi bi-cart"></i>
                                     </div>
                                     <div class="ps-3">
-                                        <h6>{{ $orders->count() }}</h6>
+                                        <h6  class="theme-color">{{ $orders->count() }}</h6>
                                         <span class="text-muted small pt-2 ps-1">Total Orders</span>
 
                                     </div>
@@ -85,13 +85,13 @@
                     <div class="col-xxl-4 col-md-7">
                         <div class="card info-card revenue-card">
                             <div class="card-body">
-                                <h5 class="card-title">Revenue</h5>
+                                <h5 class="card-title theme-color">Revenue</h5>
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                                         <i class="bi bi-currency-dollar"></i>
                                     </div>
                                     <div class="ps-3">
-                                        <h6>Rs. {{ intVal($orders->sum('total')) * (15 / 100) }}</h6>
+                                        <h6  class="theme-color">Rs. {{ intVal($orders->sum('total')) * (15 / 100) }}</h6>
                                         <span class="text-muted small pt-2 ps-1">Total Revenue</span>
 
                                     </div>
@@ -107,7 +107,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Reports</h5>
+                                <h5 class="card-title theme-color">Reports</h5>
                                 <!-- Line Chart -->
                                 <div id="reportsChart"></div>
                                 <script>
@@ -179,7 +179,7 @@
                 <!-- Recent Activity -->
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Recent Activity</h5>
+                        <h5 class="card-title theme-color">Recent Activity</h5>
                         <div class="activity">
                             @foreach ($login_activities as $login_activity)
                                 <div class="activity-item d-flex">
