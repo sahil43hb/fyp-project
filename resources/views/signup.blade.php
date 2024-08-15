@@ -38,18 +38,8 @@
     <!--================Login Box Area =================-->
     <section class="login_box_area section_gap">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="login_box_img">
-                        <img class="img-fluid" src="img/LoginIMG.jpg" alt="">
-                        <div class="hover">
-                            <h4>Already a User?</h4>
-                            <a class="primary-btn" href="{{ url('login') }}" style="color:aliceblue">Sign In</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="login_form_inner">
+            <div class="row  justify-content-center">               
+                    <div class="login_form_inner customSx">
                         <h3>Register Here</h3>
                         <form class="row login_form" method="post" id="registerationForm">
                             @csrf
@@ -83,18 +73,17 @@
                                     onblur="this.placeholder = 'Enter Password'" required>
                             </div>
 
-                            <div class="col-md-12 form-group">
-                                <div class="creat_account">
-                                    <input type="checkbox" id="f-option2" name="selector">
-                                    <label for="f-option2">Save my info</label>
-                                </div>
-                            </div>
-                            <div class="col-md-12 form-group">
+                            <div class="col-md-12 form-group pt-5">
                                 <button type="submit" value="submit" class="primary-btn">Sign up</button>
                             </div>
+                            
                         </form>
+                        <hr class="hr-text " data-content="OR">
+                        <div class='w-100'>
+                            <h4>Already a User?</h4>
+                            <a class="primary-btn signUp" href="{{ url('login') }}" style="color:aliceblue">Sign In</a>
+                        </div>
                     </div>
-                </div>
             </div>
             <div id="errors-list"></div>
         </div>
