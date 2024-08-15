@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="login_box_img">
-                        <img class="img-fluid" src="img/login.jpg" alt="" />
+                        <img class="img-fluid" src="img/LoginIMG.jpg" alt="" />
                         <div class="hover">
                             <h4>New to our website?</h4>
                             <a class="primary-btn" href="{{ url('register') }}">Create an Account</a>

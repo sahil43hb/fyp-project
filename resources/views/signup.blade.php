@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="login_box_img">
-                        <img class="img-fluid" src="img/login.jpg" alt="">
+                        <img class="img-fluid" src="img/LoginIMG.jpg" alt="">
                         <div class="hover">
                             <h4>Already a User?</h4>
                             <a class="primary-btn" href="{{ url('login') }}" style="color:aliceblue">Sign In</a>
