@@ -18,7 +18,7 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Register in FootStep</title>
+    <title>Register in AgileSole</title>
     @vite('resources/js/userForm.js')
 
     <link rel="stylesheet" href="{{ asset('css/linearicons.css') }}" />

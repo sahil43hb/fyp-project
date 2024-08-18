@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-FootStep
+AgileSole
 @endsection
 
 @section('css')

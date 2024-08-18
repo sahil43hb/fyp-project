@@ -6,8 +6,8 @@
                     <div class="single-footer-widget">
                         <h6>About Us</h6>
                         <p style="color: #fff; opacity: 0.9">
-                            FootStep has been working in market since last 35 years.We are serving people with the
-                            best quality fine shoes.Today FootStep has its own 2 branches.We believe in customer
+                        AgileSole has been working in market since last 35 years.We are serving people with the
+                            best quality fine shoes.Today AgileSole has its own 2 branches.We believe in customer
                             satisfaction and provide our customers the best of best .
                         </p>
                     </div>

@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('title')
-    FootStep - Categories
+AgileSole - Categories
 @endsection
 
 @section('css')

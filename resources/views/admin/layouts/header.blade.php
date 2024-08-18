@@ -2,8 +2,8 @@
 
       <div class="d-flex align-items-center justify-content-between">
           <a href="{{ url('admin-panel/') }}" class="logo d-flex align-items-center">
-              <img width="60px" height="40px" src="{{ asset('img/header_logo1.png') }}" alt="">
-              <!-- <span class="d-none d-lg-block theme-color">FootStep</span> -->
+              <img width="60px" height="40px" src="{{ asset('img/AgileSoleLogo.png') }}" alt="">
+              <!-- <span class="d-none d-lg-block theme-color">AgileSole</span> -->
           </a>
           <i class="bi bi-list toggle-sidebar-btn"></i>
       </div><!-- End Logo -->

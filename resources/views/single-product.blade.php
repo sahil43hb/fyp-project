@@ -2,7 +2,7 @@
 
 
 @section('title')
-    FootStep
+AgileSole
 @endsection
 
 @section('css')

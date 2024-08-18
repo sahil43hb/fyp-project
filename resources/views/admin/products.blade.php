@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('title')
-    FootStep- Products
+AgileSole- Products
 @endsection
 
 <script>

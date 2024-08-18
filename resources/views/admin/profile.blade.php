@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('title')
-    FootStep - Admin
+AgileSole - Admin
 @endsection
 
 @section('css')

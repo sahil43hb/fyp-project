@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-    FootStep-Brands
+    AgileSole-Brands
 @endsection
 
 @section('css')
