@@ -25,7 +25,7 @@ class SubCategoryController extends Controller
                 })
                 ->addColumn('action', function ($sub_categories) {
                     // Here you can add any action buttons or links
-                    return '<button class="btn btn-primary mx-1 edit-btn" data-sub_category=\'' . json_encode($sub_categories) . '\'>Edit</button><button class="btn btn-danger delete-btn" data-sub_category=\'' . json_encode($sub_categories) . '\'>Delete</button>';
+                    return '<button class="btn bg-color text-white mx-1 edit-btn" data-sub_category=\'' . json_encode($sub_categories) . '\'>Edit</button><button class="btn btn-danger delete-btn" data-sub_category=\'' . json_encode($sub_categories) . '\'>Delete</button>';
                 })
                 ->rawColumns(['action'])
                 ->toJson();

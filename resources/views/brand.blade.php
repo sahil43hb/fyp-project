@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-    Footcase
+    AgileSole-Brands
 @endsection
 
 @section('css')

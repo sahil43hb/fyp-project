@@ -1,12 +1,12 @@
 $(document).ready(function () {
     // Orders histiry ==============================///////
 
-    $("#users_order").DataTable({
-        language: {
-            lengthMenu: "_MENU_", // Customize the text as per your preference
-            info: "Showing _START_ to _END_ of _TOTAL_ entries", // Optionally, customize other text
-        },
-    });
+    // $("#users_order").DataTable({
+    //     language: {
+    //         lengthMenu: "_MENU_", // Customize the text as per your preference
+    //         info: "Showing _START_ to _END_ of _TOTAL_ entries", // Optionally, customize other text
+    //     },
+    // });
 
     $("#search_input").keyup(function () {
         var query = $(this).val(); // Get the search query from the input field

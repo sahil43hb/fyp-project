@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-    Footcase
+AgileSole
 @endsection
 @section('css')
 @endsection
@@ -16,8 +16,8 @@
                         <div class="row single-slide align-items-center d-flex">
                             <div class="col-lg-5 col-md-6">
                                 <div class="banner-content">
-                                    <h1>Comfort and Style Combined</h1>
-                                    <p style="color:black">
+                                    <h1 >Comfort and Style Combined</h1>
+                                    <p>
                                         Step into Luxury with Our Innovative Footwear! Experience Unmatched Comfort and
                                         Unbeatable Style
                                     </p>
@@ -515,7 +515,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-features">
                         <div class="f-icon">
-                            <img src="{{ asset('img/features/f-icon3.png') }}" alt="" />
+                            <img src="{{ asset('img/features/icon5.jpg') }}" alt=""  style="height: 30px;width:40px"/>
                         </div>
                         <h6>Free Delivery</h6>
                         <p>Free Shipping on all order</p>
@@ -524,9 +524,9 @@
                 <!-- single features -->
                 <!-- single features -->
                 <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-features">
+                    <div class="single-features" style="border-right:0px">
                         <div class="f-icon">
-                            <img src="{{ asset('img/features/f-icon3.png') }}" alt="" />
+                            <img src="{{ asset('img/features/icon6.png') }}" alt="" style="height: 30px;width:40px" />
                         </div>
                         <h6>Secure Payment</h6>
                         <p>Safe and streamlined transactions.</p>

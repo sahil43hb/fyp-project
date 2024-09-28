@@ -2,8 +2,8 @@
 
       <div class="d-flex align-items-center justify-content-between">
           <a href="{{ url('admin-panel/') }}" class="logo d-flex align-items-center">
-              <img src="assets/img/logo.png" alt="">
-              <span class="d-none d-lg-block">Footcase</span>
+              <img width="60px" height="40px" src="{{ asset('img/AgileSoleLogo.png') }}" alt="">
+              <!-- <span class="d-none d-lg-block theme-color">AgileSole</span> -->
           </a>
           <i class="bi bi-list toggle-sidebar-btn"></i>
       </div><!-- End Logo -->
@@ -31,7 +31,7 @@
 
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                       <li class="dropdown-header">
-                          <h6>{{ Auth::user()->name }}</h6>
+                          <h6 class="theme-color">{{ Auth::user()->name }}</h6>
                       </li>
                       <li>
                           <hr class="dropdown-divider">
@@ -39,7 +39,7 @@
                       <li>
                           <a class="dropdown-item d-flex align-items-center" href="{{ route('admin_profile') }}">
                               <i class="bi bi-person"></i>
-                              <span>My Profile</span>
+                              <span class="theme-color">My Profile</span>
                           </a>
                       </li>
                       <li>
@@ -48,7 +48,7 @@
                       <li>
                           <a class="dropdown-item d-flex align-items-center" href="{{ url('admin-panel/logout') }}">
                               <i class="bi bi-box-arrow-right"></i>
-                              <span>Sign Out</span>
+                              <span class="theme-color">Sign Out</span>
                           </a>
                       </li>
                   </ul><!-- End Profile Dropdown Items -->

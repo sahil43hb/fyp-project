@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('title')
-Footcase - Brands
+AgileSole - Brands
 @endsection
 
 @section('css')
@@ -11,7 +11,7 @@ Footcase - Brands
 @section('content')
 
     <div class="d-flex flex-row justify-content-end">
-        <button class="btn btn-primary my-4" data-bs-toggle="modal" data-bs-target="#basicModal">Add
+        <button class="btn bg-color text-white my-4" data-bs-toggle="modal" data-bs-target="#basicModal">Add
             brand</button>
     </div>
 
@@ -19,20 +19,20 @@ Footcase - Brands
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">New Brand</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title theme-color">New Brand</h5>
+                    <button type="button" class="btn-close theme-color" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form method="post" id="addBrand">
                     <div class="modal-body">
                         @csrf
                         <div class="mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Title</label>
+                            <label for="inputText" class="col-sm-2 theme-color col-form-label">Title</label>
                             <div class="col-sm-12">
                                 <input type="text" class="form-control" name="title" required>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label class="col-sm-2 col-form-label">Status</label>
+                            <label class="col-sm-2 col-form-label theme-color">Status</label>
                             <div class="col-sm-12">
                                 <select class="form-select" name="activeStatus" aria-label="Default select example" required>
                                     <option selected>Select status</option>
@@ -46,7 +46,7 @@ Footcase - Brands
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                             Close
                         </button>
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn bg-color text-white">
                             Add
                         </button>
                     </div>
@@ -59,20 +59,20 @@ Footcase - Brands
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Edit Brand</h5>
+                    <h5 class="modal-title theme-color">Edit Brand</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form method="post" id="editBrand">
                     <div class="modal-body">
                         @csrf
                         <div class="mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Title</label>
+                            <label for="inputText" class="col-sm-2 col-form-label theme-color">Title</label>
                             <div class="col-sm-12">
                                 <input type="text" class="form-control" id="brandTitle" name="title" required>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label class="col-sm-2 col-form-label">Status</label>
+                            <label class="col-sm-2 col-form-label theme-color">Status</label>
                             <div class="col-sm-12">
                                 <select class="form-select" id="brandStatus" name="active_status" aria-label="Default select example" required>
                                     <option selected>Select status</option>
@@ -86,7 +86,7 @@ Footcase - Brands
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                             Close
                         </button>
-                        <button type="submit" class="btn btn-danger">
+                        <button type="submit" class="btn bg-color text-white">
                             Edit
                         </button>
                     </div>
@@ -98,7 +98,7 @@ Footcase - Brands
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Delete Brand</h5>
+                    <h5 class="modal-title theme-color">Delete Brand</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form method="post" id="deleteBrand">
@@ -113,7 +113,7 @@ Footcase - Brands
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                             No
                         </button>
-                        <button type="submit" class="btn btn-danger">
+                        <button type="submit" class="btn bg-color text-white">
                             Yes
                         </button>
                     </div>

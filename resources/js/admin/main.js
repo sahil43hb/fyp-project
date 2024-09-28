@@ -457,6 +457,7 @@ $(document).ready(function () {
             { data: "brand_name", name: "brand_name" },
             { data: "price", name: "price" },
             { data: "size_no", name: "size_no" },
+            { data: "quantity", name: "quantity" },
             { data: "action", name: "action" },
         ],
     });
@@ -504,6 +505,7 @@ $(document).ready(function () {
         $("#brands_id").val(productData.brands_id);
         $("#seasonability").val(productData.seasonability);
         $("#new_collection").val(productData.new_collection);
+        $("#quantity").val(productData.quantity);
         $("#description").val(productData.description);
         $("#sale").val(productData.sale);
         if (productData.sale === "1") {

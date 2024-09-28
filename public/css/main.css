@@ -10,6 +10,9 @@
 .no-padding {
     padding: 0;
 }
+.theme-color{
+    color: #44D62C;
+}
 .section_gap {
     padding: 100px 0;
 }
@@ -66,9 +69,11 @@
 }
 .section-title h1 {
     font-size: 36px;
+    color: #44D62C;
 }
 .section-title p {
     margin-bottom: 0;
+    opacity: 0.75;
 }
 
 /* Start Gradient Area css
@@ -88,18 +93,18 @@
 .product_description_area .nav.nav-tabs li a.active,
 .blog-pagination .page-item.active .page-link,
 .single-footer-widget .click-btn {
-    background: -webkit-linear-gradient(90deg, #9e9e9e 0%, #515050 100%);
-    background: -moz-linear-gradient(90deg, #9e9e9e 0%, #515050 100%);
-    background: -o-linear-gradient(90deg, #9e9e9e 0%, #515050 100%);
-    background: linear-gradient(90deg, #9e9e9e 0%, #515050 100%);
+    background: -webkit-linear-gradient(90deg, #44D62C 0%, #44D62C 100%);
+    background: -moz-linear-gradient(90deg, #44D62C 0%, #44D62C 100%);
+    background: -o-linear-gradient(90deg, #44D62C 0%, #44D62C 100%);
+    background: linear-gradient(90deg, #44D62C 0%, #44D62C 100%);
 }
 
 .gradient-bg-reverse,
 #search_input_box {
-    background: -webkit-linear-gradient(270deg, #9e9e9e 0%, #515050 100%);
-    background: -moz-linear-gradient(270deg, #9e9e9e 0%, #515050 100%);
-    background: -o-linear-gradient(270deg, #9e9e9e 0%, #515050 100%);
-    background: linear-gradient(270deg, #9e9e9e 0%, #515050 100%);
+    background: -webkit-linear-gradient(270deg, #44D62C 0%, #44D62C 100%);
+    background: -moz-linear-gradient(270deg, #44D62C 0%, #44D62C 100%);
+    background: -o-linear-gradient(270deg, #44D62C 0%, #44D62C 100%);
+    background: linear-gradient(270deg, #44D62C 0%, #44D62C 100%);
 }
 
 .gradient-color,
@@ -1317,7 +1322,8 @@ h6 {
     display: inline-block;
     font-size: 12px;
     font-weight: 500;
-    color: #9e9e9e;
+    color: #44D62C;
+    opacity: 0.6;
 }
 @media (min-width: 991px) {
     .header_area .navbar .nav .nav-item .nav-link {
@@ -1329,7 +1335,8 @@ h6 {
 }
 .header_area .navbar .nav .nav-item:hover .nav-link,
 .header_area .navbar .nav .nav-item.active .nav-link {
-    color: #2d2d2d;
+    color: #44D62C;
+    opacity: 1;
 }
 .header_area .navbar .nav .nav-item.submenu {
     position: relative;
@@ -1419,7 +1426,7 @@ h6 {
     border-bottom: none;
 }
 .header_area .navbar .nav .nav-item.submenu ul .nav-item:hover .nav-link {
-    background: #9e9e9e;
+    background: #44D62C;
     color: #fff;
 }
 @media (min-width: 992px) {
@@ -1533,8 +1540,9 @@ h6 {
 /* banner area css
 ============================================================================================ */
 .banner-area {
-    background: url(../img/banner/bi.png) center no-repeat;
-    /* background-size: cover; */
+    /* background-color: rgba(30, 40, 50, 0.05); */
+    background: url(../img/banner/bb.png) no-repeat;
+    background-size: cover;
     /* position: relative; */
     /* height: ; */
 }
@@ -1596,6 +1604,12 @@ h6 {
     line-height: 66px;
     font-weight: 700;
     margin-bottom: 20px;
+    color: #44D62C;
+}
+.banner-area .banner-content p {
+    color:black; 
+    font-weight:500; 
+    font-size:17px;
 }
 @media (max-width: 767px) {
     .banner-area .banner-content h1 {
@@ -1641,7 +1655,7 @@ h6 {
 }
 
 .organic-breadcrumb {
-    background: url(../img/banner/bi.png) center no-repeat;
+    background: url(../img/banner/bb.png) no-repeat;
     background-size: cover;
     padding-top: 130px;
 }
@@ -1669,7 +1683,8 @@ h6 {
 }
 .breadcrumb-banner h1 {
     font-weight: 600;
-    color: #fff;
+    color: black;
+    opacity:0.7
 }
 @media (max-width: 767px) {
     .breadcrumb-banner h1 {
@@ -1816,6 +1831,13 @@ h6 {
     -webkit-text-fill-color: transparent;
 }
 
+.cartDel{
+    cursor: pointer;
+}
+.cartDel:hover {
+    color: #44D62C;
+}
+
 /* start features area css
 ============================================================================================ */
 @media (max-width: 768px) {
@@ -1862,10 +1884,12 @@ h6 {
 }
 .single-features h6 {
     font-size: 16px;
+    color: #44D62C;
     margin-bottom: 0;
 }
 .single-features p {
     margin-bottom: 0;
+    opacity: 0.5;
 }
 /* .single-features:hover .f-icon img {
   opacity: 0.5;
@@ -5645,6 +5669,7 @@ label {
     line-height: 38px;
     text-transform: uppercase;
     border-radius: 0;
+    background-color: red;
 }
 .cart_inner
     .table
@@ -6085,6 +6110,7 @@ label {
 }
 .login_box_area .login_box_img img {
     width: 100%;
+    height: 583px !important;
 }
 .login_box_area .login_box_img:before {
     position: absolute;
@@ -6108,6 +6134,7 @@ label {
     font-size: 24px;
     color: #fff;
     margin-bottom: 15px;
+    /* color: #44D62C; */
 }
 .login_box_area .login_box_img .hover p {
     max-width: 380px;
@@ -6131,9 +6158,9 @@ label {
     padding-bottom: 20px;
 }
 .login_form_inner h3 {
-    color: #222222;
+    color: #44D62C;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 30px;
 }
 .login_form_inner .login_form {
@@ -7287,7 +7314,10 @@ label {
 ============================================================================================ */
 .footer-area {
     padding-top: 50px;
-    background-color: #222222;
+    background-color: #44D62C;
+}
+.change-color{
+    background-color: #43b253;
 }
 .footer-area h6 {
     color: #fff;
@@ -7323,12 +7353,20 @@ label {
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+    color: #fff;
+    font-size: 25px;
 }
 .footer-social a:hover i {
-    color: #ffba00;
+    color: black;
+    opacity: 1;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 7px;
+
 }
 .footer-social i {
-    color: #cccccc;
+    color: #ffffff;
+    opacity: 0.7;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -7439,7 +7477,9 @@ label {
 }
 
 .footer-text {
-    padding-top: 16px;
+    padding: 15px 0px 15px 0px;
+    font-size: 16px;
+    color: #fff;
 }
 @media (max-width: 991px) {
     .footer-text {
@@ -7448,7 +7488,7 @@ label {
 }
 .footer-text a,
 .footer-text i {
-    color: #ffba00;
+    color: #44D62C;
 }
 
 /*# sourceMappingURL=main.css.map */

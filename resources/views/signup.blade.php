@@ -18,7 +18,7 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Register in Matrix</title>
+    <title>Register in AgileSole</title>
     @vite('resources/js/userForm.js')
 
     <link rel="stylesheet" href="{{ asset('css/linearicons.css') }}" />
@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="login_box_img">
-                        <img class="img-fluid" src="img/login.jpg" alt="">
+                        <img class="img-fluid" src="img/LoginIMG.jpg" alt="">
                         <div class="hover">
                             <h4>Already a User?</h4>
                             <a class="primary-btn" href="{{ url('login') }}" style="color:aliceblue">Sign In</a>

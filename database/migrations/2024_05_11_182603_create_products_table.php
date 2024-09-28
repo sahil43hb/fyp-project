@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('description', 1024)->nullable();
             $table->integer('discount')->nullable();
             $table->string('product_image');
-            $table->integer('quantity')->default(3);
+            $table->integer('quantity');
             $table->timestamps();
         });
     }

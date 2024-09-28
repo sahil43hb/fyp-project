@@ -65,7 +65,12 @@ h6 {
     font-weight: 600;
     color: #012970;
 }
-
+.theme-color{
+    color: #44D62C !important;
+}
+.bg-color{
+    background-color: #44D62C !important;
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -363,7 +368,7 @@ h6 {
 }
 
 .logo img {
-    max-height: 26px;
+    /* max-height: 26px; */
     margin-right: 6px;
 }
 
@@ -389,7 +394,7 @@ h6 {
     font-size: 32px;
     padding-left: 10px;
     cursor: pointer;
-    color: #012970;
+    color: #44D62C
 }
 
 .header .search-bar {
@@ -472,7 +477,7 @@ h6 {
 }
 
 .header-nav .nav-profile {
-    color: #012970;
+    color: #44D62C;
 }
 
 .header-nav .nav-profile img {

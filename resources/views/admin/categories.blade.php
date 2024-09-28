@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('title')
-    Footcase - Categories
+AgileSole - Categories
 @endsection
 
 @section('css')
@@ -9,7 +9,7 @@
 
 @section('content')
     <div class="d-flex flex-row justify-content-end">
-        <button class="btn btn-primary my-4" data-bs-toggle="modal" data-bs-target="#basicModal">Add
+        <button class="btn bg-color text-white my-4" data-bs-toggle="modal" data-bs-target="#basicModal">Add
             category</button>
     </div>
 
@@ -17,20 +17,20 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">New Category</h5>
+                    <h5 class="modal-title theme-color">New Category</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form method="post" id="addCategory">
                     <div class="modal-body">
                         @csrf
                         <div class="mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Title</label>
+                            <label for="inputText" class="col-sm-2 col-form-label theme-color">Title</label>
                             <div class="col-sm-12">
                                 <input type="text" class="form-control" name="title" required>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label class="col-sm-2 col-form-label">Status</label>
+                            <label class="col-sm-2 col-form-label theme-color">Status</label>
                             <div class="col-sm-12">
                                 <select class="form-select" name="activeStatus" aria-label="Default select example"
                                     required>
@@ -45,7 +45,7 @@
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                             Close
                         </button>
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn bg-color text-white">
                             Add
                         </button>
                     </div>
@@ -58,20 +58,20 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">New Category</h5>
+                    <h5 class="modal-title theme-color">New Category</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form method="post" id="editCategory">
                     <div class="modal-body">
                         @csrf
                         <div class="mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Title</label>
+                            <label for="inputText" class="col-sm-2 col-form-label theme-color">Title</label>
                             <div class="col-sm-12">
                                 <input type="text" class="form-control" id="categoryTitle" name="title" required>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label class="col-sm-2 col-form-label">Status</label>
+                            <label class="col-sm-2 col-form-label theme-color">Status</label>
                             <div class="col-sm-12">
                                 <select class="form-select" id="categoryActiveStatus" name="active_status"
                                     aria-label="Default select example" required>
@@ -86,7 +86,7 @@
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                             Close
                         </button>
-                        <button type="submit" class="btn btn-danger">
+                        <button type="submit" class="btn bg-color text-white">
                             Edit
                         </button>
                     </div>
@@ -98,7 +98,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">New Category</h5>
+                    <h5 class="modal-title theme-color">New Category</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form method="post" id="deleteCategory">
@@ -113,7 +113,7 @@
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                             No
                         </button>
-                        <button type="submit" class="btn btn-danger">
+                        <button type="submit" class="btn bg-color text-white">
                             Yes
                         </button>
                     </div>

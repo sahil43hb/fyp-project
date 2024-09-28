@@ -3,7 +3,7 @@
 
 
 @section('title')
-    Footcase
+AgileSole
 @endsection
 
 @section('css')
