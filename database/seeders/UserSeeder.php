@@ -16,7 +16,7 @@ class UserSeeder extends Seeder
     {
         for ($i = 1; $i <= 9; $i++) {
             User::create([
-                'name' => "User $i",
+                'name' => $i == 1 ? "Admin" :  "User $i",
                 'email' => $i == 1 ? "agilesole@admin.com" : "user$i@gmail.com",
                 'email_verified_at' => now(),
                 'password' => Hash::make('12345678'),

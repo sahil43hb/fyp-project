@@ -3,7 +3,7 @@
             <nav class="navbar navbar-expand-lg navbar-light main_box">
                 <div class="container">
                     <a class="navbar-brand logo_h" href="{{ url('/') }}">
-                        <img width="100px" height="70px"
+                        <img width="70px" height="50px"
                             style="border-radius:12px;" src="{{ asset('img/AgileSoleLogo.png') }}" alt="" />
                         </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -34,6 +34,7 @@
                             </li>
                             @if (categoriesData()->isNotEmpty())
                                 @foreach (categoriesData() as $category)
+                                {{-- @if($category->active_status === '1' ) --}}
                                     <li class="nav-item submenu dropdown">
                                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
                                             role="button" aria-haspopup="true"
@@ -46,6 +47,7 @@
                                             @endforeach
                                         </ul>
                                     </li>
+                                    {{-- @endif --}}
                                 @endforeach
                             @endif
 

@@ -15,8 +15,8 @@ AgileSole - Users
         <thead>
             <tr>
                 <th>No</th>
-                <th>Customer_name</th>
-                <th>Customer_email</th>
+                <th>Customer Name</th>
+                <th>Customer Email</th>
                 <th>Total</th>
                 <th>Currency</th>
                 <th>Payment</th>

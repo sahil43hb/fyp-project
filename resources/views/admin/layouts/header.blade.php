@@ -22,12 +22,21 @@
                   <a class="nav-link nav-icon search-bar-toggle " href="#">
                       <i class="bi bi-search"></i>
                   </a>
-              </li><!-- End Search Icon-->
+              </li>
+              <!-- End Search Icon-->
+
               <li class="nav-item dropdown pe-3">
                   <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#"
                       data-bs-toggle="dropdown">
-                      <span class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->username }}</span>
-                  </a><!-- End Profile Iamge Icon -->
+                      <div class="p-1"> 
+                        <div class="rounded-circle border d-flex justify-content-center align-items-center"
+                             style="width:40px;height:40px"
+                          alt="Avatar">
+                        <i class="fas fa-user-alt adminAvatar"></i>
+                        </div>                      
+                    </div>
+                  </a>
+                  <!-- End Profile Iamge Icon -->
 
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                       <li class="dropdown-header">

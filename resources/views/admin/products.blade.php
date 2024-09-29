@@ -15,13 +15,12 @@ AgileSole- Products
 
 @section('content')
     <div class="d-flex flex-row justify-content-end">
-        <button class="btn bg-color text-white my-4" data-bs-toggle="modal" data-bs-target="#fullscreenModal">Add
-            product</button>
+        <button class="btn bg-color text-white my-4" data-bs-toggle="modal" data-bs-target="#fullscreenModal">Add Product</button>
     </div>
 
     <div class="modal fade" id="fullscreenModal" tabindex="-1">
         <div class="modal-dialog modal-fullscreen ">
-            <div class="modal-content ">
+            <div class="modal-content">
                 <div class="modal-header container">
                     <h5 class="modal-title theme-color">Add New Product</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -67,11 +66,11 @@ AgileSole- Products
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-4">
-                                    <label class="col-sm-12 col-form-label theme-color">Sub categories</label>
+                                    <label class="col-sm-12 col-form-label theme-color">Sub Categories</label>
                                     <div class="col-sm-12">
                                         <select class="form-select" id="sub_categories_id" name="sub_categories_id"
                                             aria-label="Default select example" required>
-                                            <option value="">Select Subcategory</option>
+                                            <option value="">Select sub category</option>
                                         </select>
                                     </div>
                                 </div>
@@ -80,7 +79,7 @@ AgileSole- Products
                                     <div class="col-sm-12">
                                         <select class="form-select" name="brands_id" aria-label="Default select example"
                                             required>
-                                            <option selected>Select brand</option>
+                                            <option value="" selected>Select brand</option>
                                             @foreach ($brands as $brand)
                                                 <option value="{{ $brand->id }}">{{ $brand->title }}</option>
                                             @endforeach
@@ -95,7 +94,7 @@ AgileSole- Products
                                     <div class="col-sm-12">
                                         <select class="form-select" name="new_collection"
                                             aria-label="Default select example" required>
-                                            <option selected>Select collection status</option>
+                                            <option value="" selected>Select collection status</option>
                                             <option value="1">Yes</option>
                                             <option value="0">No</option>
                                         </select>
@@ -116,7 +115,7 @@ AgileSole- Products
                                 <div class="mb-3 col-sm-4">
                                     <label for="inputText" class="col-sm-2 col-form-label theme-color">Quantity</label>
                                     <div class="col-sm-12">
-                                        <input type="number" class="form-control" name="quantity" placeholder="Enter Quantity"
+                                        <input type="number" class="form-control" name="quantity" placeholder="Enter quantity"
                                             required>
                                     </div>
                                 </div>
@@ -126,7 +125,7 @@ AgileSole- Products
                                 <div class="col-sm-4 mb-3">
                                     <label for="inputPassword" class="col-sm-5 col-form-label theme-color">Description</label>
                                     <div class="col-sm-12">
-                                        <textarea class="form-control" name="description" style="height: 100px"></textarea>
+                                        <textarea class="form-control" name="description" style="height: 100px" required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-sm-4 mb-3">
@@ -159,7 +158,7 @@ AgileSole- Products
     <div class="modal fade" id="fullscreenModalEditModal" tabindex="-1">
         <div class="modal-dialog modal-fullscreen ">
             <div class="modal-content ">
-                <div class="modal-header">
+                <div class="modal-header container">
                     <h5 class="modal-title theme-color">Edit Product</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -208,7 +207,7 @@ AgileSole- Products
                                     <div class="col-sm-12">
                                         <select class="form-select" id="edit_sub_categories_id" name="sub_categories_id"
                                             aria-label="Default select example" required>
-                                            <option value="">Select Subcategory</option>
+                                            <option value="">Select sub category</option>
                                         </select>
                                     </div>
                                 </div>
@@ -217,7 +216,7 @@ AgileSole- Products
                                     <div class="col-sm-12">
                                         <select class="form-select" name="brands_id" id="brands_id"
                                             aria-label="Default select example" required>
-                                            <option selected>Select brand</option>
+                                            <option value="" selected>Select brand</option>
                                             @foreach ($brands as $brand)
                                                 <option value="{{ $brand->id }}">{{ $brand->title }}</option>
                                             @endforeach
@@ -232,7 +231,7 @@ AgileSole- Products
                                     <div class="col-sm-12">
                                         <select class="form-select" id="new_collection" name="new_collection"
                                             aria-label="Default select example" required>
-                                            <option selected>Select collection status</option>
+                                            <option value="" selected>Select collection status</option>
                                             <option value="1">Yes</option>
                                             <option value="0">No</option>
                                         </select>
@@ -254,7 +253,7 @@ AgileSole- Products
                                 <div class="mb-3 col-sm-4">
                                     <label for="inputText" class="col-sm-2 col-form-label theme-color">Quantity</label>
                                     <div class="col-sm-12">
-                                        <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Enter Quantity"
+                                        <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Enter quantity"
                                             required>
                                     </div>
                                 </div>
@@ -308,7 +307,7 @@ AgileSole- Products
                                 <div class="col-sm-4 mb-3"> 
                                     <label for="inputPassword" class="col-sm-5 col-form-label theme-color">Description</label>
                                     <div class="col-sm-12">
-                                        <textarea class="form-control" name="description" id="description" style="height: 150px"></textarea>
+                                        <textarea class="form-control" name="description" id="description" style="height: 150px" required></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -348,10 +347,10 @@ AgileSole- Products
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                            No
+                            Cancel
                         </button>
-                        <button type="submit" class="btn bg-color text-white">
-                            Yes
+                        <button type="submit" class="btn bg-danger text-white">
+                            Delete
                         </button>
                     </div>
                 </form>

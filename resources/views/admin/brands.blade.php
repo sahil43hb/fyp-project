@@ -35,7 +35,7 @@ AgileSole - Brands
                             <label class="col-sm-2 col-form-label theme-color">Status</label>
                             <div class="col-sm-12">
                                 <select class="form-select" name="activeStatus" aria-label="Default select example" required>
-                                    <option selected>Select status</option>
+                                    <option value="" selected>Select status</option>
                                     <option value="1">Active</option>
                                     <option value="0">Disable</option>
                                 </select>
@@ -75,7 +75,7 @@ AgileSole - Brands
                             <label class="col-sm-2 col-form-label theme-color">Status</label>
                             <div class="col-sm-12">
                                 <select class="form-select" id="brandStatus" name="active_status" aria-label="Default select example" required>
-                                    <option selected>Select status</option>
+                                    <option value="" selected>Select status</option>
                                     <option value="1">Active</option>
                                     <option value="0">Disable</option>
                                 </select>
@@ -87,7 +87,7 @@ AgileSole - Brands
                             Close
                         </button>
                         <button type="submit" class="btn bg-color text-white">
-                            Edit
+                            Update
                         </button>
                     </div>
                 </form>
@@ -111,10 +111,10 @@ AgileSole - Brands
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                            No
+                            Cancel
                         </button>
-                        <button type="submit" class="btn bg-color text-white">
-                            Yes
+                        <button type="submit" class="btn bg-danger text-white">
+                            Delete
                         </button>
                     </div>
                 </form>

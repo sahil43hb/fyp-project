@@ -3999,6 +3999,11 @@ label {
     bottom: 0;
     z-index: 1;
 }
+.adminAvatar{
+    font-size: 22px;
+    color: #44D62C !important;
+}
+
 .single-sidebar-product:before {
     position: absolute;
     content: "";
@@ -7357,7 +7362,7 @@ label {
     font-size: 25px;
 }
 .footer-social a:hover i {
-    color: black;
+    color: #44D62C;
     opacity: 1;
     background-color: #fff;
     padding: 10px;

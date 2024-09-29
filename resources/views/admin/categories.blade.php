@@ -34,7 +34,7 @@ AgileSole - Categories
                             <div class="col-sm-12">
                                 <select class="form-select" name="activeStatus" aria-label="Default select example"
                                     required>
-                                    <option selected>Select status</option>
+                                    <option value="" selected>Select status</option>
                                     <option value="1">Active</option>
                                     <option value="0">Disable</option>
                                 </select>
@@ -58,7 +58,7 @@ AgileSole - Categories
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title theme-color">New Category</h5>
+                    <h5 class="modal-title theme-color">Edit Category</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form method="post" id="editCategory">
@@ -75,7 +75,7 @@ AgileSole - Categories
                             <div class="col-sm-12">
                                 <select class="form-select" id="categoryActiveStatus" name="active_status"
                                     aria-label="Default select example" required>
-                                    <option selected>Select status</option>
+                                    <option value="" selected>Select status</option>
                                     <option value="1">Active</option>
                                     <option value="0">Disable</option>
                                 </select>
@@ -87,7 +87,7 @@ AgileSole - Categories
                             Close
                         </button>
                         <button type="submit" class="btn bg-color text-white">
-                            Edit
+                            Update
                         </button>
                     </div>
                 </form>
@@ -98,7 +98,7 @@ AgileSole - Categories
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title theme-color">New Category</h5>
+                    <h5 class="modal-title theme-color">Delete Category</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form method="post" id="deleteCategory">
@@ -111,10 +111,10 @@ AgileSole - Categories
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                            No
+                            Cancel
                         </button>
-                        <button type="submit" class="btn bg-color text-white">
-                            Yes
+                        <button type="submit" class="btn btn-danger">
+                            Delete
                         </button>
                     </div>
                 </form>

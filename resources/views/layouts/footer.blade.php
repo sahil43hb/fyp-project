@@ -6,7 +6,7 @@
                     <div class="single-footer-widget">
                         <h6>About Us</h6>
                         <p style="color: #fff; opacity: 0.9">
-                        AgileSole has been working in market since last 35 years.We are serving people with the
+                        AgileSole has been working in market since last 13 years.We are serving people with the
                             best quality fine shoes.Today AgileSole has its own 2 branches.We believe in customer
                             satisfaction and provide our customers the best of best .
                         </p>
@@ -52,11 +52,15 @@
                         <h6>Follow Us</h6>
                         <p style="color: #fff; opacity: 0.9">Let us be social</p>
                         <div class="footer-social d-flex align-items-center">
-                            <a href="#" target="_blank"><i class="fa fa-instagram" ></i></a>
-                            <a href="#"
-                                target="_blank"><i class="fa fa-facebook" ></i></a>
-                            <a href="#"
-                                target="_blank"><i class="fa fa-youtube" ></i></a>
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank">
+                                <i class="fa fa-youtube"></i>
+                            </a>
 
                         </div>
                     </div>

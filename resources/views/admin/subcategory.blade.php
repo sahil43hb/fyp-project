@@ -9,8 +9,7 @@ AgileSole - Sub Categories
 
 @section('content')
         <div class="d-flex flex-row justify-content-end">
-            <button class="btn bg-color text-white my-4" data-bs-toggle="modal" data-bs-target="#basicModal">Add
-                sub category</button>
+            <button class="btn bg-color text-white my-4" data-bs-toggle="modal" data-bs-target="#basicModal">Add Sub Category</button>
         </div>
         <div class="modal fade" id="basicModal" tabindex="-1">
             <div class="modal-dialog">
@@ -32,17 +31,17 @@ AgileSole - Sub Categories
                                 <label class="col-sm-2 col-form-label theme-color">Status</label>
                                 <div class="col-sm-12">
                                     <select class="form-select" name="activeStatus" aria-label="Default select example" required>
-                                        <option selected>Select status</option>
+                                        <option value="" selected>Select status</option>
                                         <option value="1">Active</option>
                                         <option value="0">Disable</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label class="col-sm-2 col-form-label theme-color">Ctaegory</label>
+                                <label class="col-sm-2 col-form-label theme-color">Category</label>
                                 <div class="col-sm-12">
                                     <select class="form-select" name="category_id" aria-label="Default select example" required>
-                                        <option selected>Select Category</option>
+                                        <option value="" selected>Select Category</option>
 
                                         @foreach ($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->title }}</option>
@@ -69,7 +68,7 @@ AgileSole - Sub Categories
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title theme-color">New Category</h5>
+                        <h5 class="modal-title theme-color">Edit Sub Category</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <form method="post" id="editSubCategory">
@@ -85,17 +84,17 @@ AgileSole - Sub Categories
                                 <label class="col-sm-2 col-form-label theme-color">Status</label>
                                 <div class="col-sm-12">
                                     <select class="form-select" id="subCategoryStatus" name="active_status" aria-label="Default select example" required>
-                                        <option selected>Select status</option>
+                                        <option value="" selected>Select status</option>
                                         <option value="1">Active</option>
                                         <option value="0">Disable</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label class="col-sm-2 col-form-label theme-color">Ctaegory</label>
+                                <label class="col-sm-2 col-form-label theme-color">Category</label>
                                 <div class="col-sm-12">
                                     <select class="form-select" name="category_id" id="categoryStatus" aria-label="Default select example" required>
-                                        <option selected>Select Category</option>
+                                        <option value="" selected>Select Category</option>
                                         @foreach ($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->title }}</option>
                                         @endforeach
@@ -108,7 +107,7 @@ AgileSole - Sub Categories
                                 Close
                             </button>
                             <button type="submit" class="btn bg-color text-white">
-                                Edit
+                                Update
                             </button>
                         </div>
                     </form>
@@ -120,7 +119,7 @@ AgileSole - Sub Categories
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title theme-color">New Category</h5>
+                        <h5 class="modal-title theme-color">Delete Sub Category</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <form method="post" id="deleteSubCategory">
@@ -128,15 +127,15 @@ AgileSole - Sub Categories
                             @method('DELETE')
                             @csrf
                             <div class="mb-3">
-                                <h5>Are you sure you want to delete the category?</h5>
+                                <h5>Are you sure you want to delete the Sub Category?</h5>
                             </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                No
+                                Cancel
                             </button>
-                            <button type="submit" class="btn bg-color text-white">
-                                Yes
+                            <button type="submit" class="btn bg-danger text-white">
+                                Delete
                             </button>
                         </div>
                     </form>

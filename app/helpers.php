@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\Auth;
 if (!function_exists('categoriesData')) {
     function categoriesData()
     {
-        $categories = Category::with('sub_categories')->get();
+        $categories = Category::with('sub_categories')
+            ->where('active_status', '1') // Only get categories with status 1
+            ->get();
         return $categories;
     }
 }
