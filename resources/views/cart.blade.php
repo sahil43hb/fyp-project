@@ -39,7 +39,7 @@ AgileSole
                                 <tr data-cart-id="{{ $cart->id }}">
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
+                                            <input class="form-check-input bg-success" type="checkbox" value=""
                                                 id="flexCheckDefault">
                                         </div>
                                     </td>

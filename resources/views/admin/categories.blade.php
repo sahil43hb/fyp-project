@@ -98,7 +98,7 @@ AgileSole - Categories
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title theme-color">Delete Category</h5>
+                    <h5 class="modal-title text-danger">Delete Category</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form method="post" id="deleteCategory">
@@ -125,10 +125,10 @@ AgileSole - Categories
     <table id="example" class="display text-center">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Status</th>
-                <th>Action</th>
+                <th class="text-center">Id</th>
+                <th class="text-center">Title</th>
+                <th class="text-center">Status</th>
+                <th class="text-center">Action</th>
             </tr>
         </thead>
 

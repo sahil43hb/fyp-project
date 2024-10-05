@@ -18,7 +18,7 @@ if (!function_exists('categoriesData')) {
 if (!function_exists('brandsData')) {
     function brandsData()
     {
-        $brands = Brand::all();
+        $brands = Brand::where('active_status','1')->get();
         return $brands;
     }
 }

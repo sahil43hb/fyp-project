@@ -13,18 +13,16 @@ AgileSole - Users
         <table id="user_table" class="display text-center">
             <thead>
                 <tr>
-                    <th>No</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Role</th>
-
+                    <th class="text-center !important">No</th>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Email</th>
+                    <th class="text-center">Role</th>
                 </tr>
-
             </thead>
             <tbody>
                 @foreach ($users as $user)
                 <tr>
-                    <td>{{ $loop->index + 1 }}</td>
+                    <td class="text-center">{{ $loop->index + 1 }}</td>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->role }}</td>

@@ -7495,5 +7495,18 @@ label {
 .footer-text i {
     color: #44D62C;
 }
+/* Change checkbox color */
+.form-check-input:checked {
+    background-color: #007bff; 
+    border-color: #007bff; 
+}
+.form-check-input {
+    cursor: pointer;
+}
 
-/*# sourceMappingURL=main.css.map */
+.disabled-link {
+    pointer-events: none; /* Prevent clicks */
+    color: #ccc; /* Change text color */
+    cursor: not-allowed; /* Show not-allowed cursor */
+    opacity: 0.5; /* Make it look disabled */
+}

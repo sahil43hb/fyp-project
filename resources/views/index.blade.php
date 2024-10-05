@@ -573,8 +573,10 @@ AgileSole
                 success: function(response) {
                     console.log(response);
                     let productHtml = "";
+                    
                     response.products.forEach((product) => {
                         let priceContent;
+                        let notQuantity = product.quantity === 0 ? true : false ;
                         if (product.sale === "0") {
                             priceContent = `
                          <div class="price">
@@ -606,10 +608,10 @@ AgileSole
                            ${priceContent}
                             <div class="prd-bottom">
                                 <a href="javascript:void(0)" class="social-info add-to-cart"
-
-                                    data-product-id="${product.id}">
+                                ${notQuantity  ? '' : `data-product-id=${product.id}` }
+                                    >
                                     <span class="ti-bag"></span>
-                                    <p class="hover-text">add to bag</p>
+                                    <p class="hover-text" style="color:${notQuantity  ? 'red' : 'black'};">${notQuantity  ? 'no in stock' : 'add to bag'}</p>
                                 </a>
                                 <a href="product-detail/${product.id}" class="social-info">
                                     <span class="lnr lnr-move"></span>

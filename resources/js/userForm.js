@@ -16,8 +16,9 @@ $(document).ready(function () {
             $.ajax({
                 url: "/search/" + query,
                 type: "GET",
-                success: function (response) {
+                success: function (response) {                  
                     let productHtml = "";
+                    
                     response.products.forEach((product) => {
                         let priceContent;
                         if (product.sale === "0") {

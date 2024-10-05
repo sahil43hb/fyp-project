@@ -85,7 +85,16 @@ $(document).ready(function () {
         columns: [
             { data: "DT_RowIndex", name: "DT_RowIndex" },
             { data: "title", name: "title" },
-            { data: "active_status", name: "active_status" },
+            // { data: "active_status", name: "active_status" },
+            {
+                data: "active_status",
+                name: "active_status",
+                render: function(data, type, row) {
+                    return data == 1 
+                        ? '<span class="badge bg-color text-white">Active</span>' 
+                        : '<span class="badge badge-pill bg-danger">Disable</span>';
+                }
+            },
             { data: "action", name: "action" },
         ],
     });
@@ -202,7 +211,15 @@ $(document).ready(function () {
             { data: "DT_RowIndex", name: "DT_RowIndex" },
             { data: "title", name: "title" },
             { data: "category_name", name: "category_name" },
-            { data: "active_status", name: "active_status" },
+            {
+                data: "active_status",
+                name: "active_status",
+                render: function(data, type, row) {
+                    return data == 1 
+                        ? '<span class="badge bg-color text-white">Active</span>' 
+                        : '<span class="badge badge-pill bg-danger">Disable</span>';
+                }
+            },
             { data: "action", name: "action" },
         ],
     });
@@ -320,7 +337,15 @@ $(document).ready(function () {
         columns: [
             { data: "DT_RowIndex", name: "DT_RowIndex" },
             { data: "title", name: "title" },
-            { data: "active_status", name: "active_status" },
+            {
+                data: "active_status",
+                name: "active_status",
+                render: function(data, type, row) {
+                    return data == 1 
+                        ? '<span class="badge bg-color text-white">Active</span>' 
+                        : '<span class="badge badge-pill bg-danger">Disable</span>';
+                }
+            },
             { data: "action", name: "action" },
         ],
     });

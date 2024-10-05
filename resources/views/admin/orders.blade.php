@@ -35,7 +35,7 @@ AgileSole - Users
                     <td>{{ $order->payment->payment_status }}</td>
                     <td>
                         <a href="{{ route('download.invoice', ['order_id' => $order->id]) }}"
-                            class="btn btn-primary bg-danger border-0">Invoice</a>
+                            class="btn bg-color text-white border-0">Invoice</a>
                     </td>
                 </tr>
             @endforeach
