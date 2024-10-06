@@ -1543,6 +1543,7 @@ h6 {
     /* background-color: rgba(30, 40, 50, 0.05); */
     background: url(../img/banner/bb.png) no-repeat;
     background-size: cover;
+    height: 90vh;
     /* position: relative; */
     /* height: ; */
 }
@@ -1587,10 +1588,21 @@ h6 {
     opacity: 1;
 }
 
-.banner-img {
+/* .banner-img {
     display: flex;
+    align-content: end;
+} */
+
+/* set banner image size */
+.banner-set{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    display: flex;
+    /* justify-items:end; */
     align-items: center;
 }
+
 .banner-area .banner-content {
     padding-left: 10px;
 }
@@ -1658,6 +1670,7 @@ h6 {
     background: url(../img/banner/bb.png) no-repeat;
     background-size: cover;
     padding-top: 130px;
+    height: 90vh;
 }
 @media (max-width: 991px) {
     .organic-breadcrumb {
@@ -7509,4 +7522,23 @@ label {
     color: #ccc; /* Change text color */
     cursor: not-allowed; /* Show not-allowed cursor */
     opacity: 0.5; /* Make it look disabled */
+}
+
+/* set the product image height  */
+.custom-height {
+    height: 200px; /* Adjust this value as needed */
+    object-fit: contain; /* Ensures the image covers the area while maintaining aspect ratio */
+}
+
+
+/* to make animation on product image  */
+
+.product-image {
+    transition: transform 0.8s ease;
+    
+}
+
+.product-image:hover {
+    transform: scale(1.05); /* Scale the image up slightly on hover */
+    
 }

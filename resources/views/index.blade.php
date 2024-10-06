@@ -12,25 +12,27 @@ AgileSole
             <div class="row fullscreen align-items-center">
                 <div class="col-lg-12">
                     <div class="active-banner-slider owl-carousel">
-                        <!-- single-slide -->
+                        <!-- single-slide -->   
+                        @foreach (productData() as $product)
                         <div class="row single-slide align-items-center d-flex">
                             <div class="col-lg-5 col-md-6">
                                 <div class="banner-content">
-                                    <h1 >Comfort and Style Combined</h1>
+                                    <h1 >{{$product->sku}}</h1>
                                     <p>
-                                        Step into Luxury with Our Innovative Footwear! Experience Unmatched Comfort and
-                                        Unbeatable Style
+                                       {{$product->description}}
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-7" style="height:100vh;display:flex;align-items:center">
-                                <div class="banner-img">
-                                    <img class="img-fluid" src="{{ asset('img/banner/banner-img.png') }}" alt="" />
+                            <div class="col-lg-7 justify-content-end d-flex" >
+                                <div class="banner-img banner-set">
+                                    <img class="img-fluid" src="{{ asset('uploads/' . $product->product_image) }}" alt="" />
                                 </div>
                             </div>
                         </div>
+                        @endforeach                     
+                     
                         <!-- single-slide -->
-                        <div class="row single-slide align-items-center d-flex">
+                        {{-- <div class="row single-slide align-items-center d-flex">
                             <div class="col-lg-5 col-md-6">
                                 <div class="banner-content">
                                     <h1>Sustainable Steps</h1>
@@ -40,8 +42,8 @@ AgileSole
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-7" style="height:100vh;display:flex;align-items:center">
-                                <div class="banner-img">
+                            <div class="col-lg-7 justify-content-end d-flex" >
+                                <div class="banner-img banner-set">
                                     <img class="img-fluid" src="{{ asset('img/banner/banner_image2.png') }}"
                                         alt="" />
                                 </div>
@@ -57,8 +59,8 @@ AgileSole
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-7" style="height:100vh;display:flex;align-items:center">
-                                <div class="banner-img">
+                            <div class="col-lg-7 justify-content-end d-flex" >
+                                <div class="banner-img banner-set">
                                     <img class="img-fluid" src="{{ asset('img/banner/banner_image3.png') }}"
                                         alt="" />
                                 </div>
@@ -74,8 +76,8 @@ AgileSole
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-7" style="height:100vh;display:flex;align-items:center">
-                                <div class="banner-img">
+                            <div class="col-lg-7 justify-content-end d-flex" >
+                                <div class="banner-img banner-set">
                                     <img class="img-fluid" src="{{ asset('img/banner/banner_image4.png') }}"
                                         alt="" />
                                 </div>
@@ -91,13 +93,13 @@ AgileSole
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-7" style="height:100vh;display:flex;align-items:center">
-                                <div class="banner-img">
+                            <div class="col-lg-7 justify-content-end d-flex" >
+                                <div class="banner-img banner-set">
                                     <img class="img-fluid" src="{{ asset('img/banner/banner_image5.png') }}"
                                         alt="" />
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -118,8 +120,10 @@ AgileSole
                         </div>
                     </div>
                 </div>
-                <div class="row" id="products-container">
-                    <!-- Products will be dynamically inserted here -->
+                <div class="container">
+                    <div class="row" id="products-container">
+                        <!-- Products will be dynamically inserted here -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -129,7 +133,8 @@ AgileSole
     <section class="owl-carousel active-product-area">
         <!-- single product slide -->
         @foreach ($categoriesProduct as $category)
-            <div class="single-product-slider">
+        @if ($category->active_status === '1')
+              <div class="single-product-slider">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-6 text-center">
@@ -143,11 +148,11 @@ AgileSole
                         <!-- single product -->
 
                         @foreach ($category->products as $product)
-                            <div class="col-lg-3 col-md-6">
-                                <div class="single-product">
-                                    <img class="img-fluid" src="{{ asset('uploads/' . $product->product_image) }}"
+                            <div class="col-lg-3 col-md-6 d-flex">
+                                <div class="single-product card flex-fill product-image">
+                                    <img class="img-fluid custom-height" src="{{ asset('uploads/' . $product->product_image) }}"
                                         alt="product_image" />
-                                    <div class="product-details">
+                                    <div class="product-details pl-2">
                                         <h6>{{ $product->sku }}</h6>
 
                                         @if ($product->sale === '0')
@@ -170,11 +175,13 @@ AgileSole
                                         @endif
 
                                         <div class="prd-bottom">
-                                            <a href="javascript:void(0)" class="social-info add-to-cart-btn"
+                                            <a href="javascript:void(0)" class="social-info add-to-cart-btn {{ $product->quantity === 0 ? 'disabled-link' : '' }}"
                                                 auth="{{ Auth::check() ? json_encode(Auth::user()) : null }}"
-                                                data-product-id="{{ $product->id }}">
+                                               {{-- {{$product->quantity === 0   ? '' : `data-product-id=${product.id}` }} --}}
+                                                data-product-id="{{$product->quantity === 0   ? null : $product->id }}"
+                                                >
                                                 <span class="ti-bag"></span>
-                                                <p class="hover-text">add to bag</p>
+                                                <p class="hover-text" style="color:{{$product->quantity === 0  ? 'red' : 'black'}};">{{$product->quantity === 0 ? 'no in stock' : 'add to bag'}}</p>
                                             </a>
                                             <a href="{{ url('product-detail/' . $product->id) }}" class="social-info">
                                                 <span class="lnr lnr-move"></span>
@@ -187,7 +194,8 @@ AgileSole
                         @endforeach
                     </div>
                 </div>
-            </div>
+            </div> 
+        @endif         
         @endforeach
         <!-- single product slide -->
         {{-- <div class="single-product-slider">
@@ -598,29 +606,28 @@ AgileSole
         `;
                         }
                         productHtml += `
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-product">
-                        <img class="img-fluid" src="uploads/${product.product_image}" alt="${product.product_image}" />
-                        <div class="product-details">
-                            <h6>${product.sku}</h6>
-
-                          
-                           ${priceContent}
-                            <div class="prd-bottom">
-                                <a href="javascript:void(0)" class="social-info add-to-cart"
-                                ${notQuantity  ? '' : `data-product-id=${product.id}` }
-                                    >
-                                    <span class="ti-bag"></span>
-                                    <p class="hover-text" style="color:${notQuantity  ? 'red' : 'black'};">${notQuantity  ? 'no in stock' : 'add to bag'}</p>
-                                </a>
-                                <a href="product-detail/${product.id}" class="social-info">
-                                    <span class="lnr lnr-move"></span>
-                                    <p class="hover-text">view more</p>
-                                </a>
-                            </div>
+            <div class="col-lg-3 col-md-6  d-flex">
+                <div class="single-product flex-fill card product-image">
+                    <img class="img-fluid custom-height" src="uploads/${product.product_image}" alt="${product.product_image}" />
+                    <div class="product-details pl-2">
+                        <h6>${product.sku}</h6>
+                        ${priceContent}
+                        <div class="prd-bottom">
+                            <a href="javascript:void(0)" class="social-info add-to-cart ${notQuantity ? 'disabled-link' : ''}"
+                            ${notQuantity ? '' : `data-product-id=${product.id}`}>
+                                <span class="ti-bag"></span>
+                                <p class="hover-text" style="color:${notQuantity ? 'red' : 'black'};">
+                                    ${notQuantity ? 'no in stock' : 'add to bag'}
+                                </p>
+                            </a>
+                            <a href="product-detail/${product.id}" class="social-info">
+                                <span class="lnr lnr-move"></span>
+                                <p class="hover-text">view more</p>
+                            </a>
                         </div>
                     </div>
                 </div>
+            </div>
             `;
                     });
 

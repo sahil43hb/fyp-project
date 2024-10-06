@@ -3,6 +3,7 @@
 use App\Models\Brand;
 use App\Models\Cart;
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 
 if (!function_exists('categoriesData')) {
@@ -20,6 +21,13 @@ if (!function_exists('brandsData')) {
     {
         $brands = Brand::where('active_status','1')->get();
         return $brands;
+    }
+}
+if (!function_exists('productData')) {
+    function productData()
+    {
+        $results = Product::all();
+        return $results;
     }
 }
 

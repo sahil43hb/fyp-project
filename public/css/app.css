@@ -1,8 +1,0 @@
-.form-check-input:checked {
-    background-color: #007bff; /* Change to your desired color */
-    border-color: #007bff; /* Change to your desired color */
-}
-
-.form-check-input {
-    cursor: pointer;
-}

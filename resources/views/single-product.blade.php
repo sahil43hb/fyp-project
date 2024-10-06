@@ -65,7 +65,7 @@ AgileSole
                         </div>
                         <div class="card_area d-flex align-items-center">
                             @if ($product->quantity == 0)
-                                <button class="primary-btn" disabled>Add to Cart</button>
+                                <button class="btn btn-success disabled-link" >Out of stock</button>
                             @else
                                 <a href="javascript:void(0)" class="primary-btn  add-to-cart-btn"
                                     auth="{{ Auth::check() ? json_encode(Auth::user()) : null }}"
