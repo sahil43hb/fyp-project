@@ -5,7 +5,7 @@
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Favicon-->
-    <link rel="icon" href="{{ asset('img/AgileSoleLogo.png') }}" />
+    <link rel="icon" href="{{ asset('img/FavLogo.png') }}" />
     <!-- Author Meta -->
     <meta name="author" content="CodePixar" />
     <!-- Meta Description -->
@@ -35,7 +35,7 @@
 
 <body>
     <!--================Login Box Area =================-->
-    <section class="login_box_area section_gap">
+    {{-- <section class="login_box_area section_gap">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -68,7 +68,7 @@
                                     <label for="f-option2">Keep me logged in</label>
                                 </div>
                             </div> --}}
-                            <div class="col-md-12 form-group">
+                            {{-- <div class="col-md-12 form-group">
                                 <button type="submit" value="submit" class="primary-btn">
                                     Log In
                                 </button>
@@ -81,10 +81,43 @@
                 </div>
             </div>
         </div>
+    </section> --}} 
+
+    <section class="login_box_area section_gap">
+        <div class="container">
+            <div class="row justify-content-center"  >
+                    <div class="login_form_inner customSx" >
+                        <h3>Log in</h3>
+                        <form class="row login_form" method="post" id="loginForm">
+                            @csrf
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="email" name="email"
+                                    placeholder="Email" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Email'" />
+                            </div>
+                            <div class="d-flex col-md-12 form-group align-items-center">
+                                <input type="password" class="form-control" id="password" name="password"
+                                    placeholder="Password" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Password'" />
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <button type="submit" value="submit" class="primary-btn">
+                                    Log In
+                                </button>
+                                <a href="{{ url('/forget-password') }}" class="forgot_password">Forgot Password?</a>
+                                <div id="errors-list"></div>
+                                <hr class="hr-text " data-content="OR">
+                                <div class="hover pt-2">
+                            <h4>New to our website?</h4>
+                            <a class="primary-btn text-white" href="{{ url('register') }}">Create an Account</a>
+                        </div>
+                            </div>
+                        </form>
+
+                    </div>
+            </div>
+        </div>
     </section>
-
-
-
 
     <script src="{{ asset('js/vendor/jquery-2.2.4.min.js') }} "></script>
     <script src="{{ asset('js/jquery.ajaxchimp.min.js') }}"></script>
