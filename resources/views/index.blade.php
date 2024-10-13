@@ -22,6 +22,14 @@ AgileSole
                                        {{$product->description}}
                                     </p>
                                 </div>
+                                <div class="card_area d-flex align-items-center pt-5 pl-2">
+                                    @if ($product->quantity == 0)
+                                        <button class="btn btn-success disabled-link" >Out of stock</button>
+                                    @else
+                                        <a href="{{ url('product-detail/' . $product->id) }}" class="btn-success btn bg-color"
+                                        >View Detail</a>
+                                    @endif
+                                </div>
                             </div>
                             <div class="col-lg-7 justify-content-end d-flex" >
                                 <div class="banner-img banner-set">

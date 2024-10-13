@@ -103,12 +103,12 @@ AgileSole
                                 <button type="submit" value="submit" class="primary-btn">
                                     Log In
                                 </button>
-                                <a href="">Forgot Password?</a>
+                                <a  href="{{ url('/forget-password') }}">Forgot Password?</a>
 
                             </div>
                         </form>
                         <div class="d-flex row justify-content-center py-2"><span>Don't have a
-                                account? </span><a href="">
+                                account? </span><a class="theme-color"  href="{{ url('register') }}">
                                 &nbsp;&nbsp;SignUp</a></div>
                     </div>
                 </div>

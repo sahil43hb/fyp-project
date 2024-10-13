@@ -52,13 +52,13 @@
                         <h6>Follow Us</h6>
                         <p style="color: #fff; opacity: 0.9">Let us be social</p>
                         <div class="footer-social d-flex align-items-center">
-                            <a href="https://www.instagram.com/" target="_blank">
+                            <a href="https://www.instagram.com/agilesole/" target="_blank">
                                 <i class="fa fa-instagram"></i>
                             </a>
-                            <a href="https://www.facebook.com/" target="_blank">
+                            <a href="https://www.facebook.com/profile.php?id=61566808633355" target="_blank">
                                 <i class="fa fa-facebook"></i>
                             </a>
-                            <a href="https://www.youtube.com/" target="_blank">
+                            <a href="https://www.youtube.com/channel/UC0aij5xC13NREwd5iok0eBw" target="_blank">
                                 <i class="fa fa-youtube"></i>
                             </a>
 
