@@ -103,6 +103,9 @@
         <div class="container">
             <div class="row  justify-content-center">               
                     <div class="login_form_inner customSx">
+                        <a  href="{{ url('/') }}">
+                            <img src="img/AgileSoleLogo.png" alt="" width="100px" class="pb-3">
+                        </a>  
                         <h3>Register Here</h3>
                         <form class="row login_form" method="post" id="registerationForm">
                             @csrf

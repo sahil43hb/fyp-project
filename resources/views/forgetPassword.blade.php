@@ -5,7 +5,7 @@
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Favicon-->
-    <link rel="shortcut icon" href="img/AgileSoleLogo.png" />
+    <link rel="shortcut icon" href="img/FavLogo.png" />
     <!-- Author Meta -->
     <meta name="author" content="CodePixar" />
     <!-- Meta Description -->
@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <main class="login-form">
+    {{-- <main class="login-form">
         <div class="cotainer">
             <div class="row justify-content-center">
                 <div class="col-md-8">
@@ -64,7 +64,46 @@
                 </div>
             </div>
         </div>
-    </main>
+    </main> --}}
+
+    <section class="login_box_area section_gap">
+        <div class="container">
+            <div class="row justify-content-center"  >
+                    <div class="login_form_inner customSx" >
+                        <a  href="{{ url('/') }}">
+                            <img src="img/AgileSoleLogo.png" alt="" width="100px" class="pb-3">
+                        </a>                       
+                        <h3>Reset Password</h3>
+                        <form action="{{ route('forget.password.post') }}"  class="row login_form"  method="POST">
+                            @csrf
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="email_address" name="email"
+                                    placeholder="Email" autofocus required
+                                     />
+                                     @if ($errors->has('email'))
+                                     <span class="text-danger">{{ $errors->first('email') }}</span>
+                                 @endif
+                            </div>
+                            <div class="col-md-12 form-group pt-3">
+                                <button type="submit"  class="btn primary-btn">
+                                    Send Password Reset Link
+                                </button>
+                                <hr class="hr-text" data-content="OR">
+                                <div class="hover pt-2">
+                            <h4>Sign in</h4>
+                            <a class="primary-btn text-white" href="{{ url('login') }}">Sign in</a>
+                        </div>
+                        </form>
+                        @if (Session::has('message'))
+                        <div class="alert alert-success" role="alert">
+                            {{ Session::get('message') }}
+                        </div>
+                    @endif
+                    </div>
+            </div>
+        </div>
+    </section>
+
 
 
     <script src="{{ asset('js/vendor/jquery-2.2.4.min.js') }} "></script>
