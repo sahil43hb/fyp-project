@@ -15,7 +15,7 @@
     <!-- meta character set -->
     <meta charset="UTF-8" />
     <!-- Site Title -->
-    <title>Register in AgileSole</title>
+    <title>Login in AgileSole</title>
 
     @vite('resources/js/userForm.js')
 
@@ -87,6 +87,9 @@
         <div class="container">
             <div class="row justify-content-center"  >
                     <div class="login_form_inner customSx" >
+                        <a  href="{{ url('/') }}">
+                            <img src="img/AgileSoleLogo.png" alt="" width="100px" class="pb-3">
+                        </a>  
                         <h3>Log in</h3>
                         <form class="row login_form" method="post" id="loginForm">
                             @csrf
