@@ -7585,3 +7585,10 @@ label {
     transform: scale(1.05); /* Scale the image up slightly on hover */
     
 }
+
+/* to make shadow effect on image */
+
+.shadow-hover:hover {
+    box-shadow: 0 2px 16px rgba(68, 214, 44, 1) !important;
+}
+

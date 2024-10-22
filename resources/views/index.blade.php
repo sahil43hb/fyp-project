@@ -617,28 +617,29 @@ AgileSole
         `;
                         }
                         productHtml += `
-            <div class="col-lg-3 col-md-6  d-flex">
-                <div class="single-product flex-fill card product-image">
-                    <img class="img-fluid custom-height" src="uploads/${product.product_image}" alt="${product.product_image}" />
-                    <div class="product-details pl-2">
-                        <h6>${product.sku}</h6>
-                        ${priceContent}
-                        <div class="prd-bottom">
-                            <a href="javascript:void(0)" class="social-info add-to-cart ${notQuantity ? 'disabled-link' : ''}"
-                            ${notQuantity ? '' : `data-product-id=${product.id}`}>
-                                <span class="ti-bag"></span>
-                                <p class="hover-text" style="color:${notQuantity ? 'red' : 'black'};">
-                                    ${notQuantity ? 'no in stock' : 'add to bag'}
-                                </p>
-                            </a>
-                            <a href="product-detail/${product.id}" class="social-info">
-                                <span class="lnr lnr-move"></span>
-                                <p class="hover-text">view more</p>
-                            </a>
+                <div class="col-lg-3 col-md-6 d-flex">
+                    <div class="single-product px-3 flex-fill card product-image shadow-sm shadow-hover">
+                        <img class="img-fluid custom-height" src="uploads/${product.product_image}" alt="${product.product_image}" />
+                        <div class="product-details pl-2">
+                            <h6>${product.sku}</h6>
+                            ${priceContent}
+                            <div class="prd-bottom">
+                                <a href="javascript:void(0)" class="social-info add-to-cart ${notQuantity ? 'disabled-link' : ''}"
+                                    ${notQuantity ? '' : `data-product-id=${product.id}`}>
+                                    <span class="ti-bag"></span>
+                                    <p class="hover-text" style="color:${notQuantity ? 'red' : 'black'};">
+                                        ${notQuantity ? 'no in stock' : 'add to bag'}
+                                    </p>
+                                </a>
+                                <a href="product-detail/${product.id}" class="social-info">
+                                    <span class="lnr lnr-move"></span>
+                                    <p class="hover-text">view more</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
             `;
                     });
 
