@@ -40,14 +40,14 @@ AgileSole- Products
                                 <div class="mb-3 col-sm-4">
                                     <label for="inputText" class="col-sm-2 col-form-label theme-color">Price</label>
                                     <div class="col-sm-12">
-                                        <input type="number" class="form-control" name="price"
+                                        <input type="number" min="0" class="form-control" name="price"
                                             placeholder="Enter price"required>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-4">
                                     <label for="inputText" class="col-sm-2 col-form-label theme-color">Size</label>
                                     <div class="col-sm-12">
-                                        <input type="number" class="form-control" name="size_no"
+                                        <input type="number" min="0" class="form-control" name="size_no"
                                             placeholder="Enter size"required>
                                     </div>
                                 </div>
@@ -115,7 +115,7 @@ AgileSole- Products
                                 <div class="mb-3 col-sm-4">
                                     <label for="inputText" class="col-sm-2 col-form-label theme-color">Quantity</label>
                                     <div class="col-sm-12">
-                                        <input type="number" class="form-control" name="quantity" placeholder="Enter quantity"
+                                        <input type="number" min="0" class="form-control" name="quantity" placeholder="Enter quantity"
                                             required>
                                     </div>
                                 </div>
@@ -177,14 +177,14 @@ AgileSole- Products
                                 <div class="mb-3 col-sm-4">
                                     <label for="inputText" class="col-sm-2 col-form-label theme-color">Price</label>
                                     <div class="col-sm-12">
-                                        <input type="number" class="form-control" name="price" id="price"
+                                        <input type="number" min="0" class="form-control" name="price" id="price"
                                             placeholder="Enter price"required>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-4">
                                     <label for="inputText" class="col-sm-2 col-form-label theme-color">Size</label>
                                     <div class="col-sm-12">
-                                        <input type="number" class="form-control" name="size_no" id="size_no"
+                                        <input type="number" min="0" class="form-control" name="size_no" id="size_no"
                                             placeholder="Enter size"required>
                                     </div>
                                 </div>
@@ -253,7 +253,7 @@ AgileSole- Products
                                 <div class="mb-3 col-sm-4">
                                     <label for="inputText" class="col-sm-2 col-form-label theme-color">Quantity</label>
                                     <div class="col-sm-12">
-                                        <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Enter quantity"
+                                        <input type="number" class="form-control" min="0" id="quantity" name="quantity" placeholder="Enter quantity"
                                             required>
                                     </div>
                                 </div>
@@ -285,7 +285,7 @@ AgileSole- Products
                                 <div class="mb-3 col-sm-4" id="discount_container">
                                     <label for="inputText" class="col-sm-4 col-form-label theme-color">Discount in %</label>
                                     <div class="col-sm-12">
-                                        <input type="number" class="form-control" id="discount" name="discount"
+                                        <input type="number" min="0" class="form-control" id="discount" name="discount"
                                             placeholder="Enter discount in percentage">
                                     </div>
                                 </div>
