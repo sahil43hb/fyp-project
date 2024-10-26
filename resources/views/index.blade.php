@@ -11,7 +11,7 @@ AgileSole
         <div class="container">
             <div class="row fullscreen align-items-center">
                 <div class="col-lg-12">
-                    <div class="active-banner-slider owl-carousel">
+                    <div class="{{ productData()->count() !== 1 ? 'active-banner-slider' : '' }} owl-carousel">
                         <!-- single-slide -->   
                         @foreach (productData() as $product)
                         <div class="row single-slide align-items-center d-flex">
