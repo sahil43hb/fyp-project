@@ -30,10 +30,10 @@ AgileSole
                         <!-- single product -->
                         @foreach ($subCategoriesWithProducts->products as $product)
                             <div class="col-lg-3 col-md-6">
-                                <div class="single-product">
-                                    <img class="img-fluid" src="{{ asset('uploads/' . $product->product_image) }}"
+                                <div class="single-product shadow-sm product-image flex-fill card border shadow-hover">
+                                    <img class="img-fluid custom-height" src="{{ asset('uploads/' . $product->product_image) }}"
                                         alt="product_image" />
-                                    <div class="product-details">
+                                    <div class="product-details px-3">
                                         <h6>{{ $product->sku }}</h6>
                                         @if ($product->sale === '0')
                                             <div class="price">

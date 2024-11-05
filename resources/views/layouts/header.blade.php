@@ -5,7 +5,7 @@
                     <a class="navbar-brand logo_h" href="{{ url('/') }}">
                         <img width="70px" height="50px"
                             style="border-radius:12px;" src="{{ asset('img/AgileSoleLogo.png') }}" alt="" />
-                        </a>
+                    </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">

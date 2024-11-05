@@ -157,7 +157,7 @@ AgileSole
 
                         @foreach ($category->products as $product)
                             <div class="col-lg-3 col-md-6 d-flex">
-                                <div class="single-product card flex-fill product-image">
+                                <div class="single-product card flex-fill product-image shadow-sm shadow-hover">
                                     <img class="img-fluid custom-height" src="{{ asset('uploads/' . $product->product_image) }}"
                                         alt="product_image" />
                                     <div class="product-details pl-2">
