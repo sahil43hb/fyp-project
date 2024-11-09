@@ -79,7 +79,7 @@ class CategoryController extends Controller
         $category = Category::findOrFail($id);
 
         // Update the category attributes
-        $category->update($request->only('title', 'active_status', 'category_id'));
+        $category->update($request->only('title', 'active_status'));
         // Return a response indicating success
         return response()->json(['status' => true, 'message' => 'Category updated successfully'], 200);
     }

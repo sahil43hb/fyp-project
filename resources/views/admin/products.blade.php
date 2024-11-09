@@ -41,14 +41,14 @@ AgileSole- Products
                                     <label for="inputText" class="col-sm-2 col-form-label theme-color">Price</label>
                                     <div class="col-sm-12">
                                         <input type="number" min="0" class="form-control" name="price"
-                                            placeholder="Enter price"required>
+                                            placeholder="Enter price" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-4">
                                     <label for="inputText" class="col-sm-2 col-form-label theme-color">Size</label>
                                     <div class="col-sm-12">
                                         <input type="number" min="0" class="form-control" name="size_no"
-                                            placeholder="Enter size"required>
+                                            placeholder="Enter size" required>
                                     </div>
                                 </div>
                             </div>

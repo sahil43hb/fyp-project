@@ -28,7 +28,7 @@ use Illuminate\Support\Facades\Route;
 // Route::group(['middleware' => 'guest'], function () {
 // Place your authenticated routes here
 Route::get('/admin-panel/login', [AuthenticationController::class, 'index']);
-Route::post('/admin-panel/login', [AuthenticationController::class, 'Authenticate']);
+Route::post('/admin-panel/login', [AuthenticationController::class, 'Authenticate'])->name('admin-login');
 // Add more authenticated routes as needed
 // });
 

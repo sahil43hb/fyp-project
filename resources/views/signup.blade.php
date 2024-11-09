@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="{{ asset('css/ion.rangeSlider.skinFlat.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -107,6 +109,7 @@
                             <img src="img/AgileSoleLogo.png" alt="" width="100px" class="pb-3">
                         </a>  
                         <h3>Register Here</h3>
+                        <div id="errors-list"></div>
                         <form class="row login_form" method="post" id="registerationForm">
                             @csrf
                             <div class="col-md-12 form-group">
@@ -129,14 +132,14 @@
                                 @if ($errors->has('email'))
                                     <span class="text-danger">{{ $errors->first('email') }}</span>
                                 @endif
-                            </div>
-                            @if ($errors->has('password'))
-                                <span class="text-danger">{{ $errors->first('password') }}</span>
-                            @endif
+                            </div>                           
                             <div class="col-md-12 form-group">
                                 <input type="password" class="form-control" id="password" name="password"
                                     placeholder="Enter Password" onfocus="this.placeholder = ''"
                                     onblur="this.placeholder = 'Enter Password'" required>
+                                    @if ($errors->has('password'))
+                                    <span class="text-danger">{{ $errors->first('password') }}</span>
+                                @endif
                             </div>
 
                             <div class="col-md-12 form-group pt-5">
@@ -151,7 +154,6 @@
                         </div>
                     </div>
             </div>
-            <div id="errors-list"></div>
         </div>
     </section>
     <!--================End Login Box Area =================-->
@@ -163,6 +165,8 @@
     </script>
     <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
     <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Monthly Report</title>
+    <title>Monthly Report - AgileSole</title>
     <style>
         /* Define your styles for the PDF here */
         body {

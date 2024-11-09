@@ -18,6 +18,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/') }}">Home</a>
                             </li>
+                            @if (brandsData()->isNotEmpty())
                             <li class="nav-item submenu dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
                                     aria-haspopup="true" aria-expanded="false">Collection</a>
@@ -29,6 +30,7 @@
 
                                 </ul>
                             </li>
+                            @endif
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('sale') }}">Sale</a>
                             </li>

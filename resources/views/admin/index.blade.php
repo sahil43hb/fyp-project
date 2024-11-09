@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('title')
-AgileSole  - Admin
+AgileSole - Admin
 @endsection
 
 @section('css')
@@ -113,9 +113,7 @@ AgileSole  - Admin
                                 <script>
                                     var monthlyTotals = {!! json_encode($monthlyTotals) !!};
                                     var monthLabels = {!! json_encode($monthLabels) !!};
-
                                     var monthlyUserCounts = {!! json_encode($monthlyUserCounts) !!};
-
 
                                     document.addEventListener("DOMContentLoaded", () => {
                                         new ApexCharts(document.querySelector("#reportsChart"), {
@@ -156,7 +154,7 @@ AgileSole  - Admin
                                                 width: 2
                                             },
                                             xaxis: {
-                                                type: 'datetime',
+                                                type: 'date',
                                                 categories: monthLabels
                                             },
                                             tooltip: {
