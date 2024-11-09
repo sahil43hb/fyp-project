@@ -76,7 +76,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($order->orderItems as $item)
+            @foreach ($order->orderItems as $item)  
                 <tr>
                     <td>{{ $item->product->sku }}</td>
                     <td>{{ $item->quantity }}</td>

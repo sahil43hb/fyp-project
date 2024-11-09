@@ -78,11 +78,11 @@ class BrandController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // Find the category by its ID
+        // Find the brand by its ID
         $brand = Brand::findOrFail($id);
 
-        // Update the category attributes
-        $brand->update($request->only('title', 'active_status', 'category_id'));
+        // Update the brand attributes
+        $brand->update($request->only('title', 'active_status'));
         // Return a response indicating success
         return response()->json(['status' => true, 'message' => 'Brand updated successfully'], 200);
     }

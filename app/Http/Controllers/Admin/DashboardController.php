@@ -27,7 +27,7 @@ class DashboardController extends Controller
             $monthlyUserCounts[] = $userCount;
             $monthlyTotals[] = $totalAmount;
             $monthLabels[] = $currentMonth->format('M Y');
-            $currentMonth->subMonth();
+            $currentMonth->subMonth();   // subtract one month
         }
         $monthlyTotals = array_reverse($monthlyTotals);
         $monthLabels = array_reverse($monthLabels);
@@ -54,6 +54,6 @@ class DashboardController extends Controller
         ];
         // Generate PDF using the invoice data
         $pdf = PDF::loadView('pdf.report', $invoiceData);
-        return $pdf->stream('report.pdf');
+        return $pdf->stream('AgileSole.pdf');
     }
 }

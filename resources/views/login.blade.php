@@ -96,12 +96,12 @@
                             <div class="col-md-12 form-group">
                                 <input type="text" class="form-control" id="email" name="email"
                                     placeholder="Email" onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Email'" />
+                                    onblur="this.placeholder = 'Email'" required />
                             </div>
                             <div class="d-flex col-md-12 form-group align-items-center">
                                 <input type="password" class="form-control" id="password" name="password"
                                     placeholder="Password" onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Password'" />
+                                    onblur="this.placeholder = 'Password'" required/>
                             </div>
                             <div class="col-md-12 form-group">
                                 <button type="submit" value="submit" class="primary-btn">

@@ -71,7 +71,7 @@ $(document).ready(function () {
 
     //////////////////---------------- Category Section -----------------------/////////////////////////////
 
-    var table = $("#example").DataTable({
+    var table = $("#category").DataTable({
         language: {
             lengthMenu: "_MENU_", // Customize the text as per your preference
             info: "Showing _START_ to _END_ of _TOTAL_ entries", // Optionally, customize other text
@@ -98,22 +98,21 @@ $(document).ready(function () {
             { data: "action", name: "action" },
         ],
     });
-
+//Show Edit Category Model
     var categoryData;
-    $("#example").on("click", ".edit-btn", function (event) {
+    $("#category").on("click", ".edit-btn", function (event) {
         categoryData = $(this).data("category");
         $("#categoryEdit").modal("show");
         $("#categoryTitle").val(categoryData.title);
         $("#categoryActiveStatus").val(categoryData.active_status);
-
-        // alert("Edit button clicked for category ID: " + categoryId);
     });
 
-    $("#example").on("click", ".delete-btn", function (event) {
+//Show Delete Category Model
+    $("#category").on("click", ".delete-btn", function (event) {
         categoryData = $(this).data("category");
         $("#delateModal").modal("show");
     });
-
+//Add Category
     $("#addCategory").submit(function (event) {
         event.preventDefault(); // Prevent the form from submitting normally
         var formData = $(this).serialize();
@@ -139,7 +138,7 @@ $(document).ready(function () {
             },
         });
     });
-
+//Edit Category
     $("#editCategory").submit(function (event) {
         event.preventDefault(); // Prevent the form from submitting normally
         var formData = $(this).serialize();
@@ -167,7 +166,7 @@ $(document).ready(function () {
             },
         });
     });
-
+    //Delete Category
     $("#deleteCategory").submit(function (event) {
         event.preventDefault();
         let categoryId = categoryData.id;
@@ -223,7 +222,7 @@ $(document).ready(function () {
             { data: "action", name: "action" },
         ],
     });
-
+// Open Sub Category Model
     var subCategoryData;
     $("#sub_category_table").on("click", ".edit-btn", function (event) {
         subCategoryData = $(this).data("sub_category");
@@ -234,12 +233,12 @@ $(document).ready(function () {
         $("#categoryStatus").val(subCategoryData.category_id);
         // alert("Edit button clicked for category ID: " + categoryId);
     });
-
+// Open Delete Sub Category Model
     $("#sub_category_table").on("click", ".delete-btn", function (event) {
         subCategoryData = $(this).data("sub_category");
         $("#delateModal").modal("show");
     });
-
+// Add Sub Category 
     $("#addSubCategory").submit(function (event) {
         event.preventDefault(); // Prevent the form from submitting normally
         var formData = $(this).serialize();
@@ -267,7 +266,7 @@ $(document).ready(function () {
             },
         });
     });
-
+// Edit Sub Category 
     $("#editSubCategory").submit(function (event) {
         event.preventDefault(); // Prevent the form from submitting normally
         var formData = $(this).serialize();
@@ -295,7 +294,7 @@ $(document).ready(function () {
             },
         });
     });
-
+// Delete Sub Category 
     $("#deleteSubCategory").submit(function (event) {
         event.preventDefault();
         let categoryId = subCategoryData.id;
@@ -349,26 +348,23 @@ $(document).ready(function () {
             { data: "action", name: "action" },
         ],
     });
-
+//Open Edit Model For Brand
     var brandData;
     $("#brand_table").on("click", ".edit-btn", function (event) {
         brandData = $(this).data("brand");
         $("#categoryEdit").modal("show");
         $("#brandTitle").val(brandData.title);
         $("#brandStatus").val(brandData.active_status);
-
-        // alert("Edit button clicked for category ID: " + categoryId);
     });
-
+//Open Delete Model For Brand
     $("#brand_table").on("click", ".delete-btn", function (event) {
         brandData = $(this).data("brand");
         $("#delateModal").modal("show");
     });
-
+//Add Brand
     $("#addBrand").submit(function (event) {
         event.preventDefault(); // Prevent the form from submitting normally
         var formData = $(this).serialize();
-        console.log(formData);
         $.ajax({
             type: "POST", // Use POST method
             url: "/admin-panel/brands", // Specify the URL of your controller
@@ -391,7 +387,7 @@ $(document).ready(function () {
             },
         });
     });
-
+// Edit Brand
     $("#editBrand").submit(function (event) {
         event.preventDefault(); // Prevent the form from submitting normally
         var formData = $(this).serialize();
@@ -419,7 +415,7 @@ $(document).ready(function () {
             },
         });
     });
-
+// Delete Brand
     $("#deleteBrand").submit(function (event) {
         event.preventDefault();
         let categoryId = brandData.id;
@@ -445,7 +441,7 @@ $(document).ready(function () {
         });
     });
 
-    //////////////---------- Usrs Table ------------------/////////////////////////////
+    //////////////---------- Users Table ------------------/////////////////////////////
 
     $("#user_table").DataTable({
         language: {
@@ -453,6 +449,8 @@ $(document).ready(function () {
             info: "Showing _START_ to _END_ of _TOTAL_ entries", // Optionally, customize other text
         },
     });
+    
+    //////////////---------- Admin Orders Table ------------------/////////////////////////////
 
     $("#order_table").DataTable({
         language: {
@@ -461,7 +459,7 @@ $(document).ready(function () {
         },
     });
 
-    ////////////////////////////////  Products Sectionss //////////////////////////////////////////
+    ////////////////////////////////  Products Sections //////////////////////////////////////////
 
     var productTable = $("#product_table").DataTable({
         language: {
@@ -473,7 +471,7 @@ $(document).ready(function () {
             type: "GET",
         },
         processing: true,
-        serverSide: true,
+        serverSide: true, //This means that pagination, filtering, and sorting are all handled by the server rather than in the client-side JavaScript.
         columns: [
             { data: "DT_RowIndex", name: "DT_RowIndex" },
             { data: "sku", name: "sku" },
@@ -487,7 +485,6 @@ $(document).ready(function () {
         ],
     });
 
-    // ;
     $("#category_id").on("change", function () {
         var category_id = $(this).val();
         console.warn(category_id);
@@ -509,6 +506,7 @@ $(document).ready(function () {
         });
     });
 
+   
     $("#sale").on("change", function () {
         var sale_value = $(this).val();
         if (sale_value === "1") {
@@ -517,12 +515,14 @@ $(document).ready(function () {
             $("#discount_container").css("display", "none");
         }
     });
-
+ // Open Edit Product Model 
     var productData;
     $("#product_table").on("click", ".edit-btn", function (event) {
         productData = $(this).data("product");
         console.log(productData);
         $("#fullscreenModalEditModal").modal("show");
+    
+        // Populate the form fields
         $("#sku").val(productData.sku);
         $("#price").val(productData.price);
         $("#size_no").val(productData.size_no);
@@ -533,29 +533,64 @@ $(document).ready(function () {
         $("#quantity").val(productData.quantity);
         $("#description").val(productData.description);
         $("#sale").val(productData.sale);
+        
         if (productData.sale === "1") {
             $("#discount_container").css("display", "block");
             $("#discount").val(productData.discount);
         } else {
             $("#discount_container").css("display", "none");
         }
-        $("#edit_sub_categories_id").append(
-            '<option value="' +
-                productData.sub_category.id +
-                '">' +
-                productData.sub_category.title +
-                "</option>"
-        );
-        $("#edit_sub_categories_id").val(productData.sub_categories_id);
+        // $("#edit_sub_categories_id").append(
+        //     '<option value="' +
+        //         productData.sub_category.id +
+        //         '">' +
+        //         productData.sub_category.title +
+        //         "</option>"
+        // );
+        // $("#edit_sub_categories_id").val(productData.sub_categories_id);
+        
+        // Load subcategories based on the selected category
+        loadSubCategories(productData.category_id, productData.sub_categories_id);
+    
         const imageUrl = base_url + "uploads/" + productData.product_image;
         $("#image_prev").attr("src", imageUrl);
     });
 
+    $("#edit_category_id").on("change", function () {
+        var category_id = $(this).val();
+        loadSubCategories(category_id);
+    });
+    
+    // Function to load subcategories
+    function loadSubCategories(categoryId, selectedSubCategoryId = null) {
+        $.ajax({
+            type: "GET",
+            url: `/admin-panel/sub_categories/${categoryId}`,
+            success: function (data) {
+                $("#edit_sub_categories_id").empty();
+                $.each(data, function (key, value) {
+                    $("#edit_sub_categories_id").append(
+                        '<option value="' +
+                            value.id +
+                            '">' +
+                            value.title +
+                            "</option>"
+                    );
+                });
+                // If a selectedSubCategoryId is provided, set it as the selected option
+                if (selectedSubCategoryId) {
+                    $("#edit_sub_categories_id").val(selectedSubCategoryId);
+                }
+            },
+        });
+    }
+
+ // Open Delete Product Model 
     $("#product_table").on("click", ".delete-btn", function (event) {
         productData = $(this).data("product");
         $("#delateModal").modal("show");
     });
-
+ // Add Product
     $("#addProduct").submit(function (event) {
         event.preventDefault(); // Prevent the form from submitting normally
         var formData = new FormData(this);
@@ -585,7 +620,7 @@ $(document).ready(function () {
             },
         });
     });
-
+ // Edit Product
     $("#editProduct").submit(function (event) {
         event.preventDefault(); // Prevent the form from submitting normally
         var formData = new FormData(this);
@@ -619,7 +654,7 @@ $(document).ready(function () {
             },
         });
     });
-
+ // Delete Product
     $("#deleteProduct").submit(function (event) {
         event.preventDefault();
         let product_id = productData.id;

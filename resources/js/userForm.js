@@ -131,7 +131,7 @@ $(document).ready(function () {
 
         $(this).addClass("active");
     });
-
+// Add User
     $("#registerationForm").submit(function (event) {
         event.preventDefault(); // Prevent the form from submitting normally
 
@@ -149,7 +149,7 @@ $(document).ready(function () {
             email === "" ||
             password === ""
         ) {
-            toastr.error("Fields cannot be empty.");
+            toastr.success("Fields cannot be empty.");
             return; // Exit the function if email or password is empty
         }
 
@@ -207,7 +207,7 @@ $(document).ready(function () {
                     toastr.success(response.success);
                     setTimeout(() => {
                         window.location = response.redirect;
-                    }, 2000);
+                    }, 1000);
                 } else {
                     toastr.error(response.error);
                 }

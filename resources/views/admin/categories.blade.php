@@ -122,7 +122,7 @@ AgileSole - Categories
         </div>
     </div>
 
-    <table id="example" class="display text-center">
+    <table id="category" class="display text-center">
         <thead>
             <tr>
                 <th class="text-center">Id</th>
