@@ -30,6 +30,13 @@ if (!function_exists('productData')) {
         return $results;
     }
 }
+if (!function_exists('headerProductData')) {
+    function headerProductData()
+    {
+        $results = Product::where('new_collection','1')->get();
+        return $results;
+    }
+}
 
 if (!function_exists('cartData')) {
     function cartData()

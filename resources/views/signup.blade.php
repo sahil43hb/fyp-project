@@ -101,6 +101,14 @@
             <div id="errors-list"></div>
         </div>
     </section> --}}
+
+     {{-- Loading Screen --}}
+     <div id="loading-overlay" style="display: none;">
+        <div id="loading-spinner">
+            <img src="img/AgileSoleLogo-bac.png" alt="Loading..." />
+        </div>
+    </div>
+
     <section class="login_box_area section_gap">
         <div class="container">
             <div class="row  justify-content-center">               
@@ -155,7 +163,11 @@
                     </div>
             </div>
         </div>
-    </section>
+    </section>   
+
+
+
+
     <!--================End Login Box Area =================-->
 
     <script src="{{ asset('js/vendor/jquery-2.2.4.min.js') }} "></script>

@@ -64,7 +64,7 @@ AgileSole
                                         <div class="product_count product_qty"
                                             data-product-quantity="{{ $cart->product->quantity }}">
                                             <input type="text" name="qty" maxlength="12"
-                                                value="{{ $cart->quantity }}" title="Quantity:" class="input-text">
+                                                value="{{ $cart->quantity }}" title="Quantity:" class="input-text" readonly>
                                             <button class="increase items-count" type="button"><i
                                                     class="lnr lnr-chevron-up"></i></button>
                                             <button class="reduced items-count" type="button"><i

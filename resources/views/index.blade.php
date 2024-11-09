@@ -11,10 +11,10 @@ AgileSole
         <div class="container">
             <div class="row fullscreen align-items-center">
                 <div class="col-lg-12">
-                    <div class="{{ productData()->count() !== 1 ? 'active-banner-slider' : '' }} owl-carousel">
+                    <div class="{{ headerProductData()->count() !== 1 ? 'active-banner-slider' : '' }} owl-carousel">
                         <!-- single-slide -->   
-                        @foreach (productData() as $product)
-                        <div class="row single-slide align-items-center d-flex">
+                        @foreach (headerProductData() as $product)
+                        <div class="row single-slide align-items-center d-flex"> 
                             <div class="col-lg-5 col-md-6">
                                 <div class="banner-content">
                                     <h1 >{{$product->sku}}</h1>
@@ -472,46 +472,45 @@ AgileSole
 
 
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="">
-                    <button type="button" class="close align-self-end m-2" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <div class="login_form_inner">
-                        <a  href="{{ url('/') }}">
-                            <img src="img/AgileSoleLogo.png" alt="" width="100px" class="pb-3">
-                        </a>  
-                        <h3>Log in</h3>
-                        <form class="row login_form" method="post" id="loginForm">
-                            @csrf
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="email" name="email"
-                                    placeholder="Email" onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Email'" />
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="password" name="password"
-                                    placeholder="Password" onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Password'" />
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <button type="submit" value="submit" class="primary-btn">
-                                    Log In
-                                </button>
-                                <a href="">Forgot Password?</a>
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+         <div class="">
+             <button type="button" class="close align-self-end m-2" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+             <div class="login_form_inner">
+                 <a  href="{{ url('/') }}">
+                     <img src="img/AgileSoleLogo.png" alt="" width="100px" class="pb-3">
+                 </a>  
+                 <h3>Log in</h3>
+                 <form class="row login_form" method="post" id="loginForm">
+                     @csrf
+                     <div class="col-md-12 form-group">
+                         <input type="text" class="form-control" id="email" name="email" placeholder="Email"
+                             onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" />
+                     </div>
+                     <div class="col-md-12 form-group">
+                         <input type="text" class="form-control" id="password" name="password"
+                             placeholder="Password" onfocus="this.placeholder = ''"
+                             onblur="this.placeholder = 'Password'" />
+                     </div>
+                     <div class="col-md-12 form-group">
+                         <button type="submit" value="submit" class="primary-btn">
+                             Log In
+                         </button>
+                         <a  href="{{ url('/forget-password') }}">Forgot Password?</a>
 
-                            </div>
-                        </form>
-                        <div class="d-flex row justify-content-center py-2"><span>Don't have a
-                                account? </span><a href="">
-                                &nbsp;&nbsp;SignUp</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                     </div>
+                 </form>
+                 <div class="d-flex row justify-content-center py-2"><span>Don't have a
+                         account? </span><a class="theme-color"  href="{{ url('register') }}">
+                         &nbsp;&nbsp;SignUp</a></div>
+             </div>
+         </div>
+     </div>
+   </div>
+ </div>
 
 
 

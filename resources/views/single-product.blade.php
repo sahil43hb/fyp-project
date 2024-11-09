@@ -13,8 +13,8 @@ AgileSole
     <section class="banner-area organic-breadcrumb">
         <div class="container">
             <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
-                <div class="col-5 ">
-                    <h1>Product Details</h1>
+                <div class="col-6">
+                    <h1>Product Details - {{ $product->sku }} </h1>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@ AgileSole
                         <div class="product_count">
                             <label for="qty">Quantity:</label>
                             <input type="text" name="qty" id="sst" maxlength="12" value="1"
-                                title="Quantity:" class="input-text qty">
+                                title="Quantity:" class="input-text qty" readonly>
                             <button
                                 onclick="var result = document.getElementById('sst'); var sst = result.value; var maxQuantity = {{ $product->quantity }}; if( !isNaN( sst ) && sst < maxQuantity) result.value++; return false;"
                                 class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>

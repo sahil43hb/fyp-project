@@ -131,57 +131,125 @@ $(document).ready(function () {
 
         $(this).addClass("active");
     });
-// Add User
-    $("#registerationForm").submit(function (event) {
-        event.preventDefault(); // Prevent the form from submitting normally
 
-        // Get form data
-        var formData = $(this).serialize();
 
-        var user_name = $("#username").val().trim();
-        var name = $("#name").val().trim();
-        var email = $("#email").val().trim();
-        var password = $("#password").val().trim();
-        // Check if email or password is empty
-        if (
-            user_name === "" ||
-            name === "" ||
-            email === "" ||
-            password === ""
-        ) {
-            toastr.success("Fields cannot be empty.");
-            return; // Exit the function if email or password is empty
-        }
-
-        // Process form data here (e.g., send it to a server using AJAX)
-        // For demonstration purposes, we'll just log the form data
-        // You can add AJAX code here to submit the form data to the server
-        $.ajax({
-            type: "POST", // Use POST method
-            url: "/submit", // Specify the URL of your controller
-            data: formData, // Pass the form data
-            headers: {
-                "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"), // Include CSRF token in headers
-            },
-            success: function (response) {
-                // Handle the successful response from the server
-                console.log("Success:", response);
-                if (response.status) {
-                    window.location = response.redirect;
-                } else {
-                    $.each(response.errors, function (key, val) {
-                        $("#errors-list").append(
-                            "<div class='alert alert-danger'>" + val + "</div>"
-                        );
-                    });
-                }
-            },
-            error: function (xhr, status, error) {
-                // Handle errors
-                console.log("Error:", error);
-            },
-        });
+    $(document).ready(function() {
+        $('#loading-overlay').hide();
     });
+// Add User
+$("#registerationForm").submit(function (event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    // Show the loader and hide the button text
+    $("#button-text").hide();
+    $('#loading-overlay').show();
+    $('body').css('cursor', 'not-allowed');
+
+    // Get form data
+    var formData = $(this).serialize();
+
+    var user_name = $("#username").val().trim();
+    var name = $("#name").val().trim();
+    var email = $("#email").val().trim();
+    var password = $("#password").val().trim();
+
+    // Check if email or password is empty
+    if (
+        user_name === "" ||
+        name === "" ||
+        email === "" ||
+        password === ""
+    ) {
+        toastr.success("Fields cannot be empty.");
+        // Hide the loader and show the button text again
+        $("#button-text").show();
+        return; // Exit the function if fields are empty
+    }
+
+    // Process form data here (e.g., send it to a server using AJAX)
+    $.ajax({
+        type: "POST", // Use POST method
+        url: "/submit", // Specify the URL of your controller
+        data: formData, // Pass the form data
+        headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"), // Include CSRF token in headers
+        },
+        success: function (response) {
+            // Hide the loader and show the button text again
+            $("#button-text").show();
+
+            // If the response indicates success, redirect
+            if (response.status) {
+                window.location = response.redirect;
+            } else {
+                // Display validation errors
+                $.each(response.errors, function (key, val) {
+                    $("#errors-list").append(
+                        "<div class='alert alert-danger'>" + val + "</div>"
+                    );
+                });
+            }
+        },
+        error: function (xhr, status, error) {
+            // Hide the loader and show the button text again
+            $("#button-text").show();
+            $('#loading-overlay').hide();
+            console.log("Error:", error);
+            toastr.error("An error occurred, please try again.");
+        },
+    });
+});
+
+    // $("#registerationForm").submit(function (event) {
+    //     event.preventDefault(); // Prevent the form from submitting normally
+
+    //     // Get form data
+    //     var formData = $(this).serialize();
+
+    //     var user_name = $("#username").val().trim();
+    //     var name = $("#name").val().trim();
+    //     var email = $("#email").val().trim();
+    //     var password = $("#password").val().trim();
+    //     // Check if email or password is empty
+    //     if (
+    //         user_name === "" ||
+    //         name === "" ||
+    //         email === "" ||
+    //         password === ""
+    //     ) {
+    //         toastr.success("Fields cannot be empty.");
+    //         return; // Exit the function if email or password is empty
+    //     }
+
+    //     // Process form data here (e.g., send it to a server using AJAX)
+    //     // For demonstration purposes, we'll just log the form data
+    //     // You can add AJAX code here to submit the form data to the server
+    //     $.ajax({
+    //         type: "POST", // Use POST method
+    //         url: "/submit", // Specify the URL of your controller
+    //         data: formData, // Pass the form data
+    //         headers: {
+    //             "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"), // Include CSRF token in headers
+    //         },
+    //         success: function (response) {
+    //             // Handle the successful response from the server
+    //             console.log("Success:", response);
+    //             if (response.status) {
+    //                 window.location = response.redirect;
+    //             } else {
+    //                 $.each(response.errors, function (key, val) {
+    //                     $("#errors-list").append(
+    //                         "<div class='alert alert-danger'>" + val + "</div>"
+    //                     );
+    //                 });
+    //             }
+    //         },
+    //         error: function (xhr, status, error) {
+    //             // Handle errors
+    //             console.log("Error:", error);
+    //         },
+    //     });
+    // });
 
     $("#loginForm").submit(function (event) {
         event.preventDefault(); // Prevent the form from submitting normally
@@ -260,7 +328,6 @@ $(document).ready(function () {
 
     $(".add-to-cart-btn").on("click", function () {
         var authUser = $(this).attr("auth");
-
         console.warn("authUser", authUser);
         if (!authUser) {
             $("#loginModal").modal("show");
