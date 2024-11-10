@@ -14,7 +14,7 @@ AgileSole
         <div class="container">
             <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
                 <div class="col-6">
-                    <h1>Product Details - {{ $product->sku }} </h1>
+                    <h1>Product Details - {{ $product->name }} </h1>
                 </div>
             </div>
         </div>

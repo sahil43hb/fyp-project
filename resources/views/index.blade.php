@@ -17,7 +17,7 @@ AgileSole
                         <div class="row single-slide align-items-center d-flex"> 
                             <div class="col-lg-5 col-md-6">
                                 <div class="banner-content">
-                                    <h1 >{{$product->sku}}</h1>
+                                    <h1 >{{$product->name}}</h1>
                                     <p>
                                        {{$product->description}}
                                     </p>
@@ -161,7 +161,7 @@ AgileSole
                                     <img class="img-fluid custom-height" src="{{ asset('uploads/' . $product->product_image) }}"
                                         alt="product_image" />
                                     <div class="product-details pl-2">
-                                        <h6>{{ $product->sku }}</h6>
+                                        <h6>{{ $product->name }}</h6>
 
                                         @if ($product->sale === '0')
                                             <div class="price">
@@ -620,7 +620,7 @@ AgileSole
                     <div class="single-product px-3 flex-fill card product-image shadow-sm shadow-hover">
                         <img class="img-fluid custom-height" src="uploads/${product.product_image}" alt="${product.product_image}" />
                         <div class="product-details pl-2">
-                            <h6>${product.sku}</h6>
+                            <h6>${product.name}</h6>
                             ${priceContent}
                             <div class="prd-bottom">
                                 <a href="javascript:void(0)" class="social-info add-to-cart ${notQuantity ? 'disabled-link' : ''}"

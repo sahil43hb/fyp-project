@@ -62,6 +62,7 @@ class ProductController extends Controller
         try {
             $product = new Product();
             $product->sku = $request['sku'];
+            $product->name = $request['name'];
             $product->price = $request['price'];
             $product->size_no = $request['size_no'];
             $product->new_collection = $request['new_collection'];
@@ -103,6 +104,7 @@ class ProductController extends Controller
 
         $results = Product::where('sku', 'like', '%' . $query . '%')
             ->orWhere('price', 'like', '%' . $query . '%')
+            ->orWhere('name', 'like', '%' . $query . '%')
             ->get();
         $user_status = Auth::check() ? Auth::user() : null;
         return response()->json(['products' => $results, 'user_status' => $user_status]);
@@ -151,6 +153,7 @@ class ProductController extends Controller
     {
         $product = Product::findOrFail($id);
         $product->sku = $request['sku'];
+        $product->name = $request['name'];
         $product->price = $request['price'];
         $product->size_no = $request['size_no'];
         $product->new_collection = $request['new_collection'];

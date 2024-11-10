@@ -31,6 +31,13 @@ AgileSole- Products
                         <div class="container">
                             <div class='d-flex row'>
                                 <div class="mb-3 col-sm-4">
+                                    <label for="inputText" class="col-sm-2 col-form-label theme-color">Name</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" name="name" placeholder="Enter name"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="mb-3 col-sm-4">
                                     <label for="inputText" class="col-sm-2 col-form-label theme-color">SKU</label>
                                     <div class="col-sm-12">
                                         <input type="text" class="form-control" name="sku" placeholder="Enter sku"
@@ -51,8 +58,8 @@ AgileSole- Products
                                             placeholder="Enter size" required>
                                     </div>
                                 </div>
-                            </div>
-                            <div class='d-flex row'>
+                            {{-- </div>
+                            <div class='d-flex row'> --}}
                                 <div class="mb-3  col-sm-4">
                                     <label class="col-sm-12 col-form-label theme-color">Categories</label>
                                     <div class="col-sm-12">
@@ -86,15 +93,15 @@ AgileSole- Products
                                         </select>
                                     </div>
                                 </div>
-                            </div>
+                            {{-- </div>
 
-                            <div class='d-flex row'>
+                            <div class='d-flex row'> --}}
                                 <div class="mb-3  col-sm-4">
-                                    <label class="col-sm-12 col-form-label theme-color">New Collection</label>
+                                    <label class="col-sm-12 col-form-label theme-color">New Arrival</label>
                                     <div class="col-sm-12">
                                         <select class="form-select" name="new_collection"
                                             aria-label="Default select example" required>
-                                            <option value="" selected>Select collection status</option>
+                                            <option value="" selected>Select arrival status</option>
                                             <option value="1">Yes</option>
                                             <option value="0">No</option>
                                         </select>
@@ -119,9 +126,9 @@ AgileSole- Products
                                             required>
                                     </div>
                                 </div>
-                            </div>
+                            {{-- </div>
 
-                            <div class='d-flex row'>
+                            <div class='d-flex row'> --}}
                                 <div class="col-sm-4 mb-3">
                                     <label for="inputPassword" class="col-sm-5 col-form-label theme-color">Description</label>
                                     <div class="col-sm-12">
@@ -168,6 +175,13 @@ AgileSole- Products
                         <div class="container">
                             <div class='d-flex row'>
                                 <div class="mb-3 col-sm-4">
+                                    <label for="inputText" class="col-sm-2 col-form-label theme-color">Name</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter name"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="mb-3 col-sm-4">
                                     <label for="inputText" class="col-sm-2 col-form-label theme-color">SKU</label>
                                     <div class="col-sm-12">
                                         <input type="text" class="form-control" id="sku" name="sku"
@@ -188,8 +202,8 @@ AgileSole- Products
                                             placeholder="Enter size"required>
                                     </div>
                                 </div>
-                            </div>
-                            <div class='d-flex row'>
+                            {{-- </div>
+                            <div class='d-flex row'> --}}
                                 <div class="mb-3  col-sm-4">
                                     <label class="col-sm-12 col-form-label theme-color">Categories</label>
                                     <div class="col-sm-12">
@@ -223,15 +237,15 @@ AgileSole- Products
                                         </select>
                                     </div>
                                 </div>
-                            </div>
+                            {{-- </div>
 
-                            <div class='d-flex row'>
+                            <div class='d-flex row'> --}}
                                 <div class="mb-3  col-sm-4">
-                                    <label class="col-sm-12 col-form-label theme-color">New Collection</label>
+                                    <label class="col-sm-12 col-form-label theme-color">New Arrival</label>
                                     <div class="col-sm-12">
                                         <select class="form-select" id="new_collection" name="new_collection"
                                             aria-label="Default select example" required>
-                                            <option value="" selected>Select collection status</option>
+                                            <option value="" selected>Select arrival status</option>
                                             <option value="1">Yes</option>
                                             <option value="0">No</option>
                                         </select>
@@ -268,9 +282,9 @@ AgileSole- Products
                                         </select>
                                     </div>
                                 </div> --}}
-                            </div>
+                            {{-- </div>
 
-                            <div class='d-flex row'>
+                            <div class='d-flex row'> --}}
                                 <div class="mb-3 col-sm-4">
                                     <label class="col-sm-12 col-form-label theme-color">Sale</label>
                                     <div class="col-sm-12">
@@ -302,8 +316,8 @@ AgileSole- Products
                                     </div>
                                 </div>
                                
-                            </div>
-                            <div class='d-flex row'>
+                            {{-- </div>
+                            <div class='d-flex row'> --}}
                                 <div class="col-sm-4 mb-3"> 
                                     <label for="inputPassword" class="col-sm-5 col-form-label theme-color">Description</label>
                                     <div class="col-sm-12">

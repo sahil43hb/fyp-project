@@ -7,6 +7,14 @@ AgileSole
 @endsection
 
 @section('content')
+
+   {{-- Loading Screen --}}
+   <div id="loading-overlay" style="display: none;">
+      <div id="loading-spinner">
+        <img src="img/AgileSoleLogo-bac.png" alt="Loading..." />
+      </div>
+    </div>
+
     <!-- Start Banner Area -->
     <section class="banner-area organic-breadcrumb">
         <div class="container">
