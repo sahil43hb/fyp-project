@@ -29,11 +29,11 @@ AgileSole
                         <!-- single product -->
                         @foreach ($products as $product)
                             <div class="col-lg-3 col-md-6">
-                                <div class="single-product">
+                                <div class="single-product card flex-fill product-image shadow-sm shadow-hover">
                                     <img class="img-fluid" src="{{ asset('uploads/' . $product->product_image) }}"
                                         alt="product_image" />
-                                    <div class="product-details">
-                                        <h6>{{ $product->sku }}</h6>
+                                    <div class="product-details pl-2">
+                                        <h6>{{ $product->name }}</h6>
                                         <div class="price">
                                             <h6>Size: {{ $product->size_no }}</h6>
                                         </div>

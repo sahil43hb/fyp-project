@@ -1,4 +1,9 @@
 $(document).ready(function () {
+
+
+    $(document).ready(function () {
+        $('#loading-overlay').hide();
+    });
     // Orders histiry ==============================///////
 
     $("#users_order").DataTable({
@@ -16,9 +21,9 @@ $(document).ready(function () {
             $.ajax({
                 url: "/search/" + query,
                 type: "GET",
-                success: function (response) {                  
+                success: function (response) {
                     let productHtml = "";
-                    
+
                     response.products.forEach((product) => {
                         let priceContent;
                         if (product.sale === "0") {
@@ -34,19 +39,18 @@ $(document).ready(function () {
                   <h6>Size: ${product.size_no}</h6>
                   </div>
             <div class="price">
-                <h6>Rs. ${
-                    parseInt(product.price) * (parseInt(product.discount) / 100)
-                }</h6>
+                <h6>Rs. ${parseInt(product.price) * (parseInt(product.discount) / 100)
+                                }</h6>
                 <h6 class="l-through"> Rs. ${product.price}</h6>
             </div>
         `;
                         }
                         productHtml += `
                 <div class="col-lg-3 col-md-6">
-                    <div class="single-product">
+                    <div class="single-product card flex-fill product-image shadow-sm shadow-hover">
                         <img class="img-fluid" src="uploads/${product.product_image}" alt="${product.product_image}" />
-                        <div class="product-details">
-                            <h6>${product.sku}</h6>
+                        <div class="product-details pl-2">
+                            <h6>${product.name}</h6>
 
                           
                            ${priceContent}
@@ -98,7 +102,7 @@ $(document).ready(function () {
                                             );
                                             setTimeout(() => {
                                                 window.location = "/cart";
-                                            }, 2000);
+                                            }, 1000);
                                         } else {
                                             toastr.error(response.message);
                                         }
@@ -133,72 +137,70 @@ $(document).ready(function () {
     });
 
 
-    $(document).ready(function() {
-        $('#loading-overlay').hide();
-    });
-// Add User
-$("#registerationForm").submit(function (event) {
-    event.preventDefault(); // Prevent the form from submitting normally
+    // Add User
+    $("#registerationForm").submit(function (event) {
+        event.preventDefault(); // Prevent the form from submitting normally
 
-    // Show the loader and hide the button text
-    $("#button-text").hide();
-    $('#loading-overlay').show();
-    $('body').css('cursor', 'not-allowed');
+        // Show the loader and hide the button text
+        $("#button-text").hide();
+        $('#loading-overlay').show();
+        $('body').css('cursor', 'not-allowed');
 
-    // Get form data
-    var formData = $(this).serialize();
+        // Get form data
+        var formData = $(this).serialize();
 
-    var user_name = $("#username").val().trim();
-    var name = $("#name").val().trim();
-    var email = $("#email").val().trim();
-    var password = $("#password").val().trim();
+        var user_name = $("#username").val().trim();
+        var name = $("#name").val().trim();
+        var email = $("#email").val().trim();
+        var password = $("#password").val().trim();
 
-    // Check if email or password is empty
-    if (
-        user_name === "" ||
-        name === "" ||
-        email === "" ||
-        password === ""
-    ) {
-        toastr.success("Fields cannot be empty.");
-        // Hide the loader and show the button text again
-        $("#button-text").show();
-        return; // Exit the function if fields are empty
-    }
-
-    // Process form data here (e.g., send it to a server using AJAX)
-    $.ajax({
-        type: "POST", // Use POST method
-        url: "/submit", // Specify the URL of your controller
-        data: formData, // Pass the form data
-        headers: {
-            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"), // Include CSRF token in headers
-        },
-        success: function (response) {
+        // Check if email or password is empty
+        if (
+            user_name === "" ||
+            name === "" ||
+            email === "" ||
+            password === ""
+        ) {
+            toastr.success("Fields cannot be empty.");
             // Hide the loader and show the button text again
             $("#button-text").show();
+            return; // Exit the function if fields are empty
+        }
 
-            // If the response indicates success, redirect
-            if (response.status) {
-                window.location = response.redirect;
-            } else {
-                // Display validation errors
-                $.each(response.errors, function (key, val) {
-                    $("#errors-list").append(
-                        "<div class='alert alert-danger'>" + val + "</div>"
-                    );
-                });
-            }
-        },
-        error: function (xhr, status, error) {
-            // Hide the loader and show the button text again
-            $("#button-text").show();
-            $('#loading-overlay').hide();
-            console.log("Error:", error);
-            toastr.error("An error occurred, please try again.");
-        },
+        // Process form data here (e.g., send it to a server using AJAX)
+        $.ajax({
+            type: "POST", // Use POST method
+            url: "/submit", // Specify the URL of your controller
+            data: formData, // Pass the form data
+            headers: {
+                "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"), // Include CSRF token in headers
+            },
+            success: function (response) {
+                // Hide the loader and show the button text again
+                $("#button-text").show();
+
+                // If the response indicates success, redirect
+                if (response.status) {
+                    window.location = response.redirect;
+                } else {
+                    $('#loading-overlay').hide();
+                    // Display validation errors
+                    $.each(response.errors, function (key, val) {
+                        $("#errors-list").append(
+                            "<div class='alert alert-danger'>" + val + "</div>"
+                        );
+                    });
+                }
+            },
+            error: function (xhr, status, error) {
+                // Hide the loader and show the button text again
+                $("#button-text").show();
+                $('#loading-overlay').hide();
+                console.log("Error:", error);
+                toastr.error("An error occurred, please try again.");
+            },
+        });
     });
-});
 
     // $("#registerationForm").submit(function (event) {
     //     event.preventDefault(); // Prevent the form from submitting normally
@@ -356,7 +358,7 @@ $("#registerationForm").submit(function (event) {
                             $("#cartData").text(response.totalCarts);
                             setTimeout(() => {
                                 window.location = "/cart";
-                            }, 2000);
+                            }, 1000);
                         } else {
                             toastr.error(response.message);
                         }
@@ -466,6 +468,9 @@ $("#registerationForm").submit(function (event) {
 
     $("#checkoutForm").submit(function (event) {
         event.preventDefault();
+        // Show the loader and hide the button text
+        $('#loading-overlay').show();
+        $('body').css('cursor', 'not-allowed');
 
         if (selectedCarts.length > 0) {
             $.ajax({
@@ -484,10 +489,12 @@ $("#registerationForm").submit(function (event) {
                     if (response.redirect_url) {
                         window.location.href = response.redirect_url;
                     } else {
+                        $('#loading-overlay').hide();
                         alert("Failed to initiate checkout process");
                     }
                 },
                 error: function (xhr, status, error) {
+                    $('#loading-overlay').hide();
                     // Handle error response
                     console.error("Error adding product to cart:", error);
                 },

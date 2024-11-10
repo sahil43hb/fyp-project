@@ -35,7 +35,7 @@
                                     <img class="img-fluid custom-height" src="{{ asset('uploads/' . $product->product_image) }}"
                                         alt="product_image" />
                                     <div class="product-details px-3">
-                                        <h6>{{ $product->sku }}</h6>
+                                        <h6>{{ $product->name }}</h6>
                                         @if ($product->sale === '0')
                                             <div class="price">
                                                 <h6>Size: {{ $product->size_no }}</h6>

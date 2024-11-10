@@ -524,6 +524,7 @@ $(document).ready(function () {
     
         // Populate the form fields
         $("#sku").val(productData.sku);
+        $("#name").val(productData.name);
         $("#price").val(productData.price);
         $("#size_no").val(productData.size_no);
         $("#edit_category_id").val(productData.category_id);
