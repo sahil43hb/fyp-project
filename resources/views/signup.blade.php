@@ -105,7 +105,7 @@
      {{-- Loading Screen --}}
      <div id="loading-overlay" style="display: none;">
         <div id="loading-spinner">
-            <img src="img/AgileSoleLogo-bac.png" alt="Loading..." />
+            <img src="img/AgileSoleLogoslider.png" alt="Loading..." />
         </div>
     </div>
 

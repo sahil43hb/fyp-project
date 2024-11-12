@@ -7608,8 +7608,8 @@ label {
 }
 
 #loading-spinner img {
-    width: 110px;
-    height: 110px;
+    width: auto;
+    height: auto;
     animation: fadeInOut 2s infinite;
 }
 
