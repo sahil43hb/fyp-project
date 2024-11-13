@@ -72,7 +72,7 @@
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Copyright
                 <i>©</i> 2024
-                <a href="#">DAAZ.</a>
+                <a href="#">AgileSole.</a>
                 All rights reserved.
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>

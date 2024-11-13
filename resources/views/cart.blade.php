@@ -12,6 +12,7 @@ AgileSole
    <div id="loading-overlay" style="display: none;">
       <div id="loading-spinner">
         <img src="img/AgileSoleLogoslider.png" alt="Loading..." />
+        <h1>Loading ...</h1>
       </div>
     </div>
 

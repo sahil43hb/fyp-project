@@ -11,7 +11,8 @@ use App\Models\CustomerInfo;
 use App\Models\Order;
 use App\Models\OrderItem;
 use Illuminate\Support\Facades\Auth;
-// use PDF;
+use Illuminate\Support\Facades\Mail;
+
 class StripeController extends Controller
 {
   public function index(Request $request)
@@ -109,6 +110,9 @@ class StripeController extends Controller
       $order->user_id = Auth::user()->id;
       $order->save();
       $carts = session()->get('carts');
+      if ($carts === null || !isset($carts)) {
+        return redirect()->route('dashboard');
+      }
       foreach ($carts as $cart) {
         $orderItems = new OrderItem();
         $orderItems->order_id = $order->id;
@@ -118,6 +122,15 @@ class StripeController extends Controller
         $product = $cart->product;
         $product->quantity -= $cart->quantity;
         $product->save();
+
+        if ($product->quantity < 3) {
+          // Send an email to the user
+          Mail::send('email.lowStock', ['product' => $product,], function ($message) use ($request) {
+            $message->to('manansajjad7826@gmail.com');
+            $message->subject('Low Stock Alert');
+        });
+      }
+
         $cart->delete();
       }
       // $invoiceData = [
