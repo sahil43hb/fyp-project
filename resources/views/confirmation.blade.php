@@ -77,7 +77,7 @@ AgileSole
                             @foreach ($carts as $cart)
                                 <tr>
                                     <td>
-                                        <p>{{ $cart->product->sku }}</p>
+                                        <p>{{ $cart->product->name }}</p>
                                     </td>
                                     <td>
                                         <h5>x {{ $cart->quantity }}</h5>

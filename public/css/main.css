@@ -7624,8 +7624,14 @@ label {
 }
 
 #loading-spinner img {
-    width: 110px;
-    height: 110px;
+    width: auto;
+    height: auto;
+    animation: fadeInOut 2s infinite;
+}
+#loading-spinner h1 {    
+    color:#44D62C;
+    padding-top:16px; 
+    padding-left: 40px;
     animation: fadeInOut 2s infinite;
 }
 

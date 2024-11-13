@@ -34,7 +34,7 @@ AgileSole
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="s_product_text">
-                        <h3>{{ $product->sku }}</h3>
+                        <h3>{{ $product->name }}</h3>
                         <h5>size: {{ $product->size_no }}</h5>
                         <h2>Rs.
                             {{ intVal($product->price) - intVal($product->price) * (intVal($product->discount) / 100) }}
@@ -58,7 +58,7 @@ AgileSole
                                 title="Quantity:" class="input-text qty" readonly>
                             <button
                                 onclick="var result = document.getElementById('sst'); var sst = result.value; var maxQuantity = {{ $product->quantity }}; if( !isNaN( sst ) && sst < maxQuantity) result.value++; else toastr.error('Maximum quantity reached'); return false;"
-                                class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                                class="items-count" style="top: -4px;" type="button"><i class="lnr lnr-chevron-up"></i></button>
                             <button
                                 onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 1 ) result.value--;return false;"
                                 class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
