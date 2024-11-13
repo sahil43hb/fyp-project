@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    {{-- <main class="login-form">
+    <!-- <main class="login-form">
         <div class="cotainer">
             <div class="row justify-content-center">
                 <div class="col-md-8">
@@ -64,7 +64,7 @@
                 </div>
             </div>
         </div>
-    </main> --}}
+    </main> -->
 
     <section class="login_box_area section_gap">
         <div class="container">

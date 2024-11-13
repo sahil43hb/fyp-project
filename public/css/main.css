@@ -1544,7 +1544,7 @@ h6 {
 ============================================================================================ */
 .banner-area {
     /* background-color: rgba(30, 40, 50, 0.05); */
-    background: url(../img/banner/bb.png) no-repeat;
+    background: url(../img/banner/bg-banner.jpg) no-repeat;
     background-size: cover;
     height: 90vh;
     /* position: relative; */
@@ -7426,28 +7426,28 @@ label {
 
 .footer-social a {
     padding-right: 25px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    /* -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s; */
+    /* -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; */
     color: #fff;
     font-size: 25px;
 }
 .footer-social a:hover i {
-    color: #44D62C;
+    /* color: #44D62C; */
     opacity: 1;
-    background-color: #fff;
-    padding: 10px;
+    /* background-color: #fff; */
+    /* padding: 10px; */
     border-radius: 7px;
 
 }
 .footer-social i {
     color: #ffffff;
     opacity: 0.7;
-    -webkit-transition: all 0.3s ease 0s;
+    /* -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; */
 }
 
 @media (max-width: 991px) {

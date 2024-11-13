@@ -39,83 +39,11 @@ AgileSole
                         </div>
                         @endforeach                     
                      
-                        <!-- single-slide -->
-                        {{-- <div class="row single-slide align-items-center d-flex">
-                            <div class="col-lg-5 col-md-6">
-                                <div class="banner-content">
-                                    <h1>Sustainable Steps</h1>
-                                    <p style="color:black">
-                                        Walk with Purpose! Join Us in Our Mission for Sustainability with Eco-Friendly
-                                        Footwear
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-lg-7 justify-content-end d-flex" >
-                                <div class="banner-img banner-set">
-                                    <img class="img-fluid" src="{{ asset('img/banner/banner_image2.png') }}"
-                                        alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row single-slide align-items-center d-flex">
-                            <div class="col-lg-5 col-md-6">
-                                <div class="banner-content">
-                                    <h1>Timeless Elegance</h1>
-                                    <p style="color:black">
-                                        Elevate Your Look with Timeless Elegance! Discover the Perfect Pair to Complete Your
-                                        Style
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-lg-7 justify-content-end d-flex" >
-                                <div class="banner-img banner-set">
-                                    <img class="img-fluid" src="{{ asset('img/banner/banner_image3.png') }}"
-                                        alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row single-slide align-items-center d-flex">
-                            <div class="col-lg-5 col-md-6">
-                                <div class="banner-content">
-                                    <h1>Playful Prints, Happy Feet</h1>
-                                    <p style="color:black">
-                                        Let Their Imagination Run Wild! Find Joyful Prints and Colors in Our Kids' Shoe
-                                        Selection, Made for Adventure
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-lg-7 justify-content-end d-flex" >
-                                <div class="banner-img banner-set">
-                                    <img class="img-fluid" src="{{ asset('img/banner/banner_image4.png') }}"
-                                        alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row single-slide align-items-center d-flex">
-                            <div class="col-lg-5 col-md-6">
-                                <div class="banner-content">
-                                    <h1> Princess Feet</h1>
-                                    <p style="color:black">
-                                        Every Little Girl Deserves to Feel Like a Princess! Explore Our Magical Collection
-                                        of Kids' Shoes
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-lg-7 justify-content-end d-flex" >
-                                <div class="banner-img banner-set">
-                                    <img class="img-fluid" src="{{ asset('img/banner/banner_image5.png') }}"
-                                        alt="" />
-                                </div>
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-
 
     <section class="section_gap">
         <div class="single-product-slider">
