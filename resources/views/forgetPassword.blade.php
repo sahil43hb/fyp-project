@@ -81,7 +81,7 @@
                                     placeholder="Email" autofocus required
                                      />
                                      @if ($errors->has('email'))
-                                     <span class="text-danger">{{ $errors->first('email') }}</span>
+                                     <span class="text-danger pt-2">{{ $errors->first('email') }}</span>
                                  @endif
                             </div>
                             <div class="col-md-12 form-group pt-3">

@@ -494,13 +494,15 @@ $(document).ready(function () {
             success: function (data) {
                 $("#sub_categories_id").empty();
                 $.each(data, function (key, value) {
-                    $("#sub_categories_id").append(
-                        '<option value="' +
-                            value.id +
-                            '">' +
-                            value.title +
-                            "</option>"
-                    );
+                    if(value?.active_status === '1'){
+                        $("#sub_categories_id").append(
+                            '<option value="' +
+                                value.id +
+                                '">' +
+                                value.title +
+                                "</option>"
+                        );
+                    }                   
                 });
             },
         });

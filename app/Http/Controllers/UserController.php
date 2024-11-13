@@ -24,14 +24,23 @@ class UserController extends Controller
 
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            $login_activity = new LoginActivity();
-            $login_activity->user_id = Auth::user()->id;
-            $login_activity->save();
-            return  response()->json([
-                "status" => true,
-                "success" => "You have login Successfully.",
-                "redirect" => url("/")
-            ]);
+            $user = Auth::user();
+            if ($user->role == 'user') {
+                $login_activity = new LoginActivity();
+                $login_activity->user_id = Auth::user()->id;
+                $login_activity->save();
+                return  response()->json([
+                    "status" => true,
+                    "success" => "You have login Successfully.",
+                    "redirect" => url("/")
+                ]);
+            }else{
+                Auth::logout();
+                return  response()->json([
+                    "status" => false,
+                    "error" => "Access denied. Please enter user crecredentials."
+                ]);
+            }          
         } else {
             return  response()->json([
                 "status" => false,

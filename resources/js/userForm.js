@@ -408,6 +408,8 @@ $(document).ready(function () {
                     console.error("Error adding product to cart:", error);
                 },
             });
+        }else{
+            toastr.error('Maximum quantity reached');
         }
     });
 
@@ -423,7 +425,7 @@ $(document).ready(function () {
             selectedCarts.splice(index, 1);
         }
     }
-
+    //Click on checkbox
     $(".form-check  input[type='checkbox']").click(function () {
         var row = $(this).closest("tr");
         // Get the product ID from the data attribute of the closest <tr> element
@@ -468,11 +470,12 @@ $(document).ready(function () {
 
     $("#checkoutForm").submit(function (event) {
         event.preventDefault();
+
+        if (selectedCarts.length > 0) {
         // Show the loader and hide the button text
         $('#loading-overlay').show();
         $('body').css('cursor', 'not-allowed');
 
-        if (selectedCarts.length > 0) {
             $.ajax({
                 url: `/checkout`,
                 method: "POST",
@@ -500,7 +503,7 @@ $(document).ready(function () {
                 },
             });
         } else {
-            toastr.error("Plese select the item first!");
+            toastr.error("Plese select atleast one item!");
         }
     });
 });
