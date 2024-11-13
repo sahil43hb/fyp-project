@@ -7,7 +7,7 @@ AgileSole
 
 @section('content')
     <!-- start banner Area -->
-    <section class="banner-area">
+    <section class="banner-area organic-breadcrumb1">
         <div class="container">
             <div class="row fullscreen align-items-center">
                 <div class="col-lg-12">
@@ -124,7 +124,7 @@ AgileSole
                     <div class="col-lg-6 text-center">
                         <div class="section-title">
                             <h1>Latest Footwear</h1>
-                            <p>Matrix, From Sole to Soul, Be the King of Style!</p>
+                            <p>AgileSole, From Sole to Soul, Be the King of Style!</p>
                         </div>
                     </div>
                 </div>
@@ -148,7 +148,7 @@ AgileSole
                         <div class="col-lg-6 text-center">
                             <div class="section-title">
                                 <h1>{{ $category->title }} Footwear</h1>
-                                <p>Matrix, From Sole to Soul, Be the King of Style!</p>
+                                <p>AgileSole, From Sole to Soul, Be the King of Style!</p>
                             </div>
                         </div>
                     </div>
@@ -212,7 +212,7 @@ AgileSole
                     <div class="col-lg-6 text-center">
                         <div class="section-title">
                             <h1>Coming Products</h1>
-                            <p>Matrix, From Sole to Soul, Be the King of Style!</p>
+                            <p>AgileSole, From Sole to Soul, Be the King of Style!</p>
                         </div>
                     </div>
                 </div>
@@ -222,7 +222,7 @@ AgileSole
                         <div class="single-product">
                             <img class="img-fluid" src="{{ asset('img/product/p6.jpg') }}" alt="" />
                             <div class="product-details">
-                                <h6>Matrix New Hammer sole for Sports person</h6>
+                                <h6>AgileSole New Hammer sole for Sports person</h6>
                                 <div class="price">
                                     <h6>Rs. 2999.00</h6>
                                     <h6 class="l-through">Rs. 5000.00</h6>
@@ -253,7 +253,7 @@ AgileSole
                         <div class="single-product">
                             <img class="img-fluid" src="{{ asset('img/product/p8.jpg') }}" alt="" />
                             <div class="product-details">
-                                <h6>Matrix New Hammer sole for Sports person</h6>
+                                <h6>AgileSole New Hammer sole for Sports person</h6>
                                 <div class="price">
                                     <h6>Rs. 2999.00</h6>
                                     <h6 class="l-through">Rs. 5000.00</h6>
@@ -284,7 +284,7 @@ AgileSole
                         <div class="single-product">
                             <img class="img-fluid" src="{{ asset('img/product/p3.jpg') }}" alt="" />
                             <div class="product-details">
-                                <h6>Matrix New Hammer sole for Sports person</h6>
+                                <h6>AgileSole New Hammer sole for Sports person</h6>
                                 <div class="price">
                                     <h6>Rs. 2999.00</h6>
                                     <h6 class="l-through">Rs. 5000.00</h6>
@@ -315,7 +315,7 @@ AgileSole
                         <div class="single-product">
                             <img class="img-fluid" src="{{ asset('img/product/p5.jpg') }}" alt="" />
                             <div class="product-details">
-                                <h6>Matrix New Hammer sole for Sports person</h6>
+                                <h6>AgileSole New Hammer sole for Sports person</h6>
                                 <div class="price">
                                     <h6>Rs. 2999.00</h6>
                                     <h6 class="l-through">Rs. 5000.00</h6>
@@ -346,7 +346,7 @@ AgileSole
                         <div class="single-product">
                             <img class="img-fluid" src="{{ asset('img/product/p1.jpg') }}" alt="" />
                             <div class="product-details">
-                                <h6>Matrix New Hammer sole for Sports person</h6>
+                                <h6>AgileSole New Hammer sole for Sports person</h6>
                                 <div class="price">
                                     <h6>Rs. 2999.00</h6>
                                     <h6 class="l-through">Rs. 5000.00</h6>
@@ -377,7 +377,7 @@ AgileSole
                         <div class="single-product">
                             <img class="img-fluid" src="{{ asset('img/product/p4.jpg') }}" alt="" />
                             <div class="product-details">
-                                <h6>Matrix New Hammer sole for Sports person</h6>
+                                <h6>AgileSole New Hammer sole for Sports person</h6>
                                 <div class="price">
                                     <h6>Rs. 2999.00</h6>
                                     <h6 class="l-through">Rs. 5000.00</h6>
@@ -408,7 +408,7 @@ AgileSole
                         <div class="single-product">
                             <img class="img-fluid" src="{{ asset('img/features/f-icon3.png') }}" alt="" />
                             <div class="product-details">
-                                <h6>Matrix New Hammer sole for Sports person</h6>
+                                <h6>AgileSole New Hammer sole for Sports person</h6>
                                 <div class="price">
                                     <h6>Rs. 2999.00</h6>
                                     <h6 class="l-through">Rs. 5000.00</h6>
@@ -439,7 +439,7 @@ AgileSole
                         <div class="single-product">
                             <img class="img-fluid" src="{{ asset('img/product/p8.jpg') }}" alt="" />
                             <div class="product-details">
-                                <h6>Matrix New Hammer sole for Sports person</h6>
+                                <h6>AgileSole New Hammer sole for Sports person</h6>
                                 <div class="price">
                                     <h6>Rs. 2999.00</h6>
                                     <h6 class="l-through">Rs. 5000.00</h6>

@@ -38,11 +38,10 @@ You can reset password from bellow link:
                     <p style="font-weight: bolder;font-size: 42px;
                               letter-spacing: 0.025em;
                               color:black;">
-                              Hello User! <br> 
-                              Forget Password Email
-                        
-                        
-                    </p>
+                              Hello User!
+                             <span style="font-size: 24px !important;color:black;">{{$email}}</span><br />   
+                              Forget Password Email                      
+                          </p>
                 </td>
             </tr>
  

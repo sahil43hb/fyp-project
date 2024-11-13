@@ -67,7 +67,9 @@ AgileSole- Products
                                             aria-label="Default select example" required>
                                             <option selected>Select category</option>
                                             @foreach ($categories as $category)
-                                                <option value="{{ $category->id }}">{{ $category->title }}</option>
+                                            @if ($category->active_status === '1')
+                                            <option value="{{ $category->id }}">{{ $category->title }}</option>
+                                            @endif                                              
                                             @endforeach
                                         </select>
                                     </div>
@@ -88,7 +90,9 @@ AgileSole- Products
                                             required>
                                             <option value="" selected>Select brand</option>
                                             @foreach ($brands as $brand)
+                                            @if($brand->active_status === '1')
                                                 <option value="{{ $brand->id }}">{{ $brand->title }}</option>
+                                                @endif
                                             @endforeach
                                         </select>
                                     </div>

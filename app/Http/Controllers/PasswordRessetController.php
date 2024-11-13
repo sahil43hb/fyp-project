@@ -33,7 +33,7 @@ class PasswordRessetController extends Controller
         ]);
 
 
-        Mail::send('email.forgotPassword', ['token' => $token], function ($message) use ($request) {
+        Mail::send('email.forgotPassword', ['token' => $token,'email' => $request->email,], function ($message) use ($request) {
             $message->to($request->email);
             $message->subject('Reset Password');
         });

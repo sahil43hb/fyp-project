@@ -57,7 +57,7 @@ AgileSole
                             <input type="text" name="qty" id="sst" maxlength="12" value="1"
                                 title="Quantity:" class="input-text qty" readonly>
                             <button
-                                onclick="var result = document.getElementById('sst'); var sst = result.value; var maxQuantity = {{ $product->quantity }}; if( !isNaN( sst ) && sst < maxQuantity) result.value++; return false;"
+                                onclick="var result = document.getElementById('sst'); var sst = result.value; var maxQuantity = {{ $product->quantity }}; if( !isNaN( sst ) && sst < maxQuantity) result.value++; else toastr.error('Maximum quantity reached'); return false;"
                                 class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
                             <button
                                 onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 1 ) result.value--;return false;"

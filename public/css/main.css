@@ -1553,7 +1553,7 @@ h6 {
 
 @media (max-width: 768px) {
     .banner-area .fullscreen {
-        height: 650px !important;
+        height: 450px !important;
     }
 }
 .banner-area .active-banner-slider .owl-nav {
@@ -1630,14 +1630,18 @@ h6 {
     .banner-area .banner-content h1 {
         font-size: 35px;
         line-height: 46px;
+        color: white;
     }
 }
 .banner-area .banner-content p {
     margin: 0;
 }
 @media (max-width: 991px) {
-    .banner-area .banner-img {
-        display: none;
+    .banner-area .banner-img img {
+     height: 140px;
+    }
+    .banner-set{
+        height: 200px;
     }
 }
 
@@ -1683,10 +1687,22 @@ h6 {
 @media (max-width: 767px) {
     .organic-breadcrumb {
         background: none;
-        background: -webkit-linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
-        background: -moz-linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
-        background: -o-linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
-        background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+        background: -webkit-linear-gradient(90deg,  #3fdf25 0%, #44d62c 100%);
+        background: -moz-linear-gradient(90deg, #3fdf25 0%, #44d62c 100%);
+        background: -o-linear-gradient(90deg, #3fdf25 0%, #44d62c 100%);
+        background: linear-gradient(90deg, #3fdf25 0%, #44d62c 100%);
+    }
+    .organic-breadcrumb1 {
+        padding-top: 80px;
+        background: none;
+        background: -webkit-linear-gradient(90deg,  #3fdf25 0%, #44d62c 100%);
+        background: -moz-linear-gradient(90deg, #3fdf25 0%, #44d62c 100%);
+        background: -o-linear-gradient(90deg, #3fdf25 0%, #44d62c 100%);
+        background: linear-gradient(90deg, #3fdf25 0%, #44d62c 100%);
+    }
+    .single-prd-item img{
+        height: 300px;
+        width: 300px;
     }
 }
 
