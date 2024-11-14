@@ -33,7 +33,7 @@ if (!function_exists('productData')) {
 if (!function_exists('headerProductData')) {
     function headerProductData()
     {
-        $results = Product::where('new_collection','1')->get();
+        $results = Product::where('new_collection', '1')->where('quantity', '>', 0)->get();
         return $results;
     }
 }

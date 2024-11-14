@@ -44,7 +44,7 @@ AgileSole
                             <td>Rs. {{ $order->total }}</td>
                             <td>{{ $order->created_at->format('Y-m-d') }}</td>
                             <td>
-                                <a href="{{ route('download.invoice', ['order_id' => $order->id]) }}"
+                                <a target="_blank" href="{{ route('download.invoice', ['order_id' => $order->id]) }}"
                                     class="btn btn-primary bg-danger border-0">Invoice</a>
                             </td>
                         </tr>

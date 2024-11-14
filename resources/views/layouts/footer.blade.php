@@ -36,14 +36,14 @@
                     <div class="single-footer-widget mail-chimp">
                         <h6 class="mb-20">Instragram Feed</h6>
                         <ul class="instafeed d-flex flex-wrap">
-                            <li><img src="{{ asset('img/i2.jpg') }}" alt="" /></li>
-                            <li><img src="{{ asset('img/i3.jpg') }}" alt="" /></li>
-                            <li><img src="{{ asset('img/i4.jpg') }}" alt="" /></li>
-                            <li><img src="{{ asset('img/i5.jpg') }}" alt="" /></li>
-                            <li><img src="{{ asset('img/i6.jpg') }}" alt="" /></li>
-                            <li><img src="{{ asset('img/i7.jpg') }}" alt="" /></li>
-                            <li><img src="{{ asset('img/i8.jpg') }}" alt="" /></li>
-                            <li><img src="{{ asset('img/i1.jpg') }}" alt="" /></li>
+                            <li><a href="https://www.instagram.com/agilesole/" target="_blank"><img src="{{ asset('img/i2.jpg') }}" alt=""  /></a></li>
+                            <li><a href="https://www.instagram.com/agilesole/" target="_blank"><img src="{{ asset('img/i3.jpg') }}" alt="" /></a></li>
+                            <li><a href="https://www.instagram.com/agilesole/" target="_blank"><img src="{{ asset('img/i4.jpg') }}" alt="" /></a></li>
+                            <li><a href="https://www.instagram.com/agilesole/" target="_blank"><img src="{{ asset('img/i5.jpg') }}" alt="" /></a></li>
+                            <li><a href="https://www.instagram.com/agilesole/" target="_blank"><img src="{{ asset('img/i6.jpg') }}" alt="" /></a></li>
+                            <li><a href="https://www.instagram.com/agilesole/" target="_blank"><img src="{{ asset('img/i7.jpg') }}" alt="" /></a></li>
+                            <li><a href="https://www.instagram.com/agilesole/" target="_blank"><img src="{{ asset('img/i8.jpg') }}" alt="" /></a></li>
+                            <li><a href="https://www.instagram.com/agilesole/" target="_blank"><img src="{{ asset('img/i1.jpg') }}" alt="" /></a></li>
                         </ul>
                     </div>
                 </div>
