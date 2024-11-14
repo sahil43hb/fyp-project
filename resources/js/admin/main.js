@@ -134,7 +134,14 @@ $(document).ready(function () {
             },
             error: function (xhr, status, error) {
                 // Handle errors
-                console.error("Error:", error);
+                if (xhr.status === 422) {
+                    // Validation error from Laravel
+                    var errors = xhr.responseJSON.message;
+                    toastr.error(errors); // Show the validation error message
+                } else {
+                    // General error handling
+                    toastr.error("An unexpected error occurred. Please try again.");
+                };
             },
         });
     });
@@ -262,7 +269,7 @@ $(document).ready(function () {
             },
             error: function (xhr, status, error) {
                 // Handle errors
-                console.error("Error:", error);
+               console,error(error);
             },
         });
     });
@@ -382,8 +389,14 @@ $(document).ready(function () {
                 }
             },
             error: function (xhr, status, error) {
-                // Handle errors
-                console.error("Error:", error);
+                if (xhr.status === 422) {
+                    // Validation error from Laravel
+                    var errors = xhr.responseJSON.message;
+                    toastr.error(errors); // Show the validation error message
+                } else {
+                    // General error handling
+                    toastr.error("An unexpected error occurred. Please try again.");
+                };
             },
         });
     });

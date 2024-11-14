@@ -6,6 +6,7 @@ use App\Models\Brand;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Facades\Validator;
 
 class BrandController extends Controller
 {
@@ -34,19 +35,31 @@ class BrandController extends Controller
      */
     public function create(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|unique:brands',
+        ]);
+    
+        if ($validator->fails()) {
+            // Return the first error message for better user feedback
+            return response()->json([
+                "status" => false,
+                "message" => $validator->errors()->first() // Get the first error message
+            ], 422);
+        }
+    
         $brand = new Brand();
-        $brand->title = $request['title'];
-        $brand->active_status = $request['activeStatus'];
+        $brand->title = $request->input('title');
+        $brand->active_status = $request->input('activeStatus');
+    
         if ($brand->save()) {
             // Data saved successfully, return a success response
-
             return response()->json(['status' => true, 'message' => 'Brand saved successfully'], 200);
         } else {
             // Data saving failed, return an error response
             return response()->json(['status' => false, 'message' => 'Failed to save Brand'], 500);
         }
     }
-
+    
     /**
      * Store a newly created resource in storage.
      */
