@@ -61,7 +61,7 @@ AgileSole
                                                     height="150" width="150" alt="">
                                             </div>
                                             <div class="media-body">
-                                                <p>{{ $cart->product->sku }}</p>
+                                                <p>{{ $cart->product->name }}</p>
                                             </div>
                                         </div>
                                     </td>
