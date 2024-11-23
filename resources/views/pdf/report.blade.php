@@ -62,7 +62,6 @@
             <p><strong>Customer Name:</strong> {{ $order->customer->fullname }}</p>
             <!-- Add more details as needed -->
         </div>
-
         <table class="invoice-table">
             <thead>
                 <tr>

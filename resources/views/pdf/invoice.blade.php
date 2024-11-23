@@ -9,54 +9,41 @@
             font-family: Arial, sans-serif;
             font-size: 12px;
         }
-
         .invoice-header {
             text-align: center;
             margin-bottom: 20px;
         }
-
         .invoice-header h2 {
             margin: 0;
         }
-
         .invoice-details {
             margin-bottom: 20px;
         }
-
         .invoice-details p {
             margin: 5px 0;
         }
-
         .invoice-table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
-
         .invoice-table th,
         .invoice-table td {
             border: 1px solid #ddd;
             padding: 8px;
         }
-
         .invoice-table th {
             background-color: #f2f2f2;
         }
-
         .total {
             text-align: right;
             font-weight: bold;
         }
     </style>
 </head>
-
 <body>
-
-
     <div class="invoice-header">
         <h2>Invoice</h2>
-
-
     </div>
     <div class="invoice-details">
         <p><strong>Order ID:</strong> {{ $order->id }}</p>
@@ -71,7 +58,6 @@
                 <th>Quantity</th>
                 <th>Size</th>
                 <th>Unit Price</th>
-
                 <th>Total</th>
             </tr>
         </thead>
@@ -89,10 +75,6 @@
                         ? intval($item->product->price) - intval($item->product->price) * (intval($item->product->discount) / 100)
                         : intval($item->product->price)) * $item->quantity }}
                     </td>
-
-
-
-
                 </tr>
             @endforeach
         </tbody>

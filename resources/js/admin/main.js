@@ -37,39 +37,7 @@ $(document).ready(function () {
         }
     });
 
-    /////////////////////////----------- Admin Authentication ----------------////////////////////////////////
-    // $("#adminLogin").submit(function (event) {
-    //     event.preventDefault(); // Prevent the form from submitting normally
-    //     var formData = $(this).serialize();
-    //     console.log(formData);
-    //     return;
-    //     $.ajax({
-    //         type: "POST", // Use POST method
-    //         url: "/admin-panel/login", // Specify the URL of your controller
-    //         data: formData, // Pass the form data
-    //         headers: {
-    //             "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"), // Include CSRF token in headers
-    //         },
-    //         success: function (response) {
-    //             console.log("Success:", response);
-    //             if (response.status) {
-    //                 window.location = response.redirect;
-    //             } else {
-    //                 $("#errors-list").append(
-    //                     "<div class='alert alert-danger'>" +
-    //                         response.error +
-    //                         "</div>"
-    //                 );
-    //             }
-    //         },
-    //         error: function (xhr, status, error) {
-    //             // Handle errors
-    //             console.error("Error:", error);
-    //         },
-    //     });
-    // });
-
-    //////////////////---------------- Category Section -----------------------/////////////////////////////
+   //////////////////---------------- Category Section -----------------------/////////////////////////////
 
     var table = $("#category").DataTable({
         language: {
@@ -106,7 +74,6 @@ $(document).ready(function () {
         $("#categoryTitle").val(categoryData.title);
         $("#categoryActiveStatus").val(categoryData.active_status);
     });
-
 //Show Delete Category Model
     $("#category").on("click", ".delete-btn", function (event) {
         categoryData = $(this).data("category");
@@ -521,7 +488,7 @@ $(document).ready(function () {
         });
     });
 
-   
+   // Handle Sale Field in Edit Product
     $("#sale").on("change", function () {
         var sale_value = $(this).val();
         if (sale_value === "1") {
@@ -556,14 +523,6 @@ $(document).ready(function () {
         } else {
             $("#discount_container").css("display", "none");
         }
-        // $("#edit_sub_categories_id").append(
-        //     '<option value="' +
-        //         productData.sub_category.id +
-        //         '">' +
-        //         productData.sub_category.title +
-        //         "</option>"
-        // );
-        // $("#edit_sub_categories_id").val(productData.sub_categories_id);
         
         // Load subcategories based on the selected category
         loadSubCategories(productData.category_id, productData.sub_categories_id);
@@ -695,21 +654,4 @@ $(document).ready(function () {
             },
         });
     });
-
-    // $(".nav-link").addClass("collapsed");
-
-    // $(".nav-link").on("load", function () {
-    //     // Remove active class from all nav items
-    //     // $(".nav-link").addClass("collapsed");
-    //     // Add active class to the clicked nav item
-    //     $(this).addClass("collapsed");
-    // });
-
-    // // Event listener to hide all collapse elements when a main nav item is clicked
-    // $(".nav-link").click(function () {
-    //     // Remove active class from all nav items
-    //     // $(".nav-link").addClass("collapsed");
-    //     // Add active class to the clicked nav item
-    //     $(this).removeClass("collapsed");
-    // });
 });

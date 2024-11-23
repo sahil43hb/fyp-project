@@ -7,8 +7,6 @@ AgileSole
 @endsection
 
 @section('content')
-    {{-- {{ print $carts }} --}}
-    {{-- {{ print $response }} --}}
     <!-- Start Banner Area -->
     <section class="banner-area organic-breadcrumb">
         <div class="container">
@@ -54,7 +52,6 @@ AgileSole
                             <li><a href="#"><span>Address</span> :
                                     {{ $response->customer_details->address->line1 }}</a>
                             </li>
-
                             <li><a href="#"><span>Postcode </span> :
                                     {{ $response->customer_details->address->postal_code }}</a></li>
                         </ul>

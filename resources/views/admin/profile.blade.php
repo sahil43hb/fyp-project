@@ -70,14 +70,10 @@ AgileSole - Admin
                                         <button type="submit" class="btn bg-color text-white">Change Password</button>
                                     </div>
                                 </form><!-- End Change Password Form -->
-
                             </div>
-
                         </div><!-- End Bordered Tabs -->
-
                     </div>
                 </div>
-
             </div>
         </div>
     </section>

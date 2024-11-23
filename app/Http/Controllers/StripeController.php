@@ -133,12 +133,6 @@ class StripeController extends Controller
 
         $cart->delete();
       }
-      // $invoiceData = [
-      //   'order' => $order, // Pass the order data to the invoice view
-      //   'customerInfo' => $customerInfo, // Pass the customer information to the invoice view
-      // ];
-      // $pdf = PDF::loadView('pdf.invoice', $invoiceData);
-      // $pdf->stream('document.pdf');
       session()->forget('carts');
       return view('confirmation', compact('response', 'carts'));
     }

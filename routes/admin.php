@@ -24,20 +24,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
-// Route::group(['middleware' => 'guest'], function () {
-// Place your authenticated routes here
 Route::get('/admin-panel/login', [AuthenticationController::class, 'index']);
 Route::post('/admin-panel/login', [AuthenticationController::class, 'Authenticate'])->name('admin-login');
-// Add more authenticated routes as needed
-// });
 
 Route::prefix('admin-panel')->middleware(['admin'])->group(function () {
+    // Place your authenticated routes here
     Route::get('/', [DashboardController::class, 'index']);
     Route::post('/generate_report', [DashboardController::class, 'generateReport'])->name('report_generate');
     Route::get('/profile', [ProfileController::class, 'index'])->name('admin_profile');
     Route::post('/change-password', [ProfileController::class, 'changePassword'])->name(('admin_change_password'));
-    
     Route::get('/categories', [CategoryController::class, 'index']);
     Route::post('/categories', [CategoryController::class, 'create']);
     Route::put('/categories/{id}', [CategoryController::class, 'update']);

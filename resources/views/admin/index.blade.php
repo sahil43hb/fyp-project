@@ -35,12 +35,10 @@ AgileSole - Admin
                                             Users</span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-
-                    </div><!-- End Customers Card -->
-
+                    </div>
+                    <!-- End Customers Card -->
 
                     <!-- Sales Card -->
                     <div class="col-xxl-4 col-md-7">
@@ -60,7 +58,8 @@ AgileSole - Admin
                             </div>
 
                         </div>
-                    </div><!-- End Sales Card -->
+                    </div>
+                    <!-- End Sales Card -->
 
                     {{-- Orders Cart --}}
                     <div class="col-xxl-4 col-md-5">
@@ -80,7 +79,8 @@ AgileSole - Admin
                             </div>
 
                         </div>
-                    </div><!-- End Customers Card -->
+                    </div>
+                    <!-- End Customers Card -->
                     <!-- Revenue Card -->
                     <div class="col-xxl-4 col-md-7">
                         <div class="card info-card revenue-card">
@@ -99,9 +99,8 @@ AgileSole - Admin
                             </div>
 
                         </div>
-                    </div><!-- End Revenue Card -->
-
-
+                    </div>
+                    <!-- End Revenue Card -->
 
                     <!-- Reports -->
                     <div class="col-12">
@@ -171,7 +170,9 @@ AgileSole - Admin
                         </div>
                     </div><!-- End Reports -->
                 </div>
-            </div><!-- End Left side columns -->
+            </div>
+            <!-- End Left side columns -->
+
             <!-- Right side columns -->
             <div class="col-lg-4">
                 <!-- Recent Activity -->
@@ -192,69 +193,10 @@ AgileSole - Admin
                         </div>
 
                     </div>
-                </div><!-- End Recent Activity -->
-
-                {{-- <!-- Budget Report -->
-                <div class="card">
-                    <div class="card-body pb-0">
-                        <h5 class="card-title">Budget Report</h5>
-                        <div id="budgetChart" style="min-height: 400px;" class="echart"></div>
-                        <script>
-                            document.addEventListener("DOMContentLoaded", () => {
-                                var budgetChart = echarts.init(document.querySelector("#budgetChart")).setOption({
-                                    legend: {
-                                        data: ['Allocated Budget', 'Actual Spending']
-                                    },
-                                    radar: {
-                                        // shape: 'circle',
-                                        indicator: [{
-                                                name: 'Sales',
-                                                max: 6500
-                                            },
-                                            {
-                                                name: 'Administration',
-                                                max: 16000
-                                            },
-                                            {
-                                                name: 'Information Technology',
-                                                max: 30000
-                                            },
-                                            {
-                                                name: 'Customer Support',
-                                                max: 38000
-                                            },
-                                            {
-                                                name: 'Development',
-                                                max: 52000
-                                            },
-                                            {
-                                                name: 'Marketing',
-                                                max: 25000
-                                            }
-                                        ]
-                                    },
-                                    series: [{
-                                        name: 'Budget vs spending',
-                                        type: 'radar',
-                                        data: [{
-                                                value: [4200, 3000, 20000, 35000, 50000, 18000],
-                                                name: 'Allocated Budget'
-                                            },
-                                            {
-                                                value: [5000, 14000, 28000, 26000, 42000, 21000],
-                                                name: 'Actual Spending'
-                                            }
-                                        ]
-                                    }]
-                                });
-                            });
-                        </script>
-
-                    </div>
-                </div><!-- End Budget Report --> --}}
-
-            </div><!-- End Right side columns -->
-
+                </div>
+                <!-- End Recent Activity -->               
+            </div>
+            <!-- End Right side columns -->
         </div>
     </section>
 @endsection

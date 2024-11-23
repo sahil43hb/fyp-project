@@ -55,7 +55,6 @@ class UserController extends Controller
     }
     public function Create(Request $request)
     {
-        // dd($request);
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'username' => 'required|unique:users',

@@ -1,10 +1,3 @@
-{{-- <h1>Forget Password Email</h1>
-
-You can reset password from bellow link:
-<a href="{{ route('reset.password.get', $token) }}">Reset Password</a> --}}
-
-
-
 <body style="background-color:grey">
     <table align="center" border="0" cellpadding="0" cellspacing="0"
            width="550" bgcolor="white" style="border:1px solid rgb(104, 103, 103);box-shadow: 2px 2px 2px 2px #888888;">
@@ -75,10 +68,7 @@ You can reset password from bellow link:
   <p style="color:white; 
     line-height: 1.5em;">
 Contact : +92306-9158103   
-</p>
-
-    
-   
+</p>  
 </td>
 </tr>
 <tr>

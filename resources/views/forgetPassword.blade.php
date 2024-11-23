@@ -23,49 +23,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
 </head>
-
 <body>
-    <!-- <main class="login-form">
-        <div class="cotainer">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-header">Reset Password</div>
-                        <div class="card-body">
-
-                            @if (Session::has('message'))
-                                <div class="alert alert-success" role="alert">
-                                    {{ Session::get('message') }}
-                                </div>
-                            @endif
-
-                            <form action="{{ route('forget.password.post') }}" method="POST">
-                                @csrf
-                                <div class="form-group row">
-                                    <label for="email_address" class="col-md-4 col-form-label text-md-right">Email
-                                    </label>
-                                    <div class="col-md-6">
-                                        <input type="text" id="email_address" class="form-control" name="email"
-                                            required autofocus>
-                                        @if ($errors->has('email'))
-                                            <span class="text-danger">{{ $errors->first('email') }}</span>
-                                        @endif
-                                    </div>
-                                </div>
-                                <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn" style="background-color: #44D62C;color:#fff">
-                                        Send Password Reset Link
-                                    </button>
-                                </div>
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main> -->
-
     <section class="login_box_area section_gap">
         <div class="container">
             <div class="row justify-content-center"  >
@@ -103,9 +61,6 @@
             </div>
         </div>
     </section>
-
-
-
     <script src="{{ asset('js/vendor/jquery-2.2.4.min.js') }} "></script>
     <script src="{{ asset('js/jquery.ajaxchimp.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"

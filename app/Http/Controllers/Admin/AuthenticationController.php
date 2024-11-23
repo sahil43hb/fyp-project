@@ -10,7 +10,6 @@ class AuthenticationController extends Controller
 {
     public function index()
     {
-
         return view('admin.login');
     }
     public function Authenticate(Request $request)

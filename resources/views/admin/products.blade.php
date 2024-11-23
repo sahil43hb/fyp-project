@@ -58,8 +58,6 @@ AgileSole- Products
                                             placeholder="Enter size" required>
                                     </div>
                                 </div>
-                            {{-- </div>
-                            <div class='d-flex row'> --}}
                                 <div class="mb-3  col-sm-4">
                                     <label class="col-sm-12 col-form-label theme-color">Categories</label>
                                     <div class="col-sm-12">
@@ -97,9 +95,6 @@ AgileSole- Products
                                         </select>
                                     </div>
                                 </div>
-                            {{-- </div>
-
-                            <div class='d-flex row'> --}}
                                 <div class="mb-3  col-sm-4">
                                     <label class="col-sm-12 col-form-label theme-color">New Arrival</label>
                                     <div class="col-sm-12">
@@ -130,9 +125,6 @@ AgileSole- Products
                                             required>
                                     </div>
                                 </div>
-                            {{-- </div>
-
-                            <div class='d-flex row'> --}}
                                 <div class="col-sm-4 mb-3">
                                     <label for="inputPassword" class="col-sm-5 col-form-label theme-color">Description</label>
                                     <div class="col-sm-12">
@@ -159,13 +151,9 @@ AgileSole- Products
                         </div>
                     </form>
                 </div>
-
-
             </div>
         </div>
     </div>
-
-
     <div class="modal fade" id="fullscreenModalEditModal" tabindex="-1">
         <div class="modal-dialog modal-fullscreen ">
             <div class="modal-content ">
@@ -206,8 +194,6 @@ AgileSole- Products
                                             placeholder="Enter size"required>
                                     </div>
                                 </div>
-                            {{-- </div>
-                            <div class='d-flex row'> --}}
                                 <div class="mb-3  col-sm-4">
                                     <label class="col-sm-12 col-form-label theme-color">Categories</label>
                                     <div class="col-sm-12">
@@ -241,9 +227,6 @@ AgileSole- Products
                                         </select>
                                     </div>
                                 </div>
-                            {{-- </div>
-
-                            <div class='d-flex row'> --}}
                                 <div class="mb-3  col-sm-4">
                                     <label class="col-sm-12 col-form-label theme-color">New Arrival</label>
                                     <div class="col-sm-12">
@@ -275,20 +258,6 @@ AgileSole- Products
                                             required>
                                     </div>
                                 </div>
-                                {{-- <div class="mb-3 col-sm-4">
-                                    <label class="col-sm-12 col-form-label theme-color">Sale</label>
-                                    <div class="col-sm-12">
-                                        <select class="form-select" id="sale" name="sale"
-                                            aria-label="Default select example" required>
-                                            <option value="">Select choice</option>
-                                            <option value="1">Yes</option>
-                                            <option value="0">No</option>
-                                        </select>
-                                    </div>
-                                </div> --}}
-                            {{-- </div>
-
-                            <div class='d-flex row'> --}}
                                 <div class="mb-3 col-sm-4">
                                     <label class="col-sm-12 col-form-label theme-color">Sale</label>
                                     <div class="col-sm-12">
@@ -319,9 +288,6 @@ AgileSole- Products
                                             height="100" width="100">
                                     </div>
                                 </div>
-                               
-                            {{-- </div>
-                            <div class='d-flex row'> --}}
                                 <div class="col-sm-4 mb-3"> 
                                     <label for="inputPassword" class="col-sm-5 col-form-label theme-color">Description</label>
                                     <div class="col-sm-12">
@@ -329,7 +295,6 @@ AgileSole- Products
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
@@ -341,12 +306,9 @@ AgileSole- Products
                         </div>
                     </form>
                 </div>
-
-
             </div>
         </div>
     </div>
-
 
     <div class="modal fade" id="delateModal" tabindex="-1">
         <div class="modal-dialog">

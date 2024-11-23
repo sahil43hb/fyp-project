@@ -9,11 +9,7 @@
     <meta content="" name="description" />
     <meta content="" name="keywords" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <!-- Favicons -->
-    {{-- <link href="{{ asset('assets / img / favicon . png') }}" rel="icon" /> --}}
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-
 
     @include('admin.layouts.style')
 
@@ -29,9 +25,6 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
     @include('admin.layouts.script')
-
-
-
 
     @if (session()->has('success'))
         <script>

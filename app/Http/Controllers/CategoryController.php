@@ -50,7 +50,6 @@ class CategoryController extends Controller
         $category->active_status = $request['activeStatus'];
         if ($category->save()) {
             // Data saved successfully, return a success response
-
             return response()->json(['status' => true, 'message' => 'Category saved successfully'], 200);
         } else {
             // Data saving failed, return an error response
@@ -89,7 +88,6 @@ class CategoryController extends Controller
     {
         // Find the category by its ID
         $category = Category::findOrFail($id);
-
         // Update the category attributes
         $category->update($request->only('title', 'active_status'));
         // Return a response indicating success

@@ -66,10 +66,7 @@
   <p style="color:white; 
     line-height: 1.5em;">
 Contact : +92306-9158103   
-</p>
-
-    
-   
+</p>  
 </td>
 </tr>
 <tr>

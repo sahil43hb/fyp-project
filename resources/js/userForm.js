@@ -1,11 +1,10 @@
 $(document).ready(function () {
 
-
     $(document).ready(function () {
         $('#loading-overlay').hide();
     });
-    // Orders histiry ==============================///////
 
+    /////// Orders histiry ==============================///////
     $("#users_order").DataTable({
         language: {
             lengthMenu: "_MENU_", // Customize the text as per your preference
@@ -289,41 +288,6 @@ $(document).ready(function () {
         });
     });
 
-    // $(".add-to-cart-btn").on("click", function () {
-    //     if ($(this).attr("auth") === "0") {
-    //         $("#loginModal").modal("show");
-    //     } else {
-    //         var productId = $(this).data("product-id"); // Assuming you have a data attribute for the product ID
-    //         // Example: You can make an AJAX request to add the product to the cart
-    //         const quantity = $("#sst").val();
-    //         const productQuantity = quantity ? quantity : 1;
-    //         console.warn(productQuantity);
-    //         $.ajax({
-    //             url: "/add-to-cart",
-    //             method: "POST",
-    //             data: {
-    //                 productId: productId,
-    //                 quantity: productQuantity,
-    //             },
-    //             headers: {
-    //                 "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
-    //                     "content"
-    //                 ), // Include CSRF token in headers
-    //             },
-    //             success: function (response) {
-    //                 // Handle success response, such as updating the cart count
-    //                 console.log(response);
-    //                 $("#cartData").text(response.totalCarts);
-    //                 window.location = "/cart";
-    //             },
-    //             error: function (xhr, status, error) {
-    //                 // Handle error response
-    //                 console.error("Error adding product to cart:", error);
-    //             },
-    //         });
-    //     }
-    // });
-
     $(".forgot_password").on("click", function () {
         $("#ForgotPasswordModal").modal("show");
     });
@@ -430,7 +394,6 @@ $(document).ready(function () {
         var row = $(this).closest("tr");
         // Get the product ID from the data attribute of the closest <tr> element
         var cartId = parseInt(row.data("cart-id"));
-        // alert(cartId);
         toggleSelected(cartId);
     });
 

@@ -31,14 +31,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
     <!-- Template Main CSS File -->
     <link rel="stylesheet" href="{{ asset('admin/assets/css/style.css') }}" />
-
 </head>
-
 <body>
-
     <main>
         <div class="container">
-
             <section
                 class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
                 <div class="container">
@@ -70,13 +66,6 @@
                                             <input type="password" name="password" class="form-control" required>
                                             <div class="invalid-feedback">Please enter your password!</div>
                                         </div>
-                                        {{-- <div class="col-12">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="remember"
-                                                    value="true" id="rememberMe">
-                                                <label class="form-check-label" for="rememberMe">Remember me</label>
-                                            </div>
-                                        </div> --}}
                                         <div class="col-12">
                                             <button type="submit" class="btn w-100 text-light" style="background-color: #44D62C">Login</button>
                                         </div>
@@ -89,7 +78,6 @@
             </section>
         </div>
     </main><!-- End #main -->
-
 
     <!-- Vendor JS Files -->
     <script src="{{ asset('admin/assets/vendor/apexcharts/apexcharts.min.js') }}"></script>

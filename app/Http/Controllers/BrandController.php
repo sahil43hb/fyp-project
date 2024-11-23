@@ -74,7 +74,6 @@ class BrandController extends Controller
     public function show($id)
     {
         $brandsWithProducts = Brand::with('products')->findOrFail($id);
-        // dd($brandsWithProducts);
         return view('brand', compact('brandsWithProducts'));
     }
 
@@ -93,7 +92,6 @@ class BrandController extends Controller
     {
         // Find the brand by its ID
         $brand = Brand::findOrFail($id);
-
         // Update the brand attributes
         $brand->update($request->only('title', 'active_status'));
         // Return a response indicating success

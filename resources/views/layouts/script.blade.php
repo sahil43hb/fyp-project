@@ -10,7 +10,6 @@
   <script src="{{ asset('js/countdown.js') }}"></script>
   <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
   <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-  {{-- <script src="{{ asset('js/owl.carousel.min.js') }}"></script> --}}
   <!--gmaps Js-->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
   <script src="{{ asset('js/gmaps.min.js') }}"></script>
@@ -24,6 +23,3 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-
-  <!-- <df-messenger intent="WELCOME" chat-title="FootCase" agent-id="2dcf6fb8-0044-411a-acb5-738bffcafc91" language-code="en"
-      style="height:200px; width:350px;"></df-messenger> -->

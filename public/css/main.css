@@ -3108,20 +3108,6 @@ label {
     font-weight: 300;
 }
 
-.order-tracking {
-    padding: 30px;
-    background: #f9fafc;
-}
-
-.tracking_form .primary-btn {
-    border-radius: 0px;
-    line-height: 38px;
-    border: none;
-}
-.tracking_form .primary-btn:hover:before {
-    left: 170px;
-}
-
 .load-product {
     display: none;
 }
@@ -6289,77 +6275,7 @@ label {
 
 /* End Login form Area css
 ============================================================================================ */
-/* Tracking Form Area css
-============================================================================================ */
-.tracking_box_area .tracking_box_inner p {
-    max-width: 870px;
-    color: #222222;
-    margin-bottom: 25px;
-}
-.tracking_box_area .tracking_box_inner .tracking_form {
-    max-width: 645px;
-}
-.tracking_box_area .tracking_box_inner .tracking_form .form-group input {
-    height: 40px;
-    border: 1px solid #eee;
-    padding: 0px 15px;
-    outline: none;
-    box-shadow: none;
-    border-radius: 0px;
-    font-size: 14px;
-    color: #777777;
-    font-family: "Roboto", sans-serif;
-    font-weight: normal;
-}
-.tracking_box_area
-    .tracking_box_inner
-    .tracking_form
-    .form-group
-    input.placeholder {
-    font-size: 14px;
-    color: #777777;
-    font-family: "Roboto", sans-serif;
-    font-weight: normal;
-}
-.tracking_box_area
-    .tracking_box_inner
-    .tracking_form
-    .form-group
-    input:-moz-placeholder {
-    font-size: 14px;
-    color: #777777;
-    font-family: "Roboto", sans-serif;
-    font-weight: normal;
-}
-.tracking_box_area
-    .tracking_box_inner
-    .tracking_form
-    .form-group
-    input::-moz-placeholder {
-    font-size: 14px;
-    color: #777777;
-    font-family: "Roboto", sans-serif;
-    font-weight: normal;
-}
-.tracking_box_area
-    .tracking_box_inner
-    .tracking_form
-    .form-group
-    input::-webkit-input-placeholder {
-    font-size: 14px;
-    color: #777777;
-    font-family: "Roboto", sans-serif;
-    font-weight: normal;
-}
-.tracking_box_area .tracking_box_inner .tracking_form .form-group:last-child {
-    margin-bottom: 0px;
-}
-.tracking_box_area .tracking_box_inner .tracking_form .form-group .submit_btn {
-    text-transform: uppercase;
-}
 
-/* End Tracking Form Area css
-============================================================================================ */
 .radion_btn input[type="radio"] {
     position: absolute;
     visibility: hidden;

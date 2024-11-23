@@ -118,9 +118,6 @@ AgileSole
             </div>
         </div>
     </div>
-
-
-
     <!-- End brand Area -->
 @endsection
 @section('script')

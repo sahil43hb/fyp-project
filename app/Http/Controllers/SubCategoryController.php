@@ -72,7 +72,6 @@ class SubCategoryController extends Controller
     public function show($id)
     {
         $subCategoriesWithProducts = SubCategory::with('products')->findOrFail($id);
-        // dd($brandsWithProducts);
         return view('sub_categories', compact('subCategoriesWithProducts'));
     }
 

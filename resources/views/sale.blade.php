@@ -21,9 +21,7 @@ AgileSole
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12">
-                <!-- Start Filter Bar -->
-                <!-- End Filter Bar -->
-                <!-- Start Best Seller -->
+              <!-- Start Best Seller -->
                 <section class="lattest-product-area pb-40 category-list">
                     <div class="row">
                         <!-- single product -->
@@ -107,8 +105,6 @@ AgileSole
      </div>
    </div>
  </div>
-
-
     <!-- start footer Area -->
 @endsection
 @section('script')

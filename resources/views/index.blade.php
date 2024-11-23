@@ -82,7 +82,6 @@ AgileSole
                     </div>
                     <div class="row">
                         <!-- single product -->
-
                         @foreach ($category->products as $product)
                             <div class="col-lg-3 col-md-6 d-flex">
                                 <div class="single-product card flex-fill product-image shadow-sm shadow-hover">
@@ -113,7 +112,6 @@ AgileSole
                                         <div class="prd-bottom">
                                             <a href="javascript:void(0)" class="social-info add-to-cart-btn {{ $product->quantity === 0 ? 'disabled-link' : '' }}"
                                                 auth="{{ Auth::check() ? json_encode(Auth::user()) : null }}"
-                                               {{-- {{$product->quantity === 0   ? '' : `data-product-id=${product.id}` }} --}}
                                                 data-product-id="{{$product->quantity === 0   ? null : $product->id }}"
                                                 >
                                                 <span class="ti-bag"></span>
@@ -132,272 +130,8 @@ AgileSole
                 </div>
             </div> 
         @endif         
-        @endforeach
-        <!-- single product slide -->
-        {{-- <div class="single-product-slider">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 text-center">
-                        <div class="section-title">
-                            <h1>Coming Products</h1>
-                            <p>AgileSole, From Sole to Soul, Be the King of Style!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- single product -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="{{ asset('img/product/p6.jpg') }}" alt="" />
-                            <div class="product-details">
-                                <h6>AgileSole New Hammer sole for Sports person</h6>
-                                <div class="price">
-                                    <h6>Rs. 2999.00</h6>
-                                    <h6 class="l-through">Rs. 5000.00</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="login.html" target="_blank" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">add to bag</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Wishlist</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">compare</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">view more</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="{{ asset('img/product/p8.jpg') }}" alt="" />
-                            <div class="product-details">
-                                <h6>AgileSole New Hammer sole for Sports person</h6>
-                                <div class="price">
-                                    <h6>Rs. 2999.00</h6>
-                                    <h6 class="l-through">Rs. 5000.00</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="login.html" target="_blank" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">add to bag</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Wishlist</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">compare</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">view more</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="{{ asset('img/product/p3.jpg') }}" alt="" />
-                            <div class="product-details">
-                                <h6>AgileSole New Hammer sole for Sports person</h6>
-                                <div class="price">
-                                    <h6>Rs. 2999.00</h6>
-                                    <h6 class="l-through">Rs. 5000.00</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="login.html" target="_blank" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">add to bag</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Wishlist</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">compare</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">view more</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="{{ asset('img/product/p5.jpg') }}" alt="" />
-                            <div class="product-details">
-                                <h6>AgileSole New Hammer sole for Sports person</h6>
-                                <div class="price">
-                                    <h6>Rs. 2999.00</h6>
-                                    <h6 class="l-through">Rs. 5000.00</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="login.html" target="_blank" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">add to bag</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Wishlist</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">compare</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">view more</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="{{ asset('img/product/p1.jpg') }}" alt="" />
-                            <div class="product-details">
-                                <h6>AgileSole New Hammer sole for Sports person</h6>
-                                <div class="price">
-                                    <h6>Rs. 2999.00</h6>
-                                    <h6 class="l-through">Rs. 5000.00</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="login.html" target="_blank" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">add to bag</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Wishlist</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">compare</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">view more</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="{{ asset('img/product/p4.jpg') }}" alt="" />
-                            <div class="product-details">
-                                <h6>AgileSole New Hammer sole for Sports person</h6>
-                                <div class="price">
-                                    <h6>Rs. 2999.00</h6>
-                                    <h6 class="l-through">Rs. 5000.00</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="login.html" target="_blank" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">add to bag</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Wishlist</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">compare</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">view more</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="{{ asset('img/features/f-icon3.png') }}" alt="" />
-                            <div class="product-details">
-                                <h6>AgileSole New Hammer sole for Sports person</h6>
-                                <div class="price">
-                                    <h6>Rs. 2999.00</h6>
-                                    <h6 class="l-through">Rs. 5000.00</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="login.html" target="_blank" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">add to bag</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Wishlist</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">compare</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">view more</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="{{ asset('img/product/p8.jpg') }}" alt="" />
-                            <div class="product-details">
-                                <h6>AgileSole New Hammer sole for Sports person</h6>
-                                <div class="price">
-                                    <h6>Rs. 2999.00</h6>
-                                    <h6 class="l-through">Rs. 5000.00</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="login.html" target="_blank" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">add to bag</p>
-                                    </a>
-                                    <a class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Wishlist</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">compare</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">view more</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
+        @endforeach        
     </section>
-
 
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
@@ -440,9 +174,6 @@ AgileSole
    </div>
  </div>
 
-
-
-
     <section class="features-area section_gap">
         <div class="container">
             <div class="row features-inner">
@@ -468,7 +199,6 @@ AgileSole
                     </div>
                 </div>
                 <!-- single features -->
-                <!-- single features -->
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-features" style="border-right:0px">
                         <div class="f-icon">
@@ -482,29 +212,7 @@ AgileSole
         </div>
     </section>
     <!-- end product Area -->
-
-    <!-- Start brand Area -->
-    {{-- <section class="brand-area section_gap">
-        <div class="container">
-            <div class="row">
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="{{ asset('img/brand/1.png') }}" alt="" />
-                </a>
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="{{ asset('img/brand/2.png') }}" alt="" />
-                </a>
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="{{ asset('img/brand/3.png') }}" alt="" />
-                </a>
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="{{ asset('img/brand/4.png') }}" alt="" />
-                </a>
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="{{ asset('img/brand/5.png') }}" alt="" />
-                </a>
-            </div>
-        </div>
-   </section>  --}}
+    
     <!-- End brand Area -->
 @endsection
 @section('script')

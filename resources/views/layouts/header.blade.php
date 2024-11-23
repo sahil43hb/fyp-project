@@ -27,7 +27,6 @@
                                         <li class="nav-item"><a class="nav-link"
                                                 href="{{ url('brands/' . $brand->id) }}">{{ $brand->title }}</a></li>
                                     @endforeach
-
                                 </ul>
                             </li>
                             @endif

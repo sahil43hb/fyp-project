@@ -27,7 +27,6 @@
                                         <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                                     </button>
                                 </div>
-
                             </form>
                         </div>
                     </div>
@@ -61,20 +60,17 @@
                             <a href="https://www.youtube.com/channel/UC0aij5xC13NREwd5iok0eBw" target="_blank">
                                 <i class="fa fa-youtube"></i>
                             </a>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap" style="background-color: #000">
-            <p class="footer-text m-0 " >
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <p class="footer-text m-0 " >               
                 Copyright
                 <i>©</i> 2024
                 <a href="#">AgileSole.</a>
                 All rights reserved.
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
         </div> 
     </footer>

@@ -37,70 +37,7 @@
 </head>
 
 <body>
-    <!--================Login Box Area =================-->
-    {{-- <section class="login_box_area section_gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="login_box_img">
-                        <img class="img-fluid" src="img/LoginIMG.jpg" alt="">
-                        <div class="hover">
-                            <h4>Already a User?</h4>
-                            <a class="primary-btn" href="{{ url('login') }}" style="color:aliceblue">Sign In</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="login_form_inner">
-                        <h3>Register Here</h3>
-                        <form class="row login_form" method="post" id="registerationForm">
-                            @csrf
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="name" name="name"
-                                    placeholder="Full name" onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Enter Full Name'" required>
-                                @if ($errors->has('name'))
-                                    <span class="text-danger">{{ $errors->first('name') }}</span>
-                                @endif
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="username" name="username"
-                                    placeholder="Enter User Name" onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Enter User Name'" required>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="email" class="form-control" id="email" name="email"
-                                    placeholder="Enter Email" onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Enter Email'" required>
-                                @if ($errors->has('email'))
-                                    <span class="text-danger">{{ $errors->first('email') }}</span>
-                                @endif
-                            </div>
-                            @if ($errors->has('password'))
-                                <span class="text-danger">{{ $errors->first('password') }}</span>
-                            @endif
-                            <div class="col-md-12 form-group">
-                                <input type="password" class="form-control" id="password" name="password"
-                                    placeholder="Enter Password" onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Enter Password'" required>
-                            </div>
-
-                            <div class="col-md-12 form-group">
-                                <div class="creat_account">
-                                    <input type="checkbox" id="f-option2" name="selector">
-                                    <label for="f-option2">Save my info</label>
-                                </div>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <button type="submit" value="submit" class="primary-btn">Sign up</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div id="errors-list"></div>
-        </div>
-    </section> --}}
+    <!--================SIgnup Box Area =================--> 
 
      {{-- Loading Screen --}}
      <div id="loading-overlay" style="display: none;">
@@ -109,7 +46,6 @@
             <h1>Loading ...</h1>
         </div>
     </div>
-
     <section class="login_box_area section_gap">
         <div class="container">
             <div class="row  justify-content-center">               
@@ -164,11 +100,7 @@
                     </div>
             </div>
         </div>
-    </section>   
-
-
-
-
+    </section> 
     <!--================End Login Box Area =================-->
 
     <script src="{{ asset('js/vendor/jquery-2.2.4.min.js') }} "></script>

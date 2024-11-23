@@ -81,8 +81,6 @@ AgileSole
             </div>
         </div>
     </section>
-
-
     <!--================Contact Success and Error message Area =================-->
     <div id="success" class="modal modal-message fade" role="dialog">
         <div class="modal-dialog">
@@ -97,7 +95,6 @@ AgileSole
             </div>
         </div>
     </div>
-
     <!-- Modals error -->
 
     <div id="error" class="modal modal-message fade" role="dialog">
