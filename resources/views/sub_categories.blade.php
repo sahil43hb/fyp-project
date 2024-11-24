@@ -30,7 +30,7 @@ AgileSole
                                 <div class="single-product shadow-sm product-image flex-fill card border shadow-hover">
                                     <img class="img-fluid custom-height" src="{{ asset('uploads/' . $product->product_image) }}"
                                         alt="product_image" />
-                                    <div class="product-details">
+                                    <div class="product-details px-2">
                                         <h6>{{ $product->name }}</h6>
                                         @if ($product->sale === '0')
                                             <div class="price">

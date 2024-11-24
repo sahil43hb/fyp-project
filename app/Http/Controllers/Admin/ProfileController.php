@@ -28,7 +28,7 @@ class ProfileController extends Controller
             return redirect()->back()->with('success', "Password Updated Successfully");
         } else {
             // Current password is incorrect, return error response
-            return redirect()->back()->with('error', "Something went wrong.Please try again!");
+            return redirect()->back()->with('error', "The current password you entered is incorrect. Please try again.");
         }
     }
 }

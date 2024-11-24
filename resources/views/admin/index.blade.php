@@ -10,7 +10,7 @@ AgileSole - Admin
 @section('content')
     <div class="pagetitle d-flex justify-content-between align-items-center my-4">
         <h1 class="theme-color">Dashboard</h1>
-        <form action="{{ route('report_generate') }}" method="POST">
+        <form action="{{ route('report_generate') }}" method="POST" target="_blank">
             @csrf
             <button class="btn text-white bg-color">Generate Report</button>
         </form>
