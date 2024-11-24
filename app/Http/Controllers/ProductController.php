@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
@@ -54,11 +55,16 @@ class ProductController extends Controller
      */
     public function create(Request $request)
     {
-
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'product_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Max 2MB
         ]);
-
+        if ($validator->fails()) {
+            // Return the first error message for better user feedback
+            return response()->json([
+                "status" => false,
+                "message" => $validator->errors()->first() // Get the first error message
+            ], 422);
+        }
         try {
             $product = new Product();
             $product->sku = $request['sku'];
@@ -78,7 +84,7 @@ class ProductController extends Controller
             if ($product->save()) {
                 $newSettlers = NewSettler::all();
                 $product = [
-                    'subject' => 'New Product Added: ' . $product->sku,
+                    'subject' => 'New Product Added: ' . $product->name,
                     'body' => 'A new product has been added, please check it out.'
                 ];
                 // Send email to each NewSettler

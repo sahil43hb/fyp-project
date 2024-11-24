@@ -42,9 +42,10 @@ AgileSole - Sub Categories
                                 <div class="col-sm-12">
                                     <select class="form-select" name="category_id" aria-label="Default select example" required>
                                         <option value="" selected>Select Category</option>
-
                                         @foreach ($categories as $category)
-                                        <option value="{{ $category->id }}">{{ $category->title }}</option>
+                                        @if ($category->active_status === '1')
+                                        <option  value="{{ $category->id }}">{{ $category->title }}</option>
+                                        @endif
                                         @endforeach
                                     </select>
                                 </div>
@@ -95,8 +96,8 @@ AgileSole - Sub Categories
                                 <div class="col-sm-12">
                                     <select class="form-select" name="category_id" id="categoryStatus" aria-label="Default select example" required>
                                         <option value="" selected>Select Category</option>
-                                        @foreach ($categories as $category)
-                                        <option value="{{ $category->id }}">{{ $category->title }}</option>
+                                        @foreach ($categories as $category)                                        
+                                        <option @disabled($category->active_status === '0')  value="{{ $category->id }}">{{ $category->title }}</option>
                                         @endforeach
                                     </select>
                                 </div>

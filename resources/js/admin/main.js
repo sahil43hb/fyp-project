@@ -545,7 +545,7 @@ $(document).ready(function () {
                 $("#edit_sub_categories_id").empty();
                 $.each(data, function (key, value) {
                     $("#edit_sub_categories_id").append(
-                        '<option value="' +
+                        '<option ' + (value.active_status === "0" ? 'disabled' : '') +' value="' +
                             value.id +
                             '">' +
                             value.title +
@@ -591,7 +591,13 @@ $(document).ready(function () {
             },
             error: function (xhr, status, error) {
                 // Handle errors
-                console.error("Error:", error);
+                if (xhr.status === 422) {
+                    var errors = xhr.responseJSON.message;
+                    toastr.error(errors); // Show the validation error message
+                } else {
+                    // General error handling
+                    toastr.error("An unexpected error occurred. Please try again.");
+                }
             },
         });
     });

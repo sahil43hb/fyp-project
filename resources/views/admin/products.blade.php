@@ -121,7 +121,7 @@ AgileSole- Products
                                 <div class="mb-3 col-sm-4">
                                     <label for="inputText" class="col-sm-2 col-form-label theme-color">Quantity</label>
                                     <div class="col-sm-12">
-                                        <input type="number" min="0" class="form-control" name="quantity" placeholder="Enter quantity"
+                                        <input type="number" value="1" min="1" class="form-control" name="quantity" placeholder="Enter quantity"
                                             required>
                                     </div>
                                 </div>
@@ -201,7 +201,7 @@ AgileSole- Products
                                             aria-label="Default select example" required>
                                             <option selected>Select category</option>
                                             @foreach ($categories as $category)
-                                                <option value="{{ $category->id }}">{{ $category->title }}</option>
+                                                <option @disabled($category->active_status === '0') value="{{ $category->id }}">{{ $category->title }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -222,7 +222,7 @@ AgileSole- Products
                                             aria-label="Default select example" required>
                                             <option value="" selected>Select brand</option>
                                             @foreach ($brands as $brand)
-                                                <option value="{{ $brand->id }}">{{ $brand->title }}</option>
+                                                <option @disabled($brand->active_status === '0') value="{{ $brand->id }}">{{ $brand->title }}</option>
                                             @endforeach
                                         </select>
                                     </div>
