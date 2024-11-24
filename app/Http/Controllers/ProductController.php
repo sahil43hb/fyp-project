@@ -85,7 +85,7 @@ class ProductController extends Controller
                 $newSettlers = NewSettler::all();
                 $product = [
                     'subject' => 'New Product Added: ' . $product->name,
-                    'body' => 'A new product has been added, please check it out.'
+                    'body' => "🌟 Exciting news! A fantastic new product has just been added—don't miss out, check it out now!🌟"
                 ];
                 // Send email to each NewSettler
                 foreach ($newSettlers as $newSettler) {

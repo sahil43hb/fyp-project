@@ -54,7 +54,7 @@
     <table class="invoice-table">
         <thead>
             <tr>
-                <th>Product</th>
+                <th>Product Name</th>
                 <th>Quantity</th>
                 <th>Size</th>
                 <th>Unit Price</th>
@@ -64,7 +64,7 @@
         <tbody>
             @foreach ($order->orderItems as $item)  
                 <tr>
-                    <td>{{ $item->product->sku }}</td>
+                    <td>{{ $item->product->name }}</td>
                     <td>{{ $item->quantity }}</td>
                     <td>{{ $item->product->size_no }}</td>
                     <td>{{ $item->product->discount
