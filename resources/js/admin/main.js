@@ -162,6 +162,7 @@ $(document).ready(function () {
             },
             error: function (xhr, status, error) {
                 // Handle errors
+                toastr.error("An unexpected error occurred.");
                 console.error("Error:", error);
             },
         });
@@ -290,6 +291,7 @@ $(document).ready(function () {
             },
             error: function (xhr, status, error) {
                 // Handle errors
+                toastr.error("An unexpected error occurred.");
                 console.error("Error:", error);
             },
         });
@@ -416,7 +418,7 @@ $(document).ready(function () {
             },
             error: function (xhr, status, error) {
                 // Handle errors
-                console.error("Error:", error);
+                toastr.error('An unexpected error occurred. ');
             },
         });
     });
