@@ -245,9 +245,9 @@ AgileSole
                   </div>
             <div class="price">
                 <h6>Rs. ${
-                    parseInt(product.price) * (parseInt(product.discount) / 100)
+                    parseInt(product.price) - parseInt(product.price) * (parseInt(product.discount) / 100)
                 }</h6>
-                <h6 class="l-through"> Rs. ${product.price}</h6>
+                <h6 class="l-through"> Rs. ${parseInt(product.price)*(parseInt(product.discount) / 100)}</h6>
             </div>
         `;
                         }

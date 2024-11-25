@@ -128,6 +128,9 @@ AgileSole
                                 </td>
                                 <td></td>
                             </tr>
+                            <tr><td colspan="6">
+                                <h6 class="fw-bold">We recommend reviewing our <a href="#" class="border-0 cartDel fs-1" data-toggle="modal" data-target="#termsModal">Terms and Conditions</a> before completing your purchase to ensure a smooth shopping experience.</h6>
+                               </td></tr>
                             <tr class="out_button_area">
                                 <td>
                                     <a class="gray_btn" href="{{ url('/') }}">Continue Shopping</a>
@@ -144,7 +147,7 @@ AgileSole
                                     <form method="post" id="checkoutForm">
                                         @csrf
                                         <div class="checkout_btn_inner d-flex align-items-center justify-content-end">
-                                            <button type="submit" class="primary-btn border-0" style="background-color: red">Proceed to checkout</button>
+                                            <button type="submit" class="primary-btn border-0">Proceed to checkout</button>
                                         </div>
                                     </form>
                                 </td>
@@ -153,6 +156,58 @@ AgileSole
                     </table>
                 </div>
             </div>
+    <!-- The Modal -->
+        <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <p>
+                            Welcome to our e-commerce website. By accessing or using our services, you agree to the following terms and conditions:
+                        </p>
+                        
+                        <h6>1. Use of the Website</h6>
+                        <p>
+                            The content of the pages of this website is for your general information and use only. It is subject to change without notice.
+                        </p>
+        
+                        <h6>2. Privacy Policy</h6>
+                        <p>
+                            We are committed to protecting your privacy. Please review our Privacy Policy for more information on how we handle your data.
+                        </p>
+        
+                        <h6>3. Product Information</h6>
+                        <p>
+                            We make every effort to ensure that the information on this website is accurate and complete. However, we do not guarantee that the product descriptions or other content on this site are accurate, complete, reliable, current, or error-free.
+                        </p>
+        
+                        <h6>4. Return Policy</h6>
+                        <p>
+                            If you wish to return a product, please contact our support team within 15 days of delivery. Please note that a 20% deduction will be applied to your refund.
+                        </p>
+        
+                        <h6>5. Governing Law</h6>
+                        <p>
+                            These terms and conditions are governed by and construed in accordance with the laws of pakistan.
+                        </p>
+                    </div>
+                    
+                    <!-- Modal Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         </div>
     </section>
     <!--================End Cart Area =================-->

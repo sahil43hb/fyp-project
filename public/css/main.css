@@ -1867,7 +1867,7 @@ h6 {
     cursor: pointer;
 }
 .cartDel:hover {
-    color: #44D62C;
+    color: #44D62C !important;
 }
 
 /* start features area css
