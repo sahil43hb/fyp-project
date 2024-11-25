@@ -464,7 +464,8 @@ $(document).ready(function () {
             { data: "action", name: "action" },
         ],
     });
-
+    
+    // On category change
     $("#category_id").on("change", function () {
         var category_id = $(this).val();
         console.warn(category_id);
