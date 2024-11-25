@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-AgileSole
+AgileSole - Cart
 @endsection
 
 @section('css')
