@@ -1247,7 +1247,7 @@ h6 {
 .form-select .nice-select::after {
     right: 20px;
 }
-
+/* start the header sticky area */
 .is-sticky .header_area .main_menu .main_box {
     max-width: 100%;
     margin-top: 0;
@@ -1270,7 +1270,7 @@ h6 {
         top: 0;
     }
 }
-
+/* starts the header css */
 .header_area {
     position: absolute;
     width: 100%;
@@ -1546,7 +1546,7 @@ h6 {
     /* background-color: rgba(30, 40, 50, 0.05); */
     background: url(../img/banner/bg-banner.jpg) no-repeat;
     background-size: cover;
-    height: 90vh;
+    height: 100vh;
     /* position: relative; */
     /* height: ; */
 }
@@ -1613,6 +1613,15 @@ h6 {
     .banner-area .banner-content {
         padding-left: 0;
     }
+    .banner-area .fix-bordr {
+        margin-top: 80px;
+        margin-left: 20px;
+    }
+    .banner-area .adjst-pic {
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+    }
 }
 .banner-area .banner-content h1 {
     font-size: 52px;
@@ -1620,6 +1629,7 @@ h6 {
     font-weight: 700;
     margin-bottom: 20px;
     color: #44D62C;
+    text-wrap: nowrap;
 }
 .banner-area .banner-content p {
     color:black; 
@@ -1638,10 +1648,9 @@ h6 {
 }
 @media (max-width: 991px) {
     .banner-area .banner-img img {
-     height: 140px;
-    }
-    .banner-set{
-        height: 200px;
+     height: 200px;
+     width: auto;
+     object-fit: cover;
     }
 }
 
@@ -5099,6 +5108,11 @@ label {
 .product_image_area {
     padding-top: 120px;
 }
+.product_image_area .image {
+    display: flex !important; 
+    justify-content: center;
+    align-items: center;
+}
 
 .s_Product_carousel .owl-dots {
     position: absolute;
@@ -7503,6 +7517,7 @@ label {
 .custom-height {
     height: 200px; /* Adjust this value as needed */
     object-fit: contain; /* Ensures the image covers the area while maintaining aspect ratio */
+    padding: 10px 10px;
 }
 
 

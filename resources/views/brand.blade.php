@@ -13,7 +13,6 @@
             <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end" style="margin:16px">
                 <div class="col-5">
                     <h1> {{ $brandsWithProducts->title }} Shop </h1>
-
                 </div>
             </div>
         </div>
@@ -22,12 +21,12 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12">
-                <section class="lattest-product-area pb-40 category-list">
+                <section class="pb-40 category-list">
                     <div class="row">
                         <!-- single product -->
                         @foreach ($brandsWithProducts->products as $product)
-                            <div class="col-lg-3 col-md-6">
-                                <div class="single-product shadow-sm product-image flex-fill card border shadow-hover">
+                            <div class="col-lg-3 col-md-6 d-flex">
+                                <div class="single-product card flex-fill product-image shadow-sm shadow-hover">
                                     <img class="img-fluid custom-height" src="{{ asset('uploads/' . $product->product_image) }}"
                                         alt="product_image" />
                                     <div class="product-details px-3">

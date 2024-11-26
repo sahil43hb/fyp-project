@@ -22,11 +22,11 @@ AgileSole
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <!-- Start Best Seller -->
-                <section class="lattest-product-area pb-40 category-list">
+                <section class="pb-40 category-list">
                     <div class="row">
                         <!-- single product -->
                         @foreach ($subCategoriesWithProducts->products as $product)
-                            <div class="col-lg-3 col-md-6">
+                            <div class="col-lg-3 col-md-6 d-flex">
                                 <div class="single-product shadow-sm product-image flex-fill card border shadow-hover">
                                     <img class="img-fluid custom-height" src="{{ asset('uploads/' . $product->product_image) }}"
                                         alt="product_image" />

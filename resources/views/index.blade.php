@@ -15,7 +15,7 @@ AgileSole
                         <!-- single-slide -->   
                         @foreach (headerProductData() as $product)
                         <div class="row single-slide align-items-center d-flex"> 
-                            <div class="col-lg-5 col-md-6">
+                            <div class="fix-bordr col-lg-5 col-md-6">
                                 <div class="banner-content">
                                     <h1 >{{$product->name}}</h1>
                                     <p>
@@ -31,7 +31,7 @@ AgileSole
                                     @endif
                                 </div>
                             </div>
-                            <div class="col-lg-7 justify-content-end d-flex" >
+                            <div class="adjst-pic col-lg-7 justify-content-end d-flex" >
                                 <div class="banner-img banner-set">
                                     <img class="img-fluid" src="{{ asset('uploads/' . $product->product_image) }}" alt="" />
                                 </div>

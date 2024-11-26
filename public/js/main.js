@@ -67,11 +67,11 @@ $(document).ready(function () {
             "<img src='img/banner/prev.png'>",
             "<img src='img/banner/next.png'>",
         ],
-        dots: true,
+        dots: false,
     });
 
     /*=================================
-    Javascript for product area carousel
+    Javascript for product area carousel category vise
     ==================================*/
     $(".active-product-area").owlCarousel({
         items: 1,

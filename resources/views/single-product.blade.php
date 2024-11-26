@@ -26,9 +26,9 @@ AgileSole
     <div class="product_image_area section_gap">
         <div class="container">
             <div class="row s_product_inner">
-                <div class="col-lg-6">
+                <div class="col-lg-6 image">
                     <div class="single-prd-item">
-                        <img src="{{ asset('uploads/' . $product->product_image) }}" height="450" width="450"
+                        <img src="{{ asset('uploads/' . $product->product_image) }}" height="350"
                             alt="">
                     </div>
                 </div>

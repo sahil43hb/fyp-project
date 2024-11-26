@@ -45,9 +45,9 @@ $(document).ready(function () {
         `;
                         }
                         productHtml += `
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 d-flex">
                     <div class="single-product card flex-fill product-image shadow-sm shadow-hover">
-                        <img class="img-fluid" src="uploads/${product.product_image}" alt="${product.product_image}" />
+                        <img class="img-fluid custom-height" src="uploads/${product.product_image}" alt="${product.product_image}" />
                         <div class="product-details pl-2">
                             <h6>${product.name}</h6>
 
