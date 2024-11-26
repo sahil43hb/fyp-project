@@ -32,7 +32,7 @@ AgileSole - Users
                     <td>{{ $order->customer->email }}</td>
                     <td>{{ $order->total }}</td>
                     <td>{{ $order->payment->currency }}</td>
-                    <td>{{ $order->payment->payment_status }}</td>
+                    <td><span class="badge bg-color text-white text-capitalize fs-6">{{ $order->payment->payment_status }}</span></td>
                     <td>
                         <a href="{{ route('download.invoice', ['order_id' => $order->id]) }}"
                             class="btn bg-color text-white border-0">Invoice</a>
