@@ -418,7 +418,11 @@ $(document).ready(function () {
             },
             error: function (xhr, status, error) {
                 // Handle errors
-                toastr.error('An unexpected error occurred. ');
+                if (xhr.status === 400) {
+                    toastr.error(xhr.responseJSON.message || 'Bad Request');}
+                    else{                        
+                        toastr.error('An unexpected error occurred. ');
+                    }
             },
         });
     });
