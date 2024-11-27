@@ -5130,8 +5130,8 @@ label {
 }
 .zoom-glass {
     position: absolute;
-    width: 200px; /* Size of the zoom box */
-    height: 200px;
+    width: 300px; /* Size of the zoom box */
+    height: 300px;
     display: none; /* Initially hidden */
     background-repeat: no-repeat;
     background-size: 200%; /* Controls the zoom level */
