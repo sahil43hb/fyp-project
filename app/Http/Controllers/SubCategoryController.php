@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\SubCategory;
+use App\Models\Product;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -103,6 +104,9 @@ class SubCategoryController extends Controller
     public function destroy($id)
     {
         $sub_category = SubCategory::findOrFail($id);
+        if (Product::where('sub_categories_id', $id)->exists()) {
+            return response()->json(['status' => false, 'message' => 'Cannot delete sub category with associated products.'], 400);
+        }
         $sub_category->delete();
 
         return response()->json(['status' => true, 'message' => 'Sub Category deleted successfully'], 200);

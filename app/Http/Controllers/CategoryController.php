@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\SubCategory;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Validator;
@@ -100,6 +101,9 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         $category = Category::findOrFail($id);
+        if (SubCategory::where('category_id', $id)->exists()) {
+            return response()->json(['status' => false, 'message' => 'Cannot delete category with associated sub category.'], 400);
+        }
         $category->delete();
 
         return response()->json(['status' => true, 'message' => 'Category deleted successfully'], 200);

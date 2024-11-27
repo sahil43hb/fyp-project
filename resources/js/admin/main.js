@@ -162,6 +162,12 @@ $(document).ready(function () {
             },
             error: function (xhr, status, error) {
                 // Handle errors
+                if (xhr.status === 400) {
+                    toastr.error(xhr.responseJSON.message || 'Bad Request');
+                }
+                else{                        
+                        toastr.error('An unexpected error occurred. ');
+                    }
                 console.error("Error:", error);
             },
         });
@@ -290,6 +296,12 @@ $(document).ready(function () {
             },
             error: function (xhr, status, error) {
                 // Handle errors
+                if (xhr.status === 400) {
+                    toastr.error(xhr.responseJSON.message || 'Bad Request');
+                }
+                else{                        
+                        toastr.error('An unexpected error occurred. ');
+                    }
                 console.error("Error:", error);
             },
         });
@@ -416,7 +428,11 @@ $(document).ready(function () {
             },
             error: function (xhr, status, error) {
                 // Handle errors
-                console.error("Error:", error);
+                if (xhr.status === 400) {
+                    toastr.error(xhr.responseJSON.message || 'Bad Request');}
+                    else{                        
+                        toastr.error('An unexpected error occurred. ');
+                    }
             },
         });
     });

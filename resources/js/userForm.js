@@ -484,3 +484,38 @@ function updateTotalSum() {
     });
     $("#totalSum").text(`Rs.${totalSum.toFixed(0)}`);
 }
+
+// glass effect on hover on image
+$(document).ready(function () {
+    $('.image-container').on('mousemove', function (e) {
+        const $container = $(this);
+        const $image = $container.find('.product-image');
+        const $zoomglass = $container.find('.zoom-glass');
+
+        const containerOffset = $container.offset();
+        const mouseX = e.pageX - containerOffset.left; // Mouse X relative to the container
+        const mouseY = e.pageY - containerOffset.top;  // Mouse Y relative to the container
+
+        const imageWidth = $image.width();
+        const imageHeight = $image.height();
+
+        // Calculate zoom background position as percentages
+        const bgPosX = (mouseX / imageWidth) * 100; // X position in percentage
+        const bgPosY = (mouseY / imageHeight) * 100; // Y position in percentage
+
+        // Display and position the zoom box
+        $zoomglass.css({
+            display: 'block',
+            left: mouseX - $zoomglass.width() / 2, // Center the zoom box around the cursor
+            top: mouseY - $zoomglass.height() / 2, // Center the zoom box around the cursor
+            backgroundImage: `url(${$image.attr('src')})`,
+            backgroundSize: `${imageWidth * 3}px ${imageHeight * 3}px`, // Zoom level (2x here)
+            backgroundPosition: `${bgPosX}% ${bgPosY}%`, // Focus on the hovered pixel
+        });
+    });
+
+    $('.image-container').on('mouseleave', function () {
+        const $zoomglass = $(this).find('.zoom-glass');
+        $zoomglass.hide(); // Hide the zoom box when the mouse leaves the image
+    });
+});

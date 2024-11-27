@@ -5103,6 +5103,8 @@ label {
 
 /* End Product Sidebar Area css
 ============================================================================================ */
+
+
 /* Single Product Area css
 ============================================================================================ */
 .product_image_area {
@@ -5110,9 +5112,38 @@ label {
 }
 .product_image_area .image {
     display: flex !important; 
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
+
+/* Product glass effect on hover 
+=================================================================================*/
+.image-container {
+    position: relative;
+    height: 450px; /* Match the image height */
+    padding: 20px;
+}
+
+.product-image {
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the container */
+}
+.zoom-glass {
+    position: absolute;
+    width: 200px; /* Size of the zoom box */
+    height: 200px;
+    display: none; /* Initially hidden */
+    background-repeat: no-repeat;
+    background-size: 200%; /* Controls the zoom level */
+    border: 2px solid #000; /* Optional border for the zoom box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    pointer-events: none; /* Prevent interaction */
+    z-index: 10;
+    background-color: white; 
+}
+
+/* end product hover glass cross 
+============================================================================================*/
 
 .s_Product_carousel .owl-dots {
     position: absolute;

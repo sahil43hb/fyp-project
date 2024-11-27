@@ -27,9 +27,9 @@ AgileSole
         <div class="container">
             <div class="row s_product_inner">
                 <div class="col-lg-6 image">
-                    <div class="single-prd-item">
-                        <img src="{{ asset('uploads/' . $product->product_image) }}" height="350"
-                            alt="">
+                    <div class="single-prd-item image-container">
+                        <img src="{{ asset('uploads/' . $product->product_image) }}"  alt="" class="product-image">
+                        <div class="zoom-glass"></div>
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-1">

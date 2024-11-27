@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brand;
+use App\Models\Product;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
@@ -103,8 +104,13 @@ class BrandController extends Controller
      */
     public function destroy($id)
     {
-        $brand = Brand::findOrFail($id);
-        $brand->delete();
-        return response()->json(['status' => true, 'message' => 'Brand deleted successfully'], 200);
+    $brand = Brand::findOrFail($id);
+    // Check if the brand has related products
+    if (Product::where('brands_id', $id)->exists()) {
+        return response()->json(['status' => false, 'message' => 'Cannot delete brand with associated products.'], 400);
     }
+    $brand->delete();
+    return response()->json(['status' => true, 'message' => 'Brand deleted successfully'], 200);
+    }
+
 }
