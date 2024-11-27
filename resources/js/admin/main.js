@@ -448,11 +448,56 @@ $(document).ready(function () {
     
     //////////////---------- Admin Orders Table ------------------/////////////////////////////
 
-    $("#order_table").DataTable({
+    var brandTable = $("#order_table").DataTable({
         language: {
             lengthMenu: "_MENU_", // Customize the text as per your preference
             info: "Showing _START_ to _END_ of _TOTAL_ entries", // Optionally, customize other text
         },
+    });
+    // Handle status update from dropdown
+    $(".dropdown-item").on("click", function (e) {
+        e.preventDefault(); 
+        let selectedStatus = $(this).data("value");
+        let orderId = $(this).closest("td").find(".dropdown-toggle").data("order-id");
+        
+        $.ajax({
+            url: "/admin-panel/update-shipment-status", 
+            method: "POST",
+            data: {
+                order_id: orderId,
+                shipment_status: selectedStatus,
+            },
+            headers: {
+                "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"), 
+            },
+            success: function (response) {
+                if (response.status) {
+                    let dropdownButton = $(`#dropdownMenuButton${orderId}`);
+                    dropdownButton.text(selectedStatus);
+        
+                    // Update the background color dynamically
+                    dropdownButton
+                    .removeClass("bg-primary bg-danger bg-success bg-secondary")
+                    .addClass(
+                        selectedStatus === "Pending"
+                            ? "bg-primary"
+                            : selectedStatus === "Return"
+                            ? "bg-danger"
+                            : selectedStatus === "Complete"
+                            ? "bg-success"
+                            : "bg-secondary"
+                    );
+                    toastr.success(response.message);
+                }
+            },
+            error: function (xhr) {
+                if (xhr.status === 404) {
+                    toastr.error(xhr.responseJSON.message || 'Bad Request');}
+                    else{                        
+                        toastr.error('An unexpected error occurred. ');
+                    }
+            },
+        });
     });
 
     ////////////////////////////////  Products Sections //////////////////////////////////////////

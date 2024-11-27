@@ -48,6 +48,7 @@ Route::prefix('admin-panel')->middleware(['admin'])->group(function () {
     Route::delete('/brands/{id}', [BrandController::class, 'destroy']);
     Route::get('/users', [UserController::class, 'index']);
     Route::get('/orders', [OrderController::class, 'index']);
+    Route::post('/update-shipment-status', [OrderController::class, 'updateShipmentStatus']);
     Route::get('/products', [ProductController::class, 'index']);
     Route::post('/products', [ProductController::class, 'create']);
     Route::post('/products/{id}', [ProductController::class, 'update']);

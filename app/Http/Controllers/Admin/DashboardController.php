@@ -21,7 +21,7 @@ class DashboardController extends Controller
         for ($i = 0; $i < 6; $i++) {
             $startDate = $currentMonth->copy()->startOfMonth();
             $endDate = $currentMonth->copy()->endOfMonth();
-            $orders = Order::whereBetween('created_at', [$startDate, $endDate])->get();
+            $orders = Order::where('shipment_status', '!=', 'return')->whereBetween('created_at', [$startDate, $endDate])->get();
             $userCount = User::whereBetween('created_at', [$startDate, $endDate])->count();
             $totalAmount = $orders->sum('total');
             $monthlyUserCounts[] = $userCount;
@@ -32,7 +32,7 @@ class DashboardController extends Controller
         $monthlyTotals = array_reverse($monthlyTotals);
         $monthLabels = array_reverse($monthLabels);
         $monthlyUserCounts = array_reverse($monthlyUserCounts);
-        $orders = Order::whereHas('payment', function ($query) {
+        $orders = Order::where('shipment_status', '!=', 'return')->whereHas('payment', function ($query) {
             $query->where('payment_status', 'paid');
         })->get();
         $users = User::where('role', 'user')->count();

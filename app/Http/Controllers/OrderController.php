@@ -65,4 +65,28 @@ class OrderController extends Controller
     {
         //
     }
+
+    public function updateShipmentStatus(Request $request)
+    {
+        $validated = $request->validate([
+            'shipment_status' => 'required', 
+        ]);
+        // Retrieve the order using the ID
+        $order = Order::findOrFail($request->order_id); 
+        if (!$order) {
+            return response()->json([
+                'status'=>false,
+                'message' => 'Order not found!',
+            ], 404);
+        }
+        // Update the shipment status
+        $order->shipment_status = $request['shipment_status'];
+        if ($order->save()) {
+            // Data saved successfully, return a success response
+            return response()->json(['status' => true, 'message' => 'Shipment status updated successfully!'], 200);
+        } else {
+            // Data saving failed, return an error response
+            return response()->json(['status' => false, 'message' => 'Failed to update shipment status'], 500);
+        }
+    }
 }

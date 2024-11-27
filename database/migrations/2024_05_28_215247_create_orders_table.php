@@ -17,6 +17,7 @@ return new class extends Migration
             // $table->foreignId('customer_info_id')->constrained('customer_infos');
             $table->foreignId('payment_id')->constrained('payments');
             $table->string('total');
+            $table->enum('shipment_status', ['pending', 'complete', 'return'])->default('pending');
             $table->timestamps();
         });
     }
