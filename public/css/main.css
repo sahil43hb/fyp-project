@@ -5124,7 +5124,7 @@ label {
     padding: 20px;
 }
 
-.product-image {
+.hover-glass-image {
     height: 100%;
     object-fit: cover; /* Ensures the image fills the container */
 }

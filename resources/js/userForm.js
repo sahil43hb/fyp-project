@@ -489,7 +489,7 @@ function updateTotalSum() {
 $(document).ready(function () {
     $('.image-container').on('mousemove', function (e) {
         const $container = $(this);
-        const $image = $container.find('.product-image');
+        const $image = $container.find('.hover-glass-image');
         const $zoomglass = $container.find('.zoom-glass');
 
         const containerOffset = $container.offset();

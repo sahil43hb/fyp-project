@@ -28,7 +28,7 @@ AgileSole
             <div class="row s_product_inner">
                 <div class="col-lg-6 image">
                     <div class="single-prd-item image-container">
-                        <img src="{{ asset('uploads/' . $product->product_image) }}"  alt="" class="product-image">
+                        <img src="{{ asset('uploads/' . $product->product_image) }}"  alt="" class="hover-glass-image">
                         <div class="zoom-glass"></div>
                     </div>
                 </div>
