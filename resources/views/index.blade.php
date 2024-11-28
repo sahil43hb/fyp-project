@@ -253,9 +253,9 @@ AgileSole
                         }
                         productHtml += `
                 <div class="col-lg-3 col-md-6 d-flex">
-                    <div class="single-product px-3 flex-fill card product-image shadow-sm shadow-hover">
+                    <div class="single-product  flex-fill card product-image shadow-sm shadow-hover">
                         <img class="img-fluid custom-height" src="uploads/${product.product_image}" alt="${product.product_image}" />
-                        <div class="product-details pl-2">
+                        <div class="product-details pl-3">
                             <h6>${product.name}</h6>
                             ${priceContent}
                             <div class="prd-bottom">
