@@ -448,14 +448,14 @@ $(document).ready(function () {
     
     //////////////---------- Admin Orders Table ------------------/////////////////////////////
 
-    var brandTable = $("#order_table").DataTable({
+    $("#order_table").DataTable({
         language: {
             lengthMenu: "_MENU_", // Customize the text as per your preference
             info: "Showing _START_ to _END_ of _TOTAL_ entries", // Optionally, customize other text
         },
     });
     // Handle status update from dropdown
-    $(".dropdown-item").on("click", function (e) {
+    $(".order-item").on("click", function (e) {
         e.preventDefault(); 
         let selectedStatus = $(this).data("value");
         let orderId = $(this).closest("td").find(".dropdown-toggle").data("order-id");
