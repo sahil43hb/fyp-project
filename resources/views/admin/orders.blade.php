@@ -54,9 +54,9 @@ AgileSole - Users
                             {{ $order->shipment_status }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ $order->id }}">
-                            <li><a class="dropdown-item" href="#" data-value="Pending">Pending</a></li>
-                            <li><a class="dropdown-item" href="#" data-value="Complete">Complete</a></li>
-                            <li><a class="dropdown-item" href="#" data-value="Return">Return</a></li>
+                            <li><a class="dropdown-item order-item" href="#" data-value="Pending">Pending</a></li>
+                            <li><a class="dropdown-item order-item" href="#" data-value="Complete">Complete</a></li>
+                            <li><a class="dropdown-item order-item" href="#" data-value="Return">Return</a></li>
                         </ul>
                     </div>
                 </td>
