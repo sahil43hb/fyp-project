@@ -1591,19 +1591,14 @@ h6 {
     opacity: 1;
 }
 
-/* .banner-img {
-    display: flex;
-    align-content: end;
-} */
 
 /* set banner image size */
 .banner-set{
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    display: flex;
-    /* justify-items:end; */
-    align-items: center;
+    height: 350px;
+    width: 350px;
+}
+.banner-set img{
+    height: 100%;
 }
 
 .banner-area .banner-content {
@@ -5130,8 +5125,8 @@ label {
 }
 .zoom-glass {
     position: absolute;
-    width: 200px; /* Size of the zoom box */
-    height: 200px;
+    width: 300px; /* Size of the zoom box */
+    height: 300px;
     display: none; /* Initially hidden */
     background-repeat: no-repeat;
     background-size: 200%; /* Controls the zoom level */
