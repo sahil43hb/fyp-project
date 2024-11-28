@@ -114,7 +114,7 @@ $(document).ready(function () {
                                     },
                                 });
                             } else {
-                                alert(
+                                toastr.error(
                                     "Please verify your email before adding to cart."
                                 );
                             }
@@ -140,11 +140,6 @@ $(document).ready(function () {
     $("#registerationForm").submit(function (event) {
         event.preventDefault(); // Prevent the form from submitting normally
 
-        // Show the loader and hide the button text
-        $("#button-text").hide();
-        $('#loading-overlay').show();
-        $('body').css('cursor', 'not-allowed');
-
         // Get form data
         var formData = $(this).serialize();
 
@@ -161,9 +156,10 @@ $(document).ready(function () {
             password === ""
         ) {
             toastr.success("Fields cannot be empty.");
-            // Hide the loader and show the button text again
-            $("#button-text").show();
             return; // Exit the function if fields are empty
+        }else{            
+        $('#loading-overlay').show();
+        $('body').css('cursor', 'not-allowed');
         }
 
         // Process form data here (e.g., send it to a server using AJAX)
@@ -175,117 +171,68 @@ $(document).ready(function () {
                 "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"), // Include CSRF token in headers
             },
             success: function (response) {
-                // Hide the loader and show the button text again
-                $("#button-text").show();
 
                 // If the response indicates success, redirect
                 if (response.status) {
                     window.location = response.redirect;
                 } else {
                     $('#loading-overlay').hide();
-                    // Display validation errors
-                    $.each(response.errors, function (key, val) {
-                        $("#errors-list").append(
-                            "<div class='alert alert-danger'>" + val + "</div>"
-                        );
-                    });
+                    $('body').css('cursor', 'auto');
                 }
             },
             error: function (xhr, status, error) {
-                // Hide the loader and show the button text again
-                $("#button-text").show();
+                $(".text-danger").remove(); 
+                 // Hide the loader
                 $('#loading-overlay').hide();
-                console.log("Error:", error);
-                toastr.error("An error occurred, please try again.");
+                $('body').css('cursor', 'auto');
+                if (xhr.status === 422) {                    
+                    var errors = xhr.responseJSON.errors;
+                    $.each(errors, function (key, val) {
+                        $("#" + key) // Target the specific input field
+                        .after("<span class='text-danger'>" + val[0] + "</span>");
+                }); 
+                }else{
+                    console.log("Error:", error);
+                    toastr.error("An error occurred, please try again.");
+                }  
             },
         });
     });
 
-    // $("#registerationForm").submit(function (event) {
-    //     event.preventDefault(); // Prevent the form from submitting normally
-
-    //     // Get form data
-    //     var formData = $(this).serialize();
-
-    //     var user_name = $("#username").val().trim();
-    //     var name = $("#name").val().trim();
-    //     var email = $("#email").val().trim();
-    //     var password = $("#password").val().trim();
-    //     // Check if email or password is empty
-    //     if (
-    //         user_name === "" ||
-    //         name === "" ||
-    //         email === "" ||
-    //         password === ""
-    //     ) {
-    //         toastr.success("Fields cannot be empty.");
-    //         return; // Exit the function if email or password is empty
-    //     }
-
-    //     // Process form data here (e.g., send it to a server using AJAX)
-    //     // For demonstration purposes, we'll just log the form data
-    //     // You can add AJAX code here to submit the form data to the server
-    //     $.ajax({
-    //         type: "POST", // Use POST method
-    //         url: "/submit", // Specify the URL of your controller
-    //         data: formData, // Pass the form data
-    //         headers: {
-    //             "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"), // Include CSRF token in headers
-    //         },
-    //         success: function (response) {
-    //             // Handle the successful response from the server
-    //             console.log("Success:", response);
-    //             if (response.status) {
-    //                 window.location = response.redirect;
-    //             } else {
-    //                 $.each(response.errors, function (key, val) {
-    //                     $("#errors-list").append(
-    //                         "<div class='alert alert-danger'>" + val + "</div>"
-    //                     );
-    //                 });
-    //             }
-    //         },
-    //         error: function (xhr, status, error) {
-    //             // Handle errors
-    //             console.log("Error:", error);
-    //         },
-    //     });
-    // });
-
     $("#loginForm").submit(function (event) {
-        event.preventDefault(); // Prevent the form from submitting normally
+    event.preventDefault(); // Prevent the form from submitting normally
 
-        var email = $("#email").val().trim();
-        var password = $("#password").val().trim();
-        // Check if email or password is empty
-        if (email === "" || password === "") {
-            toastr.error("Email or Password fields cannot be empty.");
-            return; // Exit the function if email or password is empty
-        }
-        var formData = $(this).serialize();
+    var email = $("#email").val().trim();
+    var password = $("#password").val().trim();
+    // Check if email or password is empty
+    if (email === "" || password === "") {
+        toastr.error("Email or Password fields cannot be empty.");
+        return; // Exit the function if email or password is empty
+    }
+    var formData = $(this).serialize();
 
-        $.ajax({
-            type: "POST", // Use POST method
-            url: "/login", // Specify the URL of your controller
-            data: formData, // Pass the form data
-            headers: {
-                "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"), // Include CSRF token in headers
-            },
-            success: function (response) {
-                if (response.status) {
-                    toastr.success(response.success);
-                    setTimeout(() => {
-                        window.location = response.redirect;
-                    }, 1000);
-                } else {
-                    toastr.error(response.error);
-                }
-            },
-            error: function (xhr, status, error) {
-                // Handle errors
-                console.log("Error:", error);
-            },
-        });
+    $.ajax({
+        type: "POST", // Use POST method
+        url: "/login", // Specify the URL of your controller
+        data: formData, // Pass the form data
+        headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"), // Include CSRF token in headers
+        },
+        success: function (response) {
+            if (response.status) {
+                toastr.success(response.success);
+                setTimeout(() => {
+                    window.location = response.redirect;
+                }, 1000);
+            } else {
+                toastr.error(response.error);
+            }
+        },
+        error: function (xhr, status, error) {
+            // Handle errors
+            console.log("Error:", error);
+        },
+    });
     });
 
     $(".forgot_password").on("click", function () {
@@ -332,7 +279,7 @@ $(document).ready(function () {
                     },
                 });
             } else {
-                alert("Please verify your email before adding to cart.");
+                toastr.error("Please verify your email before adding to cart.");
             }
         }
     });

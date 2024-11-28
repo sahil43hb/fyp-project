@@ -54,7 +54,6 @@
                             <img src="img/AgileSoleLogo.png" alt="" width="100px" class="pb-3">
                         </a>  
                         <h3>Register Here</h3>
-                        <div id="errors-list"></div>
                         <form class="row login_form" method="post" id="registerationForm">
                             @csrf
                             <div class="col-md-12 form-group">
