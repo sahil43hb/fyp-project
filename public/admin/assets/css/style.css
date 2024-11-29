@@ -873,6 +873,9 @@ h6 {
 .dashboard .activity .activity-item .activity-content {
     padding-left: 10px;
     padding-bottom: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .dashboard .activity .activity-item:first-child .activite-label::before {
