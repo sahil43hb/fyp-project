@@ -191,9 +191,8 @@ AgileSole - Cart
         
                         <h6>4. Return Policy</h6>
                         <p>
-                            If you wish to return a product, please contact our support team within 15 days of delivery. Please note that a 20% deduction will be applied to your refund.
-                        </p>
-        
+                            If you need to return a product, please contact our support team at +93157707459 within 15 days of delivery. Kindly note that a 20% deduction will be applied to the refund amount.
+                        </p>        
                         <h6>5. Governing Law</h6>
                         <p>
                             These terms and conditions are governed by and construed in accordance with the laws of pakistan.

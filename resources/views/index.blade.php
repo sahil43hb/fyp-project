@@ -321,7 +321,7 @@ AgileSole
                                     },
                                 });
                             } else {
-                                alert(
+                                toastr.error(
                                     "Please verify your email before adding to cart."
                                 );
                             }
