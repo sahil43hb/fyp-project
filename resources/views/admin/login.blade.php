@@ -56,7 +56,7 @@
                                         @csrf
                                         <div class="col-12">
                                             <label for="email" class="form-label">Email</label>
-                                            <div class="input-group has-validation">
+                                            <div class="input-group">
                                                 <input type="email" name="email" class="form-control" required>
                                                 <div class="invalid-feedback">Please enter valid email.</div>
                                             </div>
